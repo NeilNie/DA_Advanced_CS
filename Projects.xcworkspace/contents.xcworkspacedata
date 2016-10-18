@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:Recursion"
+      name = "Recursion">
+      <Group
+         location = "group:Recursion"
+         name = "Recursion">
+         <FileRef
+            location = "group:AppDelegate.h">
+         </FileRef>
+         <FileRef
+            location = "group:AppDelegate.m">
+         </FileRef>
+         <Group
+            location = "group:Assets.xcassets"
+            name = "Assets.xcassets">
+            <Group
+               location = "group:AppIcon.appiconset"
+               name = "AppIcon.appiconset">
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:Base.lproj"
+            name = "Base.lproj">
+            <FileRef
+               location = "group:LaunchScreen.storyboard">
+            </FileRef>
+            <FileRef
+               location = "group:Main.storyboard">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:DigitSum.h">
+         </FileRef>
+         <FileRef
+            location = "group:DigitSum.m">
+         </FileRef>
+         <FileRef
+            location = "group:GCD.h">
+         </FileRef>
+         <FileRef
+            location = "group:GCD.m">
+         </FileRef>
+         <FileRef
+            location = "group:Hanoi.h">
+         </FileRef>
+         <FileRef
+            location = "group:Hanoi.m">
+         </FileRef>
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+         <FileRef
+            location = "group:main.m">
+         </FileRef>
+         <Group
+            location = "group:Media.xcassets"
+            name = "Media.xcassets">
+            <Group
+               location = "group:AppIcon.appiconset"
+               name = "AppIcon.appiconset">
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-40.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-40@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-40@3x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-60@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-60@3x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-72.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-72@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-76.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-76@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-83.5@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-Small-50.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-Small-50@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-Small.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-Small@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-Small@3x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:NotificationIcon@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:NotificationIcon@3x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:NotificationIcon~ipad.png">
+               </FileRef>
+               <FileRef
+                  location = "group:NotificationIcon~ipad@2x.png">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:NYStack.h">
+         </FileRef>
+         <FileRef
+            location = "group:NYStack.m">
+         </FileRef>
+         <FileRef
+            location = "group:PrintBinary.h">
+         </FileRef>
+         <FileRef
+            location = "group:PrintBinary.m">
+         </FileRef>
+         <FileRef
+            location = "group:RecursiveDrawing.h">
+         </FileRef>
+         <FileRef
+            location = "group:RecursiveDrawing.m">
+         </FileRef>
+         <FileRef
+            location = "group:RecursivePuzzle.h">
+         </FileRef>
+         <FileRef
+            location = "group:RecursivePuzzle.m">
+         </FileRef>
+         <FileRef
+            location = "group:ReverseString.h">
+         </FileRef>
+         <FileRef
+            location = "group:ReverseString.m">
+         </FileRef>
+         <FileRef
+            location = "group:ViewController.h">
+         </FileRef>
+         <FileRef
+            location = "group:ViewController.m">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:Recursion.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:Fraction_Calculator"
+      name = "Fraction_Calculator">
+      <Group
+         location = "group:Fraction_Calculator"
+         name = "Fraction_Calculator">
+         <FileRef
+            location = "group:AppDelegate.h">
+         </FileRef>
+         <FileRef
+            location = "group:AppDelegate.m">
+         </FileRef>
+         <Group
+            location = "group:Assets.xcassets"
+            name = "Assets.xcassets">
+            <Group
+               location = "group:AppIcon.appiconset"
+               name = "AppIcon.appiconset">
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:Base.lproj"
+            name = "Base.lproj">
+            <FileRef
+               location = "group:LaunchScreen.storyboard">
+            </FileRef>
+            <FileRef
+               location = "group:Main.storyboard">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:Fraction.h">
+         </FileRef>
+         <FileRef
+            location = "group:Fraction.m">
+         </FileRef>
+         <FileRef
+            location = "group:FractionCalculator.h">
+         </FileRef>
+         <FileRef
+            location = "group:FractionCalculator.m">
+         </FileRef>
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+         <FileRef
+            location = "group:main.m">
+         </FileRef>
+         <Group
+            location = "group:Media.xcassets"
+            name = "Media.xcassets">
+            <Group
+               location = "group:AppIcon.appiconset"
+               name = "AppIcon.appiconset">
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-40.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-40@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-40@3x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-60@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-60@3x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-72.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-72@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-76.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-76@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-83.5@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-Small-50.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-Small-50@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-Small.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-Small@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon-Small@3x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Icon@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:NotificationIcon@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:NotificationIcon@3x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:NotificationIcon~ipad.png">
+               </FileRef>
+               <FileRef
+                  location = "group:NotificationIcon~ipad@2x.png">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:ViewController.h">
+         </FileRef>
+         <FileRef
+            location = "group:ViewController.m">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:Fraction_Calculator.xcodeproj">
+      </FileRef>
+      <Group
+         location = "group:Fraction_CalculatorTests"
+         name = "Fraction_CalculatorTests">
+         <FileRef
+            location = "group:Fraction_CalculatorTests.m">
+         </FileRef>
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Fraction_CalculatorUITests"
+         name = "Fraction_CalculatorUITests">
+         <FileRef
+            location = "group:Fraction_CalculatorUITests.m">
+         </FileRef>
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
+      location = "group:FriendList"
+      name = "FriendList">
+      <FileRef
+         location = "group:FriendList.xcodeproj">
+      </FileRef>
+      <Group
+         location = "group:FriendList"
+         name = "FriendList">
+         <FileRef
+            location = "group:Base.lproj/LaunchScreen.storyboard">
+         </FileRef>
+         <FileRef
+            location = "group:Base.lproj/Main.storyboard">
+         </FileRef>
+         <Group
+            location = "container:"
+            name = "ViewControllers">
+            <FileRef
+               location = "group:AddPersonViewController.h">
+            </FileRef>
+            <FileRef
+               location = "group:AddPersonViewController.m">
+            </FileRef>
+            <FileRef
+               location = "group:PersonViewController.h">
+            </FileRef>
+            <FileRef
+               location = "group:PersonViewController.m">
+            </FileRef>
+            <FileRef
+               location = "group:ViewController.h">
+            </FileRef>
+            <FileRef
+               location = "group:ViewController.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "container:"
+            name = "classes">
+            <FileRef
+               location = "group:LinkedList.h">
+            </FileRef>
+            <FileRef
+               location = "group:LinkedList.m">
+            </FileRef>
+            <FileRef
+               location = "group:LinkedListNode.h">
+            </FileRef>
+            <FileRef
+               location = "group:LinkedListNode.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "container:"
+            name = "supporting files">
+            <FileRef
+               location = "group:AppDelegate.h">
+            </FileRef>
+            <FileRef
+               location = "group:AppDelegate.m">
+            </FileRef>
+            <Group
+               location = "group:Assets.xcassets"
+               name = "Assets.xcassets">
+               <Group
+                  location = "group:AppIcon.appiconset"
+                  name = "AppIcon.appiconset">
+                  <FileRef
+                     location = "group:Contents.json">
+                  </FileRef>
+               </Group>
+            </Group>
+            <FileRef
+               location = "group:Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:main.m">
+            </FileRef>
+         </Group>
+      </Group>
+   </Group>
+   <Group
+      location = "group:Calculator"
+      name = "Calculator">
+      <Group
+         location = "group:Calculator"
+         name = "Calculator">
+         <FileRef
+            location = "group:Calculator.h">
+         </FileRef>
+         <FileRef
+            location = "group:Calculator.m">
+         </FileRef>
+         <FileRef
+            location = "group:Fraction.h">
+         </FileRef>
+         <FileRef
+            location = "group:Fraction.m">
+         </FileRef>
+         <FileRef
+            location = "group:FractionCalculator.h">
+         </FileRef>
+         <FileRef
+            location = "group:FractionCalculator.m">
+         </FileRef>
+         <FileRef
+            location = "group:main.m">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:Calculator.xcodeproj">
+      </FileRef>
+   </Group>
+</Workspace>
