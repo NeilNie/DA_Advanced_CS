@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "Person.h"
+#import "AddFriendViewController.h"
 
-@interface PersonViewController : UIViewController
+@interface PersonViewController : UIViewController <AddFriendViewControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UINavigationItem *nameTitle;
-@property (strong, nonatomic) Person *person;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property NSUInteger personIndex;
+@property (weak, nonatomic) LinkedList *theWorld;
+@property (strong, nonatomic) Person *person;
 
 @end

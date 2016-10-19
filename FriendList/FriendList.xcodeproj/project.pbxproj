@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2853E0821DB7A8E9001C4BA5 /* AddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2853E0811DB7A8E9001C4BA5 /* AddFriendViewController.m */; };
 		28A1774D1DB6E5A500E53BA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A1774C1DB6E5A500E53BA1 /* Main.storyboard */; };
 		28A177521DB6E5D400E53BA1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A177511DB6E5D400E53BA1 /* Launch Screen.storyboard */; };
 		28A177551DB6E84300E53BA1 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A177541DB6E84300E53BA1 /* Person.m */; };
@@ -39,8 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		286810271DB6F8C300CA76CD /* FriendListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FriendListTests.xctest; path = "/Users/Neil/Library/Mobile Documents/com~apple~CloudDocs/Deerfield Academy/DA Advanced CS/FriendList/build/Debug-iphoneos/FriendListTests.xctest"; sourceTree = "<absolute>"; };
-		286810281DB6F8C300CA76CD /* FriendListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FriendListUITests.xctest; path = "/Users/Neil/Library/Mobile Documents/com~apple~CloudDocs/Deerfield Academy/DA Advanced CS/FriendList/build/Debug-iphoneos/FriendListUITests.xctest"; sourceTree = "<absolute>"; };
+		2853E07E1DB7A4E4001C4BA5 /* FriendListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2853E07F1DB7A4E4001C4BA5 /* FriendListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2853E0801DB7A8E9001C4BA5 /* AddFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendViewController.h; sourceTree = "<group>"; };
+		2853E0811DB7A8E9001C4BA5 /* AddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendViewController.m; sourceTree = "<group>"; };
 		28A177491DB6E55F00E53BA1 /* FriendList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28A1774C1DB6E5A500E53BA1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		28A177511DB6E5D400E53BA1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -116,6 +119,8 @@
 		28A177501DB6E5CA00E53BA1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2853E0801DB7A8E9001C4BA5 /* AddFriendViewController.h */,
+				2853E0811DB7A8E9001C4BA5 /* AddFriendViewController.m */,
 				28BD68EA1DB6D38000C7A04E /* PersonViewController.h */,
 				28BD68EB1DB6D38000C7A04E /* PersonViewController.m */,
 				28BD68EC1DB6D38000C7A04E /* MasterViewController.h */,
@@ -143,6 +148,8 @@
 			children = (
 				28BD68DE1DB6D38000C7A04E /* FriendList */,
 				28A177491DB6E55F00E53BA1 /* FriendList.app */,
+				2853E07E1DB7A4E4001C4BA5 /* FriendListTests.xctest */,
+				2853E07F1DB7A4E4001C4BA5 /* FriendListUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,7 +188,7 @@
 			);
 			name = FriendListTests;
 			productName = FriendListTests;
-			productReference = 286810271DB6F8C300CA76CD /* FriendListTests.xctest */;
+			productReference = 2853E07E1DB7A4E4001C4BA5 /* FriendListTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		28BE17721DB0FEF30081492D /* FriendListUITests */ = {
@@ -199,7 +206,7 @@
 			);
 			name = FriendListUITests;
 			productName = FriendListUITests;
-			productReference = 286810281DB6F8C300CA76CD /* FriendListUITests.xctest */;
+			productReference = 2853E07F1DB7A4E4001C4BA5 /* FriendListUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -288,6 +295,7 @@
 				28A177551DB6E84300E53BA1 /* Person.m in Sources */,
 				28BD68F31DB6D38000C7A04E /* LinkedListNode.m in Sources */,
 				28BD68F21DB6D38000C7A04E /* LinkedList.m in Sources */,
+				2853E0821DB7A8E9001C4BA5 /* AddFriendViewController.m in Sources */,
 				28BD68EF1DB6D38000C7A04E /* AppDelegate.m in Sources */,
 				28BD68EE1DB6D38000C7A04E /* AddPersonViewController.m in Sources */,
 				28BD68F51DB6D38000C7A04E /* PersonViewController.m in Sources */,

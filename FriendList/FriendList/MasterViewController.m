@@ -32,11 +32,18 @@
     return [self.people count];
 
 }
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-}
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 45.0;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }
 }
 
 #pragma mark - AddPerson Delegate
@@ -57,6 +64,10 @@
     [self.people addObject:person];
     Person *person2 = [[Person alloc] initWithName:@"Joseph"];
     [self.people addObject:person2];
+    Person *person3 = [[Person alloc] initWithName:@"Neil"];
+    [self.people addObject:person3];
+    Person *person4 = [[Person alloc] initWithName:@"Joseph"];
+    [self.people addObject:person4];
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -72,6 +83,11 @@
     if ([segue.identifier isEqualToString:@"segueAddPerson"]) {
         AddPersonViewController *controller = [segue destinationViewController];
         controller.delegate = self;
+    }else if ([segue.identifier isEqualToString:@"idShowPerson"]){
+        PersonViewController *vc = [segue destinationViewController];
+        NSIndexPath *index = [self.tableView indexPathForSelectedRow];
+        vc.personIndex = index.row;
+        vc.theWorld = self.people;
     }
 }
 

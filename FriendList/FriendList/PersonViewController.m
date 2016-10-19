@@ -14,11 +14,20 @@
 
 @implementation PersonViewController
 
+#pragma mark - AddFriend ViewController Delegate
+
+-(void)addFriend:(Person *)person{
+    [self.person.friends addObject:person];
+    [self.tableView reloadData];
+}
+
 #pragma mark - UITableView Delegate
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"idFriendCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"idCellFriends" forIndexPath:indexPath];
+    Person *person = [self.person.friends nodeAt:(int)indexPath.row].object;
+    cell.textLabel.text = person.name;
     return cell;
 }
 
@@ -36,25 +45,38 @@
     return 45.0;
 }
 
-
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }
+}
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.nameTitle.title = [(Person *)[self.theWorld nodeAt:(int)self.personIndex].object name];
+    self.person = [self.theWorld nodeAt:(int)self.personIndex].object;
+    Person *person3 = [[Person alloc] initWithName:@"Neil"];
+    [self.person.friends addObject:person3];
+    Person *person4 = [[Person alloc] initWithName:@"Joseph"];
+    [self.person.friends addObject:person4];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"idAddFriend"]) {
+        AddFriendViewController *controller = (AddFriendViewController *)[segue destinationViewController];
+        controller.delegate = self;
+        [controller setWorld:self.theWorld];
+    }
 }
-
 
 @end
