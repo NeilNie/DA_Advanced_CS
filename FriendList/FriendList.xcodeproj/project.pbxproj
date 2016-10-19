@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28A1774D1DB6E5A500E53BA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A1774C1DB6E5A500E53BA1 /* Main.storyboard */; };
+		28A177521DB6E5D400E53BA1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A177511DB6E5D400E53BA1 /* Launch Screen.storyboard */; };
+		28A177551DB6E84300E53BA1 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A177541DB6E84300E53BA1 /* Person.m */; };
 		28BD68EE1DB6D38000C7A04E /* AddPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD68E01DB6D38000C7A04E /* AddPersonViewController.m */; };
 		28BD68EF1DB6D38000C7A04E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD68E21DB6D38000C7A04E /* AppDelegate.m */; };
 		28BD68F01DB6D38000C7A04E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28BD68E31DB6D38000C7A04E /* Assets.xcassets */; };
@@ -15,7 +18,7 @@
 		28BD68F31DB6D38000C7A04E /* LinkedListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD68E81DB6D38000C7A04E /* LinkedListNode.m */; };
 		28BD68F41DB6D38000C7A04E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD68E91DB6D38000C7A04E /* main.m */; };
 		28BD68F51DB6D38000C7A04E /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD68EB1DB6D38000C7A04E /* PersonViewController.m */; };
-		28BD68F61DB6D38000C7A04E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD68ED1DB6D38000C7A04E /* ViewController.m */; };
+		28BD68F61DB6D38000C7A04E /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD68ED1DB6D38000C7A04E /* MasterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		286810271DB6F8C300CA76CD /* FriendListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FriendListTests.xctest; path = "/Users/Neil/Library/Mobile Documents/com~apple~CloudDocs/Deerfield Academy/DA Advanced CS/FriendList/build/Debug-iphoneos/FriendListTests.xctest"; sourceTree = "<absolute>"; };
+		286810281DB6F8C300CA76CD /* FriendListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FriendListUITests.xctest; path = "/Users/Neil/Library/Mobile Documents/com~apple~CloudDocs/Deerfield Academy/DA Advanced CS/FriendList/build/Debug-iphoneos/FriendListUITests.xctest"; sourceTree = "<absolute>"; };
+		28A177491DB6E55F00E53BA1 /* FriendList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28A1774C1DB6E5A500E53BA1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		28A177511DB6E5D400E53BA1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		28A177531DB6E84300E53BA1 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		28A177541DB6E84300E53BA1 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		28BD68DF1DB6D38000C7A04E /* AddPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPersonViewController.h; sourceTree = "<group>"; };
 		28BD68E01DB6D38000C7A04E /* AddPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPersonViewController.m; sourceTree = "<group>"; };
 		28BD68E11DB6D38000C7A04E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -49,11 +59,8 @@
 		28BD68E91DB6D38000C7A04E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		28BD68EA1DB6D38000C7A04E /* PersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
 		28BD68EB1DB6D38000C7A04E /* PersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonViewController.m; sourceTree = "<group>"; };
-		28BD68EC1DB6D38000C7A04E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		28BD68ED1DB6D38000C7A04E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		28BE174F1DB0FEF30081492D /* FriendList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = FriendList.app; path = "/Users/Neil/Library/Mobile Documents/com~apple~CloudDocs/Deerfield Academy/DA Advanced CS/FriendList/build/Debug-iphoneos/FriendList.app"; sourceTree = "<absolute>"; };
-		28BE17681DB0FEF30081492D /* FriendListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FriendListTests.xctest; path = "/Users/Neil/Library/Mobile Documents/com~apple~CloudDocs/Deerfield Academy/DA Advanced CS/FriendList/build/Debug-iphoneos/FriendListTests.xctest"; sourceTree = "<absolute>"; };
-		28BE17731DB0FEF30081492D /* FriendListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FriendListUITests.xctest; path = "/Users/Neil/Library/Mobile Documents/com~apple~CloudDocs/Deerfield Academy/DA Advanced CS/FriendList/build/Debug-iphoneos/FriendListUITests.xctest"; sourceTree = "<absolute>"; };
+		28BD68EC1DB6D38000C7A04E /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		28BD68ED1DB6D38000C7A04E /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,24 +88,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		28BD68DE1DB6D38000C7A04E /* FriendList */ = {
+		28A1774E1DB6E5AC00E53BA1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				28BD68DF1DB6D38000C7A04E /* AddPersonViewController.h */,
-				28BD68E01DB6D38000C7A04E /* AddPersonViewController.m */,
+				28BD68E91DB6D38000C7A04E /* main.m */,
 				28BD68E11DB6D38000C7A04E /* AppDelegate.h */,
 				28BD68E21DB6D38000C7A04E /* AppDelegate.m */,
 				28BD68E31DB6D38000C7A04E /* Assets.xcassets */,
 				28BD68E41DB6D38000C7A04E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		28A1774F1DB6E5BC00E53BA1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
 				28BD68E51DB6D38000C7A04E /* LinkedList.h */,
 				28BD68E61DB6D38000C7A04E /* LinkedList.m */,
 				28BD68E71DB6D38000C7A04E /* LinkedListNode.h */,
 				28BD68E81DB6D38000C7A04E /* LinkedListNode.m */,
-				28BD68E91DB6D38000C7A04E /* main.m */,
+				28A177531DB6E84300E53BA1 /* Person.h */,
+				28A177541DB6E84300E53BA1 /* Person.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		28A177501DB6E5CA00E53BA1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
 				28BD68EA1DB6D38000C7A04E /* PersonViewController.h */,
 				28BD68EB1DB6D38000C7A04E /* PersonViewController.m */,
-				28BD68EC1DB6D38000C7A04E /* ViewController.h */,
-				28BD68ED1DB6D38000C7A04E /* ViewController.m */,
+				28BD68EC1DB6D38000C7A04E /* MasterViewController.h */,
+				28BD68ED1DB6D38000C7A04E /* MasterViewController.m */,
+				28BD68DF1DB6D38000C7A04E /* AddPersonViewController.h */,
+				28BD68E01DB6D38000C7A04E /* AddPersonViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		28BD68DE1DB6D38000C7A04E /* FriendList */ = {
+			isa = PBXGroup;
+			children = (
+				28A1774C1DB6E5A500E53BA1 /* Main.storyboard */,
+				28A177511DB6E5D400E53BA1 /* Launch Screen.storyboard */,
+				28A177501DB6E5CA00E53BA1 /* ViewControllers */,
+				28A1774E1DB6E5AC00E53BA1 /* Supporting Files */,
+				28A1774F1DB6E5BC00E53BA1 /* Classes */,
 			);
 			path = FriendList;
 			sourceTree = "<group>";
@@ -107,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				28BD68DE1DB6D38000C7A04E /* FriendList */,
+				28A177491DB6E55F00E53BA1 /* FriendList.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,7 +163,7 @@
 			);
 			name = FriendList;
 			productName = FriendList;
-			productReference = 28BE174F1DB0FEF30081492D /* FriendList.app */;
+			productReference = 28A177491DB6E55F00E53BA1 /* FriendList.app */;
 			productType = "com.apple.product-type.application";
 		};
 		28BE17671DB0FEF30081492D /* FriendListTests */ = {
@@ -145,7 +181,7 @@
 			);
 			name = FriendListTests;
 			productName = FriendListTests;
-			productReference = 28BE17681DB0FEF30081492D /* FriendListTests.xctest */;
+			productReference = 286810271DB6F8C300CA76CD /* FriendListTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		28BE17721DB0FEF30081492D /* FriendListUITests */ = {
@@ -163,7 +199,7 @@
 			);
 			name = FriendListUITests;
 			productName = FriendListUITests;
-			productReference = 28BE17731DB0FEF30081492D /* FriendListUITests.xctest */;
+			productReference = 286810281DB6F8C300CA76CD /* FriendListUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -219,7 +255,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28A1774D1DB6E5A500E53BA1 /* Main.storyboard in Resources */,
 				28BD68F11DB6D38000C7A04E /* Info.plist in Resources */,
+				28A177521DB6E5D400E53BA1 /* Launch Screen.storyboard in Resources */,
 				28BD68F01DB6D38000C7A04E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,8 +283,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28BD68F61DB6D38000C7A04E /* ViewController.m in Sources */,
+				28BD68F61DB6D38000C7A04E /* MasterViewController.m in Sources */,
 				28BD68F41DB6D38000C7A04E /* main.m in Sources */,
+				28A177551DB6E84300E53BA1 /* Person.m in Sources */,
 				28BD68F31DB6D38000C7A04E /* LinkedListNode.m in Sources */,
 				28BD68F21DB6D38000C7A04E /* LinkedList.m in Sources */,
 				28BD68EF1DB6D38000C7A04E /* AppDelegate.m in Sources */,

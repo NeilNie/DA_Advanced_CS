@@ -15,6 +15,7 @@
 @implementation AddPersonViewController
 
 -(IBAction)addPerson:(id)sender{
+    
     [self.delegate addPersonWithName:self.textField.text];
     [self dismissViewControllerAnimated:YES completion:nil];
 }

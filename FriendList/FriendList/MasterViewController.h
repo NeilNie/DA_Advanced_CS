@@ -11,8 +11,9 @@
 #import "LinkedList.h"
 #import "PersonViewController.h"
 #import "AddPersonViewController.h"
+#import "Person.h"
 
-@interface ViewController : UIViewController <AddPersonViewControllerDelegate>
+@interface MasterViewController : UIViewController <AddPersonViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

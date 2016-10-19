@@ -6,20 +6,21 @@
 //  Copyright © 2016 Yongyang Nie. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MasterViewController.h"
 
-@interface ViewController ()
+@interface MasterViewController ()
 
 @end
 
-@implementation ViewController
+@implementation MasterViewController
 
 #pragma mark - UITableView Delegate
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"idTableCell" forIndexPath:indexPath];
-    cell.textLabel.text = [self.people nodeAt:(int)indexPath.row].object;
+    Person *person = [self.people nodeAt:(int)indexPath.row].object;
+    cell.textLabel.text = person.name;
     return cell;
 }
 
@@ -42,7 +43,8 @@
 
 -(void)addPersonWithName:(NSString *)string{
     
-    [self.people addObject:string];
+    Person *person = [[Person alloc] initWithName:string];
+    [self.people addObject:person];
     [self.tableView reloadData];
 }
 
@@ -51,10 +53,10 @@
 - (void)viewDidLoad {
     
     self.people = [[LinkedList alloc] init];
-    [self.people addObject:@"Neil"];
-    [self.people addObject:@"Joseph"];
-    NSString *string = [self.people nodeAt:0].object;
-    NSLog(@"%@", string);
+    Person *person = [[Person alloc] initWithName:@"Neil"];
+    [self.people addObject:person];
+    Person *person2 = [[Person alloc] initWithName:@"Joseph"];
+    [self.people addObject:person2];
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -70,9 +72,6 @@
     if ([segue.identifier isEqualToString:@"segueAddPerson"]) {
         AddPersonViewController *controller = [segue destinationViewController];
         controller.delegate = self;
-    }else{
-        PersonViewController *controller = [segue destinationViewController];
-        //controller.
     }
 }
 
