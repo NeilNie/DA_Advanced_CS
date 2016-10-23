@@ -116,9 +116,13 @@
 -(void)removeAt:(int)index{
     
     LinkedListNode *node = [self nodeAt:index];
-    node.previous.next = node.next;
-    node.next.previous = node.previous;
-    node = nil;
+    if (index == 0) {
+        self.head = node.next;
+    }else{
+        node.previous.next = node.next;
+        node.next.previous = node.previous;
+        node = nil;
+    }
 }
 
 #pragma mark - Helpers (mainly recursive methods)

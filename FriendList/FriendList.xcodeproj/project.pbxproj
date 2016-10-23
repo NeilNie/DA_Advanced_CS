@@ -14,7 +14,6 @@
 		28BD68EE1DB6D38000C7A04E /* AddPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD68E01DB6D38000C7A04E /* AddPersonViewController.m */; };
 		28BD68EF1DB6D38000C7A04E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD68E21DB6D38000C7A04E /* AppDelegate.m */; };
 		28BD68F01DB6D38000C7A04E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28BD68E31DB6D38000C7A04E /* Assets.xcassets */; };
-		28BD68F11DB6D38000C7A04E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28BD68E41DB6D38000C7A04E /* Info.plist */; };
 		28BD68F21DB6D38000C7A04E /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD68E61DB6D38000C7A04E /* LinkedList.m */; };
 		28BD68F31DB6D38000C7A04E /* LinkedListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD68E81DB6D38000C7A04E /* LinkedListNode.m */; };
 		28BD68F41DB6D38000C7A04E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD68E91DB6D38000C7A04E /* main.m */; };
@@ -263,7 +262,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				28A1774D1DB6E5A500E53BA1 /* Main.storyboard in Resources */,
-				28BD68F11DB6D38000C7A04E /* Info.plist in Resources */,
 				28A177521DB6E5D400E53BA1 /* Launch Screen.storyboard in Resources */,
 				28BD68F01DB6D38000C7A04E /* Assets.xcassets in Resources */,
 			);
@@ -350,6 +348,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -398,6 +397,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

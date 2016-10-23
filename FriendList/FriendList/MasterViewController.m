@@ -37,12 +37,15 @@
     return 45.0;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"%@", [self.people nodeAt:(int)indexPath.row]);
+}
+
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
+        [self removeObjectFromWorld:[self.people nodeAt:(int)indexPath.row].object];
+        [self.people removeAt:(int)indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }
 }
 
@@ -55,6 +58,24 @@
     [self.tableView reloadData];
 }
 
+#pragma mark - Helper
+
+-(void)removeObjectFromWorld:(Person *)object{
+    
+    for (int i = 0; i < [self.people count]; i++) {
+        
+        Person *person = [self.people nodeAt:i].object;
+        
+        for (int x = 0; x < [person.friends count]; x++) {
+            Person *friend = [person.friends nodeAt:x].object;
+            if ([friend.name isEqualToString:object.name]) {
+                [person.friends removeAt:x];
+            }
+        }
+    }
+}
+
+
 #pragma mark - Life Cycle
 
 - (void)viewDidLoad {
@@ -64,10 +85,16 @@
     [self.people addObject:person];
     Person *person2 = [[Person alloc] initWithName:@"Joseph"];
     [self.people addObject:person2];
-    Person *person3 = [[Person alloc] initWithName:@"Neil"];
+    Person *person3 = [[Person alloc] initWithName:@"Paul"];
     [self.people addObject:person3];
-    Person *person4 = [[Person alloc] initWithName:@"Joseph"];
+    Person *person4 = [[Person alloc] initWithName:@"Ben"];
     [self.people addObject:person4];
+    Person *person5 = [[Person alloc] initWithName:@"John"];
+    [self.people addObject:person5];
+    Person *person6 = [[Person alloc] initWithName:@"Joe"];
+    [self.people addObject:person6];
+    
+    NSLog(@"world: %@", self.people);
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }

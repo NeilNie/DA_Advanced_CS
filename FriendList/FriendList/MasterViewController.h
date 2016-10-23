@@ -13,7 +13,7 @@
 #import "AddPersonViewController.h"
 #import "Person.h"
 
-@interface MasterViewController : UIViewController <AddPersonViewControllerDelegate>
+@interface MasterViewController : UIViewController <AddPersonViewControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

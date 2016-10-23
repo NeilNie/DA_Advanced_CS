@@ -39,7 +39,7 @@
     return [self.person.friends count];
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    NSLog(@"%@", [self.person.friends nodeAt:(int)indexPath.row].object);
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 45.0;
@@ -47,10 +47,8 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
+        [self.person.friends removeAt:(int)indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }
 }
 - (void)viewDidLoad {
@@ -58,10 +56,6 @@
     [super viewDidLoad];
     self.nameTitle.title = [(Person *)[self.theWorld nodeAt:(int)self.personIndex].object name];
     self.person = [self.theWorld nodeAt:(int)self.personIndex].object;
-    Person *person3 = [[Person alloc] initWithName:@"Neil"];
-    [self.person.friends addObject:person3];
-    Person *person4 = [[Person alloc] initWithName:@"Joseph"];
-    [self.person.friends addObject:person4];
 }
 
 - (void)didReceiveMemoryWarning {
