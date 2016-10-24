@@ -12,6 +12,7 @@
 
 @interface AddFriendViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
+@property NSUInteger currentPersonIndex;
 @property (strong, nonatomic) LinkedList *world;
 @property (retain, nonatomic) id delegate;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

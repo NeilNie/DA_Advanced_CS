@@ -68,6 +68,7 @@
     
     if ([segue.identifier isEqualToString:@"idAddFriend"]) {
         AddFriendViewController *controller = (AddFriendViewController *)[segue destinationViewController];
+        controller.currentPersonIndex  = self.personIndex;
         controller.delegate = self;
         [controller setWorld:self.theWorld];
     }

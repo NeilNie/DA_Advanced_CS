@@ -22,8 +22,11 @@
 #pragma mark - Table view data source
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self.delegate addFriend:[self.world nodeAt:(int)indexPath.row].object];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    if (indexPath.row != self.currentPersonIndex) {
+        [self.delegate addFriend:[self.world nodeAt:(int)indexPath.row].object];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -38,8 +41,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"idPerson" forIndexPath:indexPath];
-    Person *person = [self.world nodeAt:(int)indexPath.row].object;
-    cell.textLabel.text = person.name;
+    if (indexPath.row != self.currentPersonIndex) {
+        Person *person = [self.world nodeAt:(int)indexPath.row].object;
+        cell.textLabel.text = person.name;
+    }
     return cell;
 }
 
