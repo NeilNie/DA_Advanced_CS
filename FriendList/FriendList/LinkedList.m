@@ -55,16 +55,25 @@
 //count total items in linked list
 -(int)count{
     
+    LinkedListNode *node = self.head;
     int count = 0;
     if (self.head) {
         count++;
-        LinkedListNode *node = self.head;
         while (node.next != nil) {
             count++;
             node = node.next;
         }
     }
     return count;
+}
+
+//count total items in linked list recursively
+-(int)rcount:(LinkedListNode *)node{
+    
+    if (!node.next) {
+        return 0;
+    }
+    return 1 + [self rcount:node.next];
 }
 
 //return two nodes before and after a index
@@ -106,13 +115,13 @@
 
 //clear all objects in linked list recursively.
 -(void)clear{
-    
     self.head = nil;
 }
 -(void)print{
     [self printNode:self.head];
 }
 
+//remove an object at a given index
 -(void)removeAt:(int)index{
     
     LinkedListNode *node = [self nodeAt:index];
@@ -156,7 +165,7 @@
 //print out node, implemented recursively
 -(void)printNode:(LinkedListNode *)node{
     
-    if (node == [self last]) {
+    if (node.next == nil) {
         NSLog(@"%@", node.object);
         NSLog(@"|");
         NSLog(@"nil");

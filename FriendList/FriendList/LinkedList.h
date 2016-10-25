@@ -18,16 +18,22 @@ typedef struct NodesBA {
 
 @property (strong, nonatomic) LinkedListNode *head;
 
+//check is the linked list is empty
 -(BOOL)isEmpty;
 
+//clear the linked list
 -(void)clear;
 
+//print out evey element in the list
 -(void)print;
 
+//remove an object at a given index
 -(void)removeAt:(int)index;
 
+//return the first node of the list
 -(LinkedListNode *)first;
 
+//return the last node of the list. 
 -(LinkedListNode *)last;
 
 -(void)addObject:(id)object;
@@ -38,6 +44,8 @@ typedef struct NodesBA {
 
 -(NodesBA)nodeBeforeAfter:(int)index;
 
+//insert node at a given index.
+//parameter: generic type, int
 -(void)insert:(id)object atIndex:(int)index;
 
 @end

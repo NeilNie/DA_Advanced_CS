@@ -17,8 +17,22 @@
 #pragma mark - AddFriend ViewController Delegate
 
 -(void)addFriend:(Person *)person{
-    [self.person.friends addObject:person];
-    [self.tableView reloadData];
+
+    if (![self checkDuplicateFriends:person]) {
+        [self.person.friends addObject:person];
+        [self.tableView reloadData];
+    }
+}
+
+-(BOOL)checkDuplicateFriends:(Person *)friend{
+    
+    for (int i = 0; i < [self.person.friends count]; i++) {
+        Person *person = [self.person.friends nodeAt:i].object;
+        if ([person.name isEqualToString:friend.name]) {
+            return YES;
+        }
+    }
+    return NO;
 }
 
 #pragma mark - UITableView Delegate
