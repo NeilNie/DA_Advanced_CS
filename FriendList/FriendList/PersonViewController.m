@@ -70,6 +70,7 @@
     [super viewDidLoad];
     self.nameTitle.title = [(Person *)[self.theWorld nodeAt:(int)self.personIndex].object name];
     self.person = [self.theWorld nodeAt:(int)self.personIndex].object;
+    self.detailLabel.text = [NSString stringWithFormat:@"You can see %@'s friends, remove friends and add friends", self.person.name];
 }
 
 - (void)didReceiveMemoryWarning {

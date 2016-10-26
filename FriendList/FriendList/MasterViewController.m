@@ -21,6 +21,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"idTableCell" forIndexPath:indexPath];
     Person *person = [self.people nodeAt:(int)indexPath.row].object;
     cell.textLabel.text = person.name;
+    cell.imageView.image = [UIImage imageNamed:@"Circled User Male.png"];
     return cell;
 }
 

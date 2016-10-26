@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendList/FriendList/MasterViewController.m"
-            timestampString = "499143991.697325"
+            timestampString = "499197440.147843"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "-findConnectFriends:"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "-hasDuplicate:inArray:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

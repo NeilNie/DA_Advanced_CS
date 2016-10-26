@@ -206,14 +206,14 @@
                                 <state key="normal" title="Button"/>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VCs-HU-2IN">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="184" width="375" height="483"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="idCellFriends" id="jCE-q0-uqr">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jCE-q0-uqr" id="hes-f8-WRK">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -223,13 +223,34 @@
                                     <outlet property="delegate" destination="eEM-m8-8OM" id="Ebl-RX-qHh"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Circled User Male.png" translatesAutoresizingMaskIntoConstraints="NO" id="wNw-gW-vRR">
+                                <rect key="frame" x="157" y="72" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="LoQ-Tk-P6a"/>
+                                    <constraint firstAttribute="height" constant="60" id="aBx-Y0-Fcv"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v67-z2-ggJ">
+                                <rect key="frame" x="16" y="140" width="343" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Jeu-tJ-GcW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="VCs-HU-2IN" firstAttribute="top" secondItem="B1R-WR-1cg" secondAttribute="bottom" id="CZG-QJ-88l"/>
+                            <constraint firstItem="VCs-HU-2IN" firstAttribute="top" secondItem="B1R-WR-1cg" secondAttribute="bottom" constant="120" id="CZG-QJ-88l"/>
                             <constraint firstAttribute="trailing" secondItem="VCs-HU-2IN" secondAttribute="trailing" id="FAo-MY-s4G"/>
+                            <constraint firstItem="wNw-gW-vRR" firstAttribute="centerX" secondItem="cz4-x6-oeR" secondAttribute="centerX" id="L6M-X7-GU4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="v67-z2-ggJ" secondAttribute="trailing" id="MKL-Ax-ttz"/>
+                            <constraint firstItem="v67-z2-ggJ" firstAttribute="top" secondItem="wNw-gW-vRR" secondAttribute="bottom" constant="8" id="S0Q-W4-KPh"/>
+                            <constraint firstItem="v67-z2-ggJ" firstAttribute="leading" secondItem="cz4-x6-oeR" secondAttribute="leadingMargin" id="dCo-ZY-3s2"/>
                             <constraint firstItem="VCs-HU-2IN" firstAttribute="leading" secondItem="cz4-x6-oeR" secondAttribute="leading" id="hZG-fS-MjG"/>
                             <constraint firstItem="bMy-ie-Hot" firstAttribute="top" secondItem="VCs-HU-2IN" secondAttribute="bottom" id="lch-n2-YUl"/>
+                            <constraint firstItem="wNw-gW-vRR" firstAttribute="top" secondItem="B1R-WR-1cg" secondAttribute="bottom" constant="8" id="s3d-k9-LAd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="name" id="Xza-bh-q8L">
@@ -246,6 +267,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="detailLabel" destination="v67-z2-ggJ" id="gmr-iX-d38"/>
                         <outlet property="nameTitle" destination="Xza-bh-q8L" id="QUQ-E2-Jbp"/>
                         <outlet property="tableView" destination="VCs-HU-2IN" id="0E7-0G-dsT"/>
                     </connections>
@@ -319,4 +341,7 @@
             <point key="canvasLocation" x="-559.20000000000005" y="732.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Circled User Male.png" width="100" height="100"/>
+    </resources>
 </document>

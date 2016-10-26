@@ -17,5 +17,6 @@
 @property NSUInteger personIndex;
 @property (weak, nonatomic) LinkedList *theWorld;
 @property (strong, nonatomic) Person *person;
+@property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 
 @end

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2853E0821DB7A8E9001C4BA5 /* AddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2853E0811DB7A8E9001C4BA5 /* AddFriendViewController.m */; };
+		28671C661DC12556002F6BAE /* Circled User Male.png in Resources */ = {isa = PBXBuildFile; fileRef = 28671C651DC12556002F6BAE /* Circled User Male.png */; };
 		28A1774D1DB6E5A500E53BA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A1774C1DB6E5A500E53BA1 /* Main.storyboard */; };
 		28A177521DB6E5D400E53BA1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A177511DB6E5D400E53BA1 /* Launch Screen.storyboard */; };
 		28A177551DB6E84300E53BA1 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A177541DB6E84300E53BA1 /* Person.m */; };
@@ -43,6 +44,7 @@
 		2853E07F1DB7A4E4001C4BA5 /* FriendListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2853E0801DB7A8E9001C4BA5 /* AddFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendViewController.h; sourceTree = "<group>"; };
 		2853E0811DB7A8E9001C4BA5 /* AddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendViewController.m; sourceTree = "<group>"; };
+		28671C651DC12556002F6BAE /* Circled User Male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Circled User Male.png"; sourceTree = "<group>"; };
 		28A177491DB6E55F00E53BA1 /* FriendList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28A1774C1DB6E5A500E53BA1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		28A177511DB6E5D400E53BA1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		28A1774E1DB6E5AC00E53BA1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				28671C651DC12556002F6BAE /* Circled User Male.png */,
 				28BD68E91DB6D38000C7A04E /* main.m */,
 				28BD68E11DB6D38000C7A04E /* AppDelegate.h */,
 				28BD68E21DB6D38000C7A04E /* AppDelegate.m */,
@@ -261,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28671C661DC12556002F6BAE /* Circled User Male.png in Resources */,
 				28A1774D1DB6E5A500E53BA1 /* Main.storyboard in Resources */,
 				28A177521DB6E5D400E53BA1 /* Launch Screen.storyboard in Resources */,
 				28BD68F01DB6D38000C7A04E /* Assets.xcassets in Resources */,
