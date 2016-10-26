@@ -38,7 +38,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"%@", [self.people nodeAt:(int)indexPath.row]);
+    NSLog(@"%@", [self findConnectFriends:(Person *)[self.people nodeAt:(int)indexPath.row].object]);
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -75,6 +75,49 @@
     }
 }
 
+-(BOOL)hasDuplicate:(NSString *)name inArray:(NSMutableArray *)array{
+    
+    for (int i = 0; i < array.count; i++) {
+        if ([name isEqualToString:[array objectAtIndex:i]]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
+#pragma mark - Extension
+
+//this method find all the friend's friend of a person that you selected. 
+-(NSMutableArray *)findConnectFriends:(Person *)person{ // withDepth:(int)depth
+    
+    NSMutableArray *result = [NSMutableArray array];
+    LinkedListNode *node = person.friends.head;
+    
+    //iterate through all of the friends of this person.
+    while (node) {
+        
+        //add the name of the friend to the result array
+        [result addObject:[(Person *)node.object name]];
+        
+        //get this friend's friends
+        LinkedList *list = [(Person *)node.object friends];
+        LinkedListNode *friendNode = list.head;
+        
+        //iterate through all of this friend's friend.
+        while (friendNode) {
+            NSString *name = [(Person *)friendNode.object name];
+            
+            //if the person we found is not in the list yet add him to the list.
+            if (![self hasDuplicate:name inArray:result]) {
+                [result addObject:name];
+            }
+            friendNode = friendNode.next;
+        }
+        
+        node = node.next;
+    }
+    return result;
+}
 
 #pragma mark - Life Cycle
 
