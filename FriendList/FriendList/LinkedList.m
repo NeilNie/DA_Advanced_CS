@@ -67,39 +67,11 @@
     return count;
 }
 
-//count total items in linked list recursively
--(int)rcount:(LinkedListNode *)node{
-    
-    if (!node.next) {
-        return 0;
-    }
-    return 1 + [self rcount:node.next];
-}
-
-//return two nodes before and after a index
--(NodesBA)nodeBeforeAfter:(int)index{
-    
-    if (index >= 0) {
-        
-        struct NodesBA nodesba;
-        int c = 0;
-        LinkedListNode *before = [[LinkedListNode alloc] init];
-        LinkedListNode *after = self.head;
-        while (c < index && c < [self count]) {
-            c ++;
-            before = after;
-            after = after.next;
-        }
-        nodesba.before = before;
-        nodesba.after = after;
-        
-        return nodesba;
-    }
-    @throw [NSException exceptionWithName:@"Linked List Out of Bounds" reason:@"index < 0 || index > LinkedList upperbound" userInfo:nil];
-}
-
 -(void)insert:(id)object atIndex:(int)index{
     
+    if (index > [self count])
+        @throw [NSException exceptionWithName:@"Index out of bounds" reason:[NSString stringWithFormat:@"index %i out of bound 0...%i", index, [self count]] userInfo:nil];
+
     LinkedListNode *newNode = [[LinkedListNode alloc] initWithObject:object];
     LinkedListNode *findNode = self.head;
     int count = 0;
@@ -110,20 +82,14 @@
     newNode.previous = findNode;
     newNode.next = findNode.next;
     findNode.next = newNode;
-    NSLog(@"%@", newNode.object);
-}
-
-//clear all objects in linked list recursively.
--(void)clear{
-    self.head = nil;
-}
--(void)print{
-    [self printNode:self.head];
 }
 
 //remove an object at a given index
 -(void)removeAt:(int)index{
     
+    if (index > [self count])
+        @throw [NSException exceptionWithName:@"Index out of bounds" reason:[NSString stringWithFormat:@"index %i out of bound 0...%i", index, [self count]] userInfo:nil];
+
     LinkedListNode *node = [self nodeAt:index];
     if (index == 0) {
         self.head = node.next;
@@ -136,19 +102,13 @@
 
 #pragma mark - Helpers (mainly recursive methods)
 
--(LinkedListNode *)nextNode:(LinkedListNode *)node{
-    
-    static int i;
-    if (node.next == nil) {
-        return nil;
-    }else{
-        i++;
-        return [self nextNode:node.next];
-    }
-}
+//clear all objects in linked list recursively.
+-(void)clear{self.head = nil;}
+
+-(void)print{ [self printNode:self.head];}
 
 //return a node at a certain index
--(LinkedListNode *)nodeAt:(int)index{
+-(LinkedListNode *__nonnull)nodeAt:(int)index{
     
     if (index >= 0) {
         LinkedListNode *node = self.head;
