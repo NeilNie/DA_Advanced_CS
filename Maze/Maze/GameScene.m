@@ -2,7 +2,7 @@
 //  GameScene.m
 //  Maze
 //
-//  Created by Yongyang Nie on 10/28/16.
+//  Created by Yongyang Nie on 11/1/16.
 //  Copyright © 2016 Yongyang Nie. All rights reserved.
 //
 
@@ -58,20 +58,27 @@
     [self addChild:n];
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    // Run 'Pulse' action from 'Actions.sks'
-    [_label runAction:[SKAction actionNamed:@"Pulse"] withKey:@"fadeInOut"];
-    
-    for (UITouch *t in touches) {[self touchDownAtPoint:[t locationInNode:self]];}
+- (void)keyDown:(NSEvent *)theEvent {
+    switch (theEvent.keyCode) {
+        case 0x31 /* SPACE */:
+            // Run 'Pulse' action from 'Actions.sks'
+            [_label runAction:[SKAction actionNamed:@"Pulse"] withKey:@"fadeInOut"];
+            break;
+            
+        default:
+            NSLog(@"keyDown:'%@' keyCode: 0x%02X", theEvent.characters, theEvent.keyCode);
+            break;
+    }
 }
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-    for (UITouch *t in touches) {[self touchMovedToPoint:[t locationInNode:self]];}
+
+- (void)mouseDown:(NSEvent *)theEvent {
+    [self touchDownAtPoint:[theEvent locationInNode:self]];
 }
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    for (UITouch *t in touches) {[self touchUpAtPoint:[t locationInNode:self]];}
+- (void)mouseDragged:(NSEvent *)theEvent {
+    [self touchMovedToPoint:[theEvent locationInNode:self]];
 }
-- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-    for (UITouch *t in touches) {[self touchUpAtPoint:[t locationInNode:self]];}
+- (void)mouseUp:(NSEvent *)theEvent {
+    [self touchUpAtPoint:[theEvent locationInNode:self]];
 }
 
 

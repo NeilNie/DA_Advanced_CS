@@ -7,78 +7,76 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		280579C91DC3CE8500662BD3 /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 280579C61DC3CE8500662BD3 /* LinkedList.m */; };
-		280579CA1DC3CE8500662BD3 /* LinkedListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 280579C81DC3CE8500662BD3 /* LinkedListNode.m */; };
-		280579CD1DC3DD5C00662BD3 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 280579CC1DC3DD5C00662BD3 /* Stack.m */; };
-		28E8F91A1DC39435005AA51F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E8F9191DC39435005AA51F /* main.m */; };
-		28E8F91D1DC39435005AA51F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E8F91C1DC39435005AA51F /* AppDelegate.m */; };
-		28E8F91F1DC39435005AA51F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 28E8F91E1DC39435005AA51F /* GameScene.sks */; };
-		28E8F9211DC39435005AA51F /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 28E8F9201DC39435005AA51F /* Actions.sks */; };
-		28E8F9241DC39435005AA51F /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E8F9231DC39435005AA51F /* GameScene.m */; };
-		28E8F9271DC39435005AA51F /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E8F9261DC39435005AA51F /* GameViewController.m */; };
-		28E8F92A1DC39435005AA51F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28E8F9281DC39435005AA51F /* Main.storyboard */; };
-		28E8F92C1DC39435005AA51F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28E8F92B1DC39435005AA51F /* Assets.xcassets */; };
-		28E8F92F1DC39435005AA51F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28E8F92D1DC39435005AA51F /* LaunchScreen.storyboard */; };
+		28D6F9C71DC8CC290064A333 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6F9C61DC8CC290064A333 /* AppDelegate.m */; };
+		28D6F9CA1DC8CC290064A333 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6F9C91DC8CC290064A333 /* main.m */; };
+		28D6F9CC1DC8CC290064A333 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 28D6F9CB1DC8CC290064A333 /* GameScene.sks */; };
+		28D6F9CE1DC8CC290064A333 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 28D6F9CD1DC8CC290064A333 /* Actions.sks */; };
+		28D6F9D11DC8CC290064A333 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6F9D01DC8CC290064A333 /* GameScene.m */; };
+		28D6F9D41DC8CC290064A333 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6F9D31DC8CC290064A333 /* ViewController.m */; };
+		28D6F9D61DC8CC290064A333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28D6F9D51DC8CC290064A333 /* Assets.xcassets */; };
+		28D6F9D91DC8CC290064A333 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D6F9D71DC8CC290064A333 /* Main.storyboard */; };
+		28D6F9E41DC8CC2A0064A333 /* MazeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6F9E31DC8CC2A0064A333 /* MazeTests.m */; };
+		28D6FA001DC8CC3D0064A333 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6F9FD1DC8CC3D0064A333 /* Queue.m */; };
+		28D6FA011DC8CC3D0064A333 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6F9FF1DC8CC3D0064A333 /* Stack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		28E8F9361DC39436005AA51F /* PBXContainerItemProxy */ = {
+		28D6F9E01DC8CC2A0064A333 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 28E8F90D1DC39435005AA51F /* Project object */;
+			containerPortal = 28D6F9BA1DC8CC290064A333 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 28E8F9141DC39435005AA51F;
+			remoteGlobalIDString = 28D6F9C11DC8CC290064A333;
 			remoteInfo = Maze;
 		};
-		28E8F9411DC39436005AA51F /* PBXContainerItemProxy */ = {
+		28D6F9EB1DC8CC2A0064A333 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 28E8F90D1DC39435005AA51F /* Project object */;
+			containerPortal = 28D6F9BA1DC8CC290064A333 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 28E8F9141DC39435005AA51F;
+			remoteGlobalIDString = 28D6F9C11DC8CC290064A333;
 			remoteInfo = Maze;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		280579C51DC3CE8500662BD3 /* LinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinkedList.h; path = ../FriendList/FriendList/LinkedList.h; sourceTree = "<group>"; };
-		280579C61DC3CE8500662BD3 /* LinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinkedList.m; path = ../FriendList/FriendList/LinkedList.m; sourceTree = "<group>"; };
-		280579C71DC3CE8500662BD3 /* LinkedListNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinkedListNode.h; path = ../FriendList/FriendList/LinkedListNode.h; sourceTree = "<group>"; };
-		280579C81DC3CE8500662BD3 /* LinkedListNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinkedListNode.m; path = ../FriendList/FriendList/LinkedListNode.m; sourceTree = "<group>"; };
-		280579CB1DC3DD5C00662BD3 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
-		280579CC1DC3DD5C00662BD3 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
-		28E8F9151DC39435005AA51F /* Maze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maze.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		28E8F9191DC39435005AA51F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		28E8F91B1DC39435005AA51F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		28E8F91C1DC39435005AA51F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		28E8F91E1DC39435005AA51F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		28E8F9201DC39435005AA51F /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		28E8F9221DC39435005AA51F /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
-		28E8F9231DC39435005AA51F /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
-		28E8F9251DC39435005AA51F /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
-		28E8F9261DC39435005AA51F /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
-		28E8F9291DC39435005AA51F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		28E8F92B1DC39435005AA51F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		28E8F92E1DC39435005AA51F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		28E8F9301DC39435005AA51F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		28E8F9351DC39436005AA51F /* MazeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		28E8F9401DC39436005AA51F /* MazeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28D6F9C21DC8CC290064A333 /* Maze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maze.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28D6F9C51DC8CC290064A333 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		28D6F9C61DC8CC290064A333 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		28D6F9C91DC8CC290064A333 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		28D6F9CB1DC8CC290064A333 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		28D6F9CD1DC8CC290064A333 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		28D6F9CF1DC8CC290064A333 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		28D6F9D01DC8CC290064A333 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		28D6F9D21DC8CC290064A333 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		28D6F9D31DC8CC290064A333 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		28D6F9D51DC8CC290064A333 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		28D6F9D81DC8CC290064A333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		28D6F9DA1DC8CC2A0064A333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28D6F9DF1DC8CC2A0064A333 /* MazeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28D6F9E31DC8CC2A0064A333 /* MazeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MazeTests.m; sourceTree = "<group>"; };
+		28D6F9E51DC8CC2A0064A333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28D6F9EA1DC8CC2A0064A333 /* MazeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28D6F9FC1DC8CC3D0064A333 /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
+		28D6F9FD1DC8CC3D0064A333 /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
+		28D6F9FE1DC8CC3D0064A333 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		28D6F9FF1DC8CC3D0064A333 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		28E8F9121DC39435005AA51F /* Frameworks */ = {
+		28D6F9BF1DC8CC290064A333 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28E8F9321DC39436005AA51F /* Frameworks */ = {
+		28D6F9DC1DC8CC2A0064A333 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28E8F93D1DC39436005AA51F /* Frameworks */ = {
+		28D6F9E71DC8CC2A0064A333 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -88,68 +86,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		28E8F90C1DC39435005AA51F = {
+		28D6F9B91DC8CC290064A333 = {
 			isa = PBXGroup;
 			children = (
-				280579C51DC3CE8500662BD3 /* LinkedList.h */,
-				280579C61DC3CE8500662BD3 /* LinkedList.m */,
-				280579CB1DC3DD5C00662BD3 /* Stack.h */,
-				280579CC1DC3DD5C00662BD3 /* Stack.m */,
-				280579C71DC3CE8500662BD3 /* LinkedListNode.h */,
-				280579C81DC3CE8500662BD3 /* LinkedListNode.m */,
-				28E8F9171DC39435005AA51F /* Maze */,
-				28E8F9161DC39435005AA51F /* Products */,
+				28D6F9C41DC8CC290064A333 /* Maze */,
+				28D6F9E21DC8CC2A0064A333 /* MazeTests */,
+				28D6F9C31DC8CC290064A333 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		28E8F9161DC39435005AA51F /* Products */ = {
+		28D6F9C31DC8CC290064A333 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				28E8F9151DC39435005AA51F /* Maze.app */,
-				28E8F9351DC39436005AA51F /* MazeTests.xctest */,
-				28E8F9401DC39436005AA51F /* MazeUITests.xctest */,
+				28D6F9C21DC8CC290064A333 /* Maze.app */,
+				28D6F9DF1DC8CC2A0064A333 /* MazeTests.xctest */,
+				28D6F9EA1DC8CC2A0064A333 /* MazeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		28E8F9171DC39435005AA51F /* Maze */ = {
+		28D6F9C41DC8CC290064A333 /* Maze */ = {
 			isa = PBXGroup;
 			children = (
-				28E8F91B1DC39435005AA51F /* AppDelegate.h */,
-				28E8F91C1DC39435005AA51F /* AppDelegate.m */,
-				28E8F91E1DC39435005AA51F /* GameScene.sks */,
-				28E8F9201DC39435005AA51F /* Actions.sks */,
-				28E8F9221DC39435005AA51F /* GameScene.h */,
-				28E8F9231DC39435005AA51F /* GameScene.m */,
-				28E8F9251DC39435005AA51F /* GameViewController.h */,
-				28E8F9261DC39435005AA51F /* GameViewController.m */,
-				28E8F9281DC39435005AA51F /* Main.storyboard */,
-				28E8F92B1DC39435005AA51F /* Assets.xcassets */,
-				28E8F92D1DC39435005AA51F /* LaunchScreen.storyboard */,
-				28E8F9301DC39435005AA51F /* Info.plist */,
-				28E8F9181DC39435005AA51F /* Supporting Files */,
+				28D6F9C51DC8CC290064A333 /* AppDelegate.h */,
+				28D6F9C61DC8CC290064A333 /* AppDelegate.m */,
+				28D6F9CB1DC8CC290064A333 /* GameScene.sks */,
+				28D6F9CD1DC8CC290064A333 /* Actions.sks */,
+				28D6F9D21DC8CC290064A333 /* ViewController.h */,
+				28D6F9D31DC8CC290064A333 /* ViewController.m */,
+				28D6F9D51DC8CC290064A333 /* Assets.xcassets */,
+				28D6F9D71DC8CC290064A333 /* Main.storyboard */,
+				28D6F9DA1DC8CC2A0064A333 /* Info.plist */,
+				28D6FA021DC8CC400064A333 /* Classes */,
+				28D6F9C81DC8CC290064A333 /* Supporting Files */,
 			);
 			path = Maze;
 			sourceTree = "<group>";
 		};
-		28E8F9181DC39435005AA51F /* Supporting Files */ = {
+		28D6F9C81DC8CC290064A333 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				28E8F9191DC39435005AA51F /* main.m */,
+				28D6F9C91DC8CC290064A333 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		28D6F9E21DC8CC2A0064A333 /* MazeTests */ = {
+			isa = PBXGroup;
+			children = (
+				28D6F9E31DC8CC2A0064A333 /* MazeTests.m */,
+				28D6F9E51DC8CC2A0064A333 /* Info.plist */,
+			);
+			path = MazeTests;
+			sourceTree = "<group>";
+		};
+		28D6FA021DC8CC400064A333 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				28D6F9CF1DC8CC290064A333 /* GameScene.h */,
+				28D6F9D01DC8CC290064A333 /* GameScene.m */,
+				28D6F9FC1DC8CC3D0064A333 /* Queue.h */,
+				28D6F9FD1DC8CC3D0064A333 /* Queue.m */,
+				28D6F9FE1DC8CC3D0064A333 /* Stack.h */,
+				28D6F9FF1DC8CC3D0064A333 /* Stack.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		28E8F9141DC39435005AA51F /* Maze */ = {
+		28D6F9C11DC8CC290064A333 /* Maze */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 28E8F9491DC39436005AA51F /* Build configuration list for PBXNativeTarget "Maze" */;
+			buildConfigurationList = 28D6F9F31DC8CC2A0064A333 /* Build configuration list for PBXNativeTarget "Maze" */;
 			buildPhases = (
-				28E8F9111DC39435005AA51F /* Sources */,
-				28E8F9121DC39435005AA51F /* Frameworks */,
-				28E8F9131DC39435005AA51F /* Resources */,
+				28D6F9BE1DC8CC290064A333 /* Sources */,
+				28D6F9BF1DC8CC290064A333 /* Frameworks */,
+				28D6F9C01DC8CC290064A333 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -157,74 +170,74 @@
 			);
 			name = Maze;
 			productName = Maze;
-			productReference = 28E8F9151DC39435005AA51F /* Maze.app */;
+			productReference = 28D6F9C21DC8CC290064A333 /* Maze.app */;
 			productType = "com.apple.product-type.application";
 		};
-		28E8F9341DC39436005AA51F /* MazeTests */ = {
+		28D6F9DE1DC8CC2A0064A333 /* MazeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 28E8F94C1DC39436005AA51F /* Build configuration list for PBXNativeTarget "MazeTests" */;
+			buildConfigurationList = 28D6F9F61DC8CC2A0064A333 /* Build configuration list for PBXNativeTarget "MazeTests" */;
 			buildPhases = (
-				28E8F9311DC39436005AA51F /* Sources */,
-				28E8F9321DC39436005AA51F /* Frameworks */,
-				28E8F9331DC39436005AA51F /* Resources */,
+				28D6F9DB1DC8CC2A0064A333 /* Sources */,
+				28D6F9DC1DC8CC2A0064A333 /* Frameworks */,
+				28D6F9DD1DC8CC2A0064A333 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				28E8F9371DC39436005AA51F /* PBXTargetDependency */,
+				28D6F9E11DC8CC2A0064A333 /* PBXTargetDependency */,
 			);
 			name = MazeTests;
 			productName = MazeTests;
-			productReference = 28E8F9351DC39436005AA51F /* MazeTests.xctest */;
+			productReference = 28D6F9DF1DC8CC2A0064A333 /* MazeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		28E8F93F1DC39436005AA51F /* MazeUITests */ = {
+		28D6F9E91DC8CC2A0064A333 /* MazeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 28E8F94F1DC39436005AA51F /* Build configuration list for PBXNativeTarget "MazeUITests" */;
+			buildConfigurationList = 28D6F9F91DC8CC2A0064A333 /* Build configuration list for PBXNativeTarget "MazeUITests" */;
 			buildPhases = (
-				28E8F93C1DC39436005AA51F /* Sources */,
-				28E8F93D1DC39436005AA51F /* Frameworks */,
-				28E8F93E1DC39436005AA51F /* Resources */,
+				28D6F9E61DC8CC2A0064A333 /* Sources */,
+				28D6F9E71DC8CC2A0064A333 /* Frameworks */,
+				28D6F9E81DC8CC2A0064A333 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				28E8F9421DC39436005AA51F /* PBXTargetDependency */,
+				28D6F9EC1DC8CC2A0064A333 /* PBXTargetDependency */,
 			);
 			name = MazeUITests;
 			productName = MazeUITests;
-			productReference = 28E8F9401DC39436005AA51F /* MazeUITests.xctest */;
+			productReference = 28D6F9EA1DC8CC2A0064A333 /* MazeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		28E8F90D1DC39435005AA51F /* Project object */ = {
+		28D6F9BA1DC8CC290064A333 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Yongyang Nie";
 				TargetAttributes = {
-					28E8F9141DC39435005AA51F = {
+					28D6F9C11DC8CC290064A333 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 8NZ8K5GNH8;
 						ProvisioningStyle = Automatic;
 					};
-					28E8F9341DC39436005AA51F = {
+					28D6F9DE1DC8CC2A0064A333 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 8NZ8K5GNH8;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 28E8F9141DC39435005AA51F;
+						TestTargetID = 28D6F9C11DC8CC290064A333;
 					};
-					28E8F93F1DC39436005AA51F = {
+					28D6F9E91DC8CC2A0064A333 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 8NZ8K5GNH8;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 28E8F9141DC39435005AA51F;
+						TestTargetID = 28D6F9C11DC8CC290064A333;
 					};
 				};
 			};
-			buildConfigurationList = 28E8F9101DC39435005AA51F /* Build configuration list for PBXProject "Maze" */;
+			buildConfigurationList = 28D6F9BD1DC8CC290064A333 /* Build configuration list for PBXProject "Maze" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -232,39 +245,38 @@
 				en,
 				Base,
 			);
-			mainGroup = 28E8F90C1DC39435005AA51F;
-			productRefGroup = 28E8F9161DC39435005AA51F /* Products */;
+			mainGroup = 28D6F9B91DC8CC290064A333;
+			productRefGroup = 28D6F9C31DC8CC290064A333 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				28E8F9141DC39435005AA51F /* Maze */,
-				28E8F9341DC39436005AA51F /* MazeTests */,
-				28E8F93F1DC39436005AA51F /* MazeUITests */,
+				28D6F9C11DC8CC290064A333 /* Maze */,
+				28D6F9DE1DC8CC2A0064A333 /* MazeTests */,
+				28D6F9E91DC8CC2A0064A333 /* MazeUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		28E8F9131DC39435005AA51F /* Resources */ = {
+		28D6F9C01DC8CC290064A333 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28E8F92A1DC39435005AA51F /* Main.storyboard in Resources */,
-				28E8F91F1DC39435005AA51F /* GameScene.sks in Resources */,
-				28E8F92C1DC39435005AA51F /* Assets.xcassets in Resources */,
-				28E8F92F1DC39435005AA51F /* LaunchScreen.storyboard in Resources */,
-				28E8F9211DC39435005AA51F /* Actions.sks in Resources */,
+				28D6F9CC1DC8CC290064A333 /* GameScene.sks in Resources */,
+				28D6F9D61DC8CC290064A333 /* Assets.xcassets in Resources */,
+				28D6F9CE1DC8CC290064A333 /* Actions.sks in Resources */,
+				28D6F9D91DC8CC290064A333 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28E8F9331DC39436005AA51F /* Resources */ = {
+		28D6F9DD1DC8CC2A0064A333 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28E8F93E1DC39436005AA51F /* Resources */ = {
+		28D6F9E81DC8CC2A0064A333 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -274,28 +286,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		28E8F9111DC39435005AA51F /* Sources */ = {
+		28D6F9BE1DC8CC290064A333 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28E8F9271DC39435005AA51F /* GameViewController.m in Sources */,
-				280579CD1DC3DD5C00662BD3 /* Stack.m in Sources */,
-				28E8F91D1DC39435005AA51F /* AppDelegate.m in Sources */,
-				280579CA1DC3CE8500662BD3 /* LinkedListNode.m in Sources */,
-				28E8F9241DC39435005AA51F /* GameScene.m in Sources */,
-				280579C91DC3CE8500662BD3 /* LinkedList.m in Sources */,
-				28E8F91A1DC39435005AA51F /* main.m in Sources */,
+				28D6FA011DC8CC3D0064A333 /* Stack.m in Sources */,
+				28D6FA001DC8CC3D0064A333 /* Queue.m in Sources */,
+				28D6F9CA1DC8CC290064A333 /* main.m in Sources */,
+				28D6F9D11DC8CC290064A333 /* GameScene.m in Sources */,
+				28D6F9D41DC8CC290064A333 /* ViewController.m in Sources */,
+				28D6F9C71DC8CC290064A333 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28E8F9311DC39436005AA51F /* Sources */ = {
+		28D6F9DB1DC8CC2A0064A333 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28D6F9E41DC8CC2A0064A333 /* MazeTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28E8F93C1DC39436005AA51F /* Sources */ = {
+		28D6F9E61DC8CC2A0064A333 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -305,39 +317,31 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		28E8F9371DC39436005AA51F /* PBXTargetDependency */ = {
+		28D6F9E11DC8CC2A0064A333 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 28E8F9141DC39435005AA51F /* Maze */;
-			targetProxy = 28E8F9361DC39436005AA51F /* PBXContainerItemProxy */;
+			target = 28D6F9C11DC8CC290064A333 /* Maze */;
+			targetProxy = 28D6F9E01DC8CC2A0064A333 /* PBXContainerItemProxy */;
 		};
-		28E8F9421DC39436005AA51F /* PBXTargetDependency */ = {
+		28D6F9EC1DC8CC2A0064A333 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 28E8F9141DC39435005AA51F /* Maze */;
-			targetProxy = 28E8F9411DC39436005AA51F /* PBXContainerItemProxy */;
+			target = 28D6F9C11DC8CC290064A333 /* Maze */;
+			targetProxy = 28D6F9EB1DC8CC2A0064A333 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		28E8F9281DC39435005AA51F /* Main.storyboard */ = {
+		28D6F9D71DC8CC290064A333 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				28E8F9291DC39435005AA51F /* Base */,
+				28D6F9D81DC8CC290064A333 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		28E8F92D1DC39435005AA51F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				28E8F92E1DC39435005AA51F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		28E8F9471DC39436005AA51F /* Debug */ = {
+		28D6F9F11DC8CC2A0064A333 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -358,7 +362,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -377,15 +381,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
-		28E8F9481DC39436005AA51F /* Release */ = {
+		28D6F9F21DC8CC2A0064A333 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -406,7 +409,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -419,82 +422,86 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
-		28E8F94A1DC39436005AA51F /* Debug */ = {
+		28D6F9F41DC8CC2A0064A333 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8NZ8K5GNH8;
 				INFOPLIST_FILE = Maze/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.Maze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		28E8F94B1DC39436005AA51F /* Release */ = {
+		28D6F9F51DC8CC2A0064A333 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8NZ8K5GNH8;
 				INFOPLIST_FILE = Maze/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.Maze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		28E8F94D1DC39436005AA51F /* Debug */ = {
+		28D6F9F71DC8CC2A0064A333 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8NZ8K5GNH8;
 				INFOPLIST_FILE = MazeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.MazeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Maze.app/Maze";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Maze.app/Contents/MacOS/Maze";
 			};
 			name = Debug;
 		};
-		28E8F94E1DC39436005AA51F /* Release */ = {
+		28D6F9F81DC8CC2A0064A333 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8NZ8K5GNH8;
 				INFOPLIST_FILE = MazeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.MazeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Maze.app/Maze";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Maze.app/Contents/MacOS/Maze";
 			};
 			name = Release;
 		};
-		28E8F9501DC39436005AA51F /* Debug */ = {
+		28D6F9FA1DC8CC2A0064A333 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8NZ8K5GNH8;
 				INFOPLIST_FILE = MazeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.MazeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = Maze;
 			};
 			name = Debug;
 		};
-		28E8F9511DC39436005AA51F /* Release */ = {
+		28D6F9FB1DC8CC2A0064A333 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8NZ8K5GNH8;
 				INFOPLIST_FILE = MazeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.MazeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = Maze;
@@ -504,43 +511,40 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		28E8F9101DC39435005AA51F /* Build configuration list for PBXProject "Maze" */ = {
+		28D6F9BD1DC8CC290064A333 /* Build configuration list for PBXProject "Maze" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				28E8F9471DC39436005AA51F /* Debug */,
-				28E8F9481DC39436005AA51F /* Release */,
+				28D6F9F11DC8CC2A0064A333 /* Debug */,
+				28D6F9F21DC8CC2A0064A333 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		28E8F9491DC39436005AA51F /* Build configuration list for PBXNativeTarget "Maze" */ = {
+		28D6F9F31DC8CC2A0064A333 /* Build configuration list for PBXNativeTarget "Maze" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				28E8F94A1DC39436005AA51F /* Debug */,
-				28E8F94B1DC39436005AA51F /* Release */,
+				28D6F9F41DC8CC2A0064A333 /* Debug */,
+				28D6F9F51DC8CC2A0064A333 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		28E8F94C1DC39436005AA51F /* Build configuration list for PBXNativeTarget "MazeTests" */ = {
+		28D6F9F61DC8CC2A0064A333 /* Build configuration list for PBXNativeTarget "MazeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				28E8F94D1DC39436005AA51F /* Debug */,
-				28E8F94E1DC39436005AA51F /* Release */,
+				28D6F9F71DC8CC2A0064A333 /* Debug */,
+				28D6F9F81DC8CC2A0064A333 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		28E8F94F1DC39436005AA51F /* Build configuration list for PBXNativeTarget "MazeUITests" */ = {
+		28D6F9F91DC8CC2A0064A333 /* Build configuration list for PBXNativeTarget "MazeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				28E8F9501DC39436005AA51F /* Debug */,
-				28E8F9511DC39436005AA51F /* Release */,
+				28D6F9FA1DC8CC2A0064A333 /* Debug */,
+				28D6F9FB1DC8CC2A0064A333 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 28E8F90D1DC39435005AA51F /* Project object */;
+	rootObject = 28D6F9BA1DC8CC290064A333 /* Project object */;
 }
