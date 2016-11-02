@@ -8,6 +8,8 @@ The applicaiton can calculate fractions for you in the forms of fractions.
 Recursion is a very important concept in computer science. This project contains a couple of really interesting recursion problems, including GCD, Hanio toward other more. 
 ###Linked Lists
 An application build on top of the basic data structure -- linked list. You can enter people into this app and add friends to individual in this world.  
+###Maze
+Solving mazes with breath first and depth first searches. Built with Xcode and animated with SpriteKit. 
 
 ###Credit:
 If you have any questions, comments or concerns, feel free to contact me at appledeveloper.neil@gmail.com
