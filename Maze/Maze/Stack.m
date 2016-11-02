@@ -40,4 +40,10 @@
     return self.list.head == nil;
 }
 
+-(void)print{
+    
+    [self.list print];
+    NSLog(@"%i items in stack", [self count]);
+}
+
 @end

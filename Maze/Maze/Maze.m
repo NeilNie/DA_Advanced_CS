@@ -33,7 +33,7 @@
     
     self.start = [self findStart];
     self.end = [self findEnd];
-    
+    self.current = self.start;
     self.moves = [[LinkedList alloc] init];
     
     if (mode == MZSolveModeDepth) {
@@ -47,6 +47,40 @@
     
     while(![self isSolved]) {
         
+        struct MZPoint point = self.current;
+        
+        for (int i = 0; i < 4; i++) {
+            switch (i) {
+                case 0:
+                    point = [self makePointx:self.current.x + 1 y:self.current.y];
+                    break;
+                case 1:
+                    point = [self makePointx:self.current.x - 1 y:self.current.y];
+                    break;
+                case 2:
+                    point = [self makePointx:self.current.x y:self.current.y + 1];
+                    break;
+                case 3:
+                    point = [self makePointx:self.current.x y:self.current.y - 1];
+                    break;
+                case 4:
+                    if ([self.stack isEmpty])
+                        @throw [NSException exceptionWithName:@"invalid maze" reason:@"invalid maze: it can not be solved." userInfo:nil];
+                    [self.stack pop];
+                    break;
+                    
+                default:
+                    break;
+            }
+            if ([self canMoveTo:point]) {
+                MZMove *move = [[MZMove alloc] initWithPoint:point.x y:point.y parent:self.currentMove inDirection:i];
+                [self.stack push:move];
+                self.current = point;
+                self.currentMove = move;
+                //NSLog(@"move %i, %i", point.x, point.y);
+                break;
+            }
+        }
     }
 }
 
@@ -76,6 +110,13 @@
 }
 
 #pragma mark - Private
+
+-(BOOL)canMoveTo:(struct MZPoint)point{
+    
+    return
+    [[self charAt:[self makePointx:point.x y:point.y]] isEqualToString:@"."] &&
+    !(self.current.x == point.x && self.current.y == point.y);
+}
 
 -(BOOL)isSolved{
     

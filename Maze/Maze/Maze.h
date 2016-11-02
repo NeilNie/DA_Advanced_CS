@@ -10,6 +10,7 @@
 #import "LinkedList.h"
 #import "Queue.h"
 #import "Stack.h"
+#import "MZMove.h"
 
 typedef enum MZSolveMode {
     MZSolveModeBreadth = 0,
@@ -38,6 +39,8 @@ struct MZPoint {
 //the current position of the maze. Used for solving the maze
 @property struct MZPoint current;
 
+@property (strong, nonatomic) MZMove *currentMove;
+
 //linked list containing all the moves.
 @property (strong, nonatomic) LinkedList *moves;
 
@@ -48,6 +51,8 @@ struct MZPoint {
 @property (strong, nonatomic) Stack *stack;
 
 /**Methods**/
+
+-(instancetype)initWithText:(NSString *)string rowLength:(int)length;
 
 //convert text to matrix
 +(NSMutableArray <NSMutableArray *> *)convertTextToMaze:(NSString *)maze rowLength:(int)length;

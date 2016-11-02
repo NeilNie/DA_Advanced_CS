@@ -8,6 +8,12 @@
 
 #import "LinkedList.h"
 
+#if __has_feature(objc_arc)
+#define MDLog(format, ...) CFShow((__bridge CFStringRef)[NSString stringWithFormat:format, ## __VA_ARGS__]);
+#else
+#define MDLog(format, ...) CFShow([NSString stringWithFormat:format, ## __VA_ARGS__]);
+#endif
+
 @implementation LinkedList
 
 #pragma mark - Constructor
@@ -105,7 +111,7 @@
 //clear all objects in linked list recursively.
 -(void)clear{self.head = nil;}
 
--(void)print{ [self printNode:self.head];}
+-(void)print{ NSLog(@"Linked List:"); [self printNode:self.head];}
 
 //return a node at a certain index
 -(LinkedListNode *__nonnull)nodeAt:(int)index{
@@ -126,12 +132,13 @@
 -(void)printNode:(LinkedListNode *)node{
     
     if (node.next == nil) {
-        NSLog(@"%@", node.object);
-        NSLog(@"|");
-        NSLog(@"nil");
+        MDLog(@"%@", [node.object description]);
+        MDLog(@"----------");
     }else{
-        NSLog(@"%@", node.object);
-        NSLog(@"|");
+        MDLog(@"%@", [node.object description]);
+        MDLog(@" | ");
+        MDLog(@" | ");
+        MDLog(@"----------");
         [self printNode:node.next];
     }
 }

@@ -14,7 +14,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"%@", [Maze convertTextToMaze:@"#########S...#####.#...###.##.###..#.#####...#G###.#...#########" rowLength:8]);
+    Maze *maze = [[Maze alloc] initWithText:@"####S##.##.##.##.##.##.##.##.##E####" rowLength:3];
+    [maze mazeBegin:MZSolveModeDepth];
+    [maze solveMaze];
+    [maze.stack print];
     
 //    // Load the SKScene from 'GameScene.sks'
 //    GameScene *scene = (GameScene *)[SKScene nodeWithFileNamed:@"GameScene"];
