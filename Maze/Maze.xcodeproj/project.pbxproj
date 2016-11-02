@@ -18,6 +18,10 @@
 		28D6F9E41DC8CC2A0064A333 /* MazeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6F9E31DC8CC2A0064A333 /* MazeTests.m */; };
 		28D6FA001DC8CC3D0064A333 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6F9FD1DC8CC3D0064A333 /* Queue.m */; };
 		28D6FA011DC8CC3D0064A333 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6F9FF1DC8CC3D0064A333 /* Stack.m */; };
+		28D6FA081DC8CCBE0064A333 /* MZMove.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6FA071DC8CCBE0064A333 /* MZMove.m */; };
+		28D6FA131DC8CD310064A333 /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6FA101DC8CD310064A333 /* LinkedList.m */; };
+		28D6FA141DC8CD310064A333 /* LinkedListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6FA121DC8CD310064A333 /* LinkedListNode.m */; };
+		28D6FA171DC922BB0064A333 /* Maze.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6FA161DC922BB0064A333 /* Maze.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,14 @@
 		28D6F9FD1DC8CC3D0064A333 /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
 		28D6F9FE1DC8CC3D0064A333 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		28D6F9FF1DC8CC3D0064A333 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		28D6FA061DC8CCBE0064A333 /* MZMove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMove.h; sourceTree = "<group>"; };
+		28D6FA071DC8CCBE0064A333 /* MZMove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZMove.m; sourceTree = "<group>"; };
+		28D6FA0F1DC8CD310064A333 /* LinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinkedList.h; path = ../../FriendList/FriendList/LinkedList.h; sourceTree = "<group>"; };
+		28D6FA101DC8CD310064A333 /* LinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinkedList.m; path = ../../FriendList/FriendList/LinkedList.m; sourceTree = "<group>"; };
+		28D6FA111DC8CD310064A333 /* LinkedListNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinkedListNode.h; path = ../../FriendList/FriendList/LinkedListNode.h; sourceTree = "<group>"; };
+		28D6FA121DC8CD310064A333 /* LinkedListNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinkedListNode.m; path = ../../FriendList/FriendList/LinkedListNode.m; sourceTree = "<group>"; };
+		28D6FA151DC922BB0064A333 /* Maze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Maze.h; sourceTree = "<group>"; };
+		28D6FA161DC922BB0064A333 /* Maze.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Maze.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,15 +120,8 @@
 		28D6F9C41DC8CC290064A333 /* Maze */ = {
 			isa = PBXGroup;
 			children = (
-				28D6F9C51DC8CC290064A333 /* AppDelegate.h */,
-				28D6F9C61DC8CC290064A333 /* AppDelegate.m */,
-				28D6F9CB1DC8CC290064A333 /* GameScene.sks */,
-				28D6F9CD1DC8CC290064A333 /* Actions.sks */,
-				28D6F9D21DC8CC290064A333 /* ViewController.h */,
-				28D6F9D31DC8CC290064A333 /* ViewController.m */,
-				28D6F9D51DC8CC290064A333 /* Assets.xcassets */,
-				28D6F9D71DC8CC290064A333 /* Main.storyboard */,
-				28D6F9DA1DC8CC2A0064A333 /* Info.plist */,
+				28D6FA1D1DC94A340064A333 /* ViewControllers */,
+				28D6FA1C1DC94A190064A333 /* Scene */,
 				28D6FA021DC8CC400064A333 /* Classes */,
 				28D6F9C81DC8CC290064A333 /* Supporting Files */,
 			);
@@ -126,6 +131,11 @@
 		28D6F9C81DC8CC290064A333 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				28D6F9D71DC8CC290064A333 /* Main.storyboard */,
+				28D6F9C51DC8CC290064A333 /* AppDelegate.h */,
+				28D6F9C61DC8CC290064A333 /* AppDelegate.m */,
+				28D6F9D51DC8CC290064A333 /* Assets.xcassets */,
+				28D6F9DA1DC8CC2A0064A333 /* Info.plist */,
 				28D6F9C91DC8CC290064A333 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -145,12 +155,46 @@
 			children = (
 				28D6F9CF1DC8CC290064A333 /* GameScene.h */,
 				28D6F9D01DC8CC290064A333 /* GameScene.m */,
-				28D6F9FC1DC8CC3D0064A333 /* Queue.h */,
-				28D6F9FD1DC8CC3D0064A333 /* Queue.m */,
-				28D6F9FE1DC8CC3D0064A333 /* Stack.h */,
-				28D6F9FF1DC8CC3D0064A333 /* Stack.m */,
+				28D6FA151DC922BB0064A333 /* Maze.h */,
+				28D6FA161DC922BB0064A333 /* Maze.m */,
+				28D6FA061DC8CCBE0064A333 /* MZMove.h */,
+				28D6FA071DC8CCBE0064A333 /* MZMove.m */,
+				28D6FA1B1DC94A0C0064A333 /* Data */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		28D6FA1B1DC94A0C0064A333 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				28D6F9FE1DC8CC3D0064A333 /* Stack.h */,
+				28D6F9FF1DC8CC3D0064A333 /* Stack.m */,
+				28D6F9FC1DC8CC3D0064A333 /* Queue.h */,
+				28D6F9FD1DC8CC3D0064A333 /* Queue.m */,
+				28D6FA0F1DC8CD310064A333 /* LinkedList.h */,
+				28D6FA101DC8CD310064A333 /* LinkedList.m */,
+				28D6FA111DC8CD310064A333 /* LinkedListNode.h */,
+				28D6FA121DC8CD310064A333 /* LinkedListNode.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		28D6FA1C1DC94A190064A333 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				28D6F9CB1DC8CC290064A333 /* GameScene.sks */,
+				28D6F9CD1DC8CC290064A333 /* Actions.sks */,
+			);
+			name = Scene;
+			sourceTree = "<group>";
+		};
+		28D6FA1D1DC94A340064A333 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				28D6F9D21DC8CC290064A333 /* ViewController.h */,
+				28D6F9D31DC8CC290064A333 /* ViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,11 +335,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				28D6FA011DC8CC3D0064A333 /* Stack.m in Sources */,
+				28D6FA081DC8CCBE0064A333 /* MZMove.m in Sources */,
 				28D6FA001DC8CC3D0064A333 /* Queue.m in Sources */,
+				28D6FA131DC8CD310064A333 /* LinkedList.m in Sources */,
 				28D6F9CA1DC8CC290064A333 /* main.m in Sources */,
 				28D6F9D11DC8CC290064A333 /* GameScene.m in Sources */,
 				28D6F9D41DC8CC290064A333 /* ViewController.m in Sources */,
+				28D6FA141DC8CD310064A333 /* LinkedListNode.m in Sources */,
 				28D6F9C71DC8CC290064A333 /* AppDelegate.m in Sources */,
+				28D6FA171DC922BB0064A333 /* Maze.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +575,7 @@
 				28D6F9F51DC8CC2A0064A333 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		28D6F9F61DC8CC2A0064A333 /* Build configuration list for PBXNativeTarget "MazeTests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +584,7 @@
 				28D6F9F81DC8CC2A0064A333 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		28D6F9F91DC8CC2A0064A333 /* Build configuration list for PBXNativeTarget "MazeUITests" */ = {
 			isa = XCConfigurationList;
@@ -543,6 +593,7 @@
 				28D6F9FB1DC8CC2A0064A333 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

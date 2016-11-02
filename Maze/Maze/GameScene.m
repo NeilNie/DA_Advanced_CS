@@ -81,7 +81,6 @@
     [self touchUpAtPoint:[theEvent locationInNode:self]];
 }
 
-
 -(void)update:(CFTimeInterval)currentTime {
     // Called before each frame is rendered
 }

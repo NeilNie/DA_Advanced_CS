@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import <SpriteKit/SpriteKit.h>
 #import <GameplayKit/GameplayKit.h>
+#import "Maze.h"
 
 @interface ViewController : NSViewController
 
