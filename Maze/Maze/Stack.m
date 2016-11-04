@@ -34,7 +34,7 @@
     [self.list removeAt:[self.list count] - 1];
 }
 -(id)peek{
-    return [self.list nodeAt:[self.list count] - 1];
+    return [(LinkedListNode *)[self.list nodeAt:[self.list count] - 1] object];
 }
 -(BOOL)isEmpty{
     return self.list.head == nil;

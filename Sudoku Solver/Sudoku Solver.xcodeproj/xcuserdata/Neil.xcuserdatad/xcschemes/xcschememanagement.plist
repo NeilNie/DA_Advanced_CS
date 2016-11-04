@@ -4,25 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Maze.xcscheme_^#shared#^_</key>
+		<key>Sudoku Solver.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>5</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>28D6F9C11DC8CC290064A333</key>
+		<key>28A0DCC21DCD14B000B67AA2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>28D6F9DE1DC8CC2A0064A333</key>
+		<key>28A0DCD81DCD14B000B67AA2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>28D6F9E91DC8CC2A0064A333</key>
+		<key>28A0DCE31DCD14B000B67AA2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

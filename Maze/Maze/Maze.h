@@ -57,8 +57,11 @@ struct MZPoint {
 //convert text to matrix
 +(NSMutableArray <NSMutableArray *> *)convertTextToMaze:(NSString *)maze rowLength:(int)length;
 
-//solve maze
--(void)solveMaze;
+//solve maze with depth first search
+-(void)DepthSolveMaze;
+
+//solve maze with breadth first search
+-(void)BreadthSolveMaze;
 
 //return char at a certain index
 -(NSString *)charAt:(struct MZPoint)point;

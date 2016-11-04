@@ -27,8 +27,10 @@
     return self;
 }
 
--(void)dequeue{
+-(id)dequeue{
+    id object = [self.objects nodeAt:0].object;
     [self.objects removeAt:0];
+    return object;
 }
 -(void)enqueue:(id)object{
     [self.objects addObject:object];

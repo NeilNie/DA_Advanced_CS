@@ -14,10 +14,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    Maze *maze = [[Maze alloc] initWithText:@"####S##.##.##.##.##.##.##.##.##E####" rowLength:3];
-    [maze mazeBegin:MZSolveModeDepth];
-    [maze solveMaze];
-    [maze.stack print];
+
+    //Maze *maze = [[Maze alloc] initWithText:@"####################S#...............##.#.###.#.##########...#...#.........##.###.#########.#.##.#...#.......#.#.##.#####.#####.###.##...#.......#.#...####.#.#####.#.#.#.##...#.#...#.#.#.#.####.#.#.#.#.#.#.#.##...#...#.#.#...#.##.#######.##########.......#.#.......######.#.#.#.#####.##...#.#.#...#...#.##.###.#.#####.#.#.##.....#.......#.#E####################" rowLength:19];
+    //Maze *maze = [[Maze alloc] initWithText:@"#######S##.##.##E####" rowLength:3];
+    Maze *maze = [[Maze alloc] initWithText:@"#########S...#####.#...###.##.###..#.#####...#E###.#...#########" rowLength:8];
+    
+    [maze mazeBegin:MZSolveModeBreadth];
+    NSLog(@"");
+    [maze BreadthSolveMaze];
+    [maze.moves print];
+    NSLog(@"");
     
 //    // Load the SKScene from 'GameScene.sks'
 //    GameScene *scene = (GameScene *)[SKScene nodeWithFileNamed:@"GameScene"];

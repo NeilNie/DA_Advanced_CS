@@ -14,7 +14,7 @@
 - (instancetype)init;
 
 //dequeue: remove the first object in the queue
--(void)dequeue;
+-(id)dequeue;
 
 //dequeue: add an object to the back of the queue
 -(void)enqueue:(id)object;
