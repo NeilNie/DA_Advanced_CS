@@ -12,17 +12,35 @@
 
 #pragma mark - Constructors
 
-- (instancetype)init{
-    
-    self = [super init];
-    return self;
-}
-
 -(instancetype)initWithText:(NSString *)string rowLength:(int)length{
     
     self = [super init];
     if (self) {
+        self.queue = [[Queue alloc] init];
+        self.stack = [[Stack alloc] init];
         self.maze = [Maze convertTextToMaze:string rowLength:length];
+        self.start = [self findStart];
+        self.end = [self findEnd];
+        self.current = self.start;
+        self.moves = [[LinkedList alloc] init];
+        self.currentMove = [[MZMove alloc] initWithPoint:self.start.x y:self.start.y parent:nil inDirection:0];
+    }
+    return self;
+}
+
+-(instancetype)initWithFile:(NSArray *)array{
+    
+    self = [super init];
+    if (self) {
+        [self convertArrayToMatrix:array];
+        self.queue = [[Queue alloc] init];
+        self.stack = [[Stack alloc] init];
+        self.start = [self findStart];
+        self.end = [self findEnd];
+        self.current = self.start;
+        self.moves = [[LinkedList alloc] init];
+        self.currentMove = [[MZMove alloc] initWithPoint:self.start.x y:self.start.y parent:nil inDirection:0];
+        
     }
     return self;
 }
@@ -31,99 +49,37 @@
 
 -(void)mazeBegin:(MZSolveMode)mode{
     
-    self.start = [self findStart];
-    self.end = [self findEnd];
-    self.current = self.start;
-    self.moves = [[LinkedList alloc] init];
-    self.currentMove = [[MZMove alloc] initWithPoint:self.start.x y:self.start.y parent:nil inDirection:0];
-    
     if (mode == MZSolveModeDepth) {
-        self.stack = [[Stack alloc] init];
+        while (![self isSolved]) {
+            [self DepthSolveMaze];
+        }
     }else{
-        self.queue = [[Queue alloc] init];
         [self.queue enqueue:self.currentMove];
+        while (![self isSolved]) {
+            [self BreadthSolveMaze];
+        }
     }
 }
 
 -(void)BreadthSolveMaze{
     
-    while (![self isSolved]) {
+    while (![self.queue isEmpty]) {
         
-        while (![self.queue isEmpty]) {
-            
-            MZMove *move = [self.queue dequeue];
-            
-            struct MZPoint point = [self makePointx:move.x y:move.y];
-            
-            for (int i = 0; i < 4; i++) {
-                
-                switch (i) {
-                    case 0:
-                        point = [self makePointx:move.x y:move.y + 1];
-                        break;
-                    case 1:
-                        point = [self makePointx:move.x + 1 y:move.y];
-                        break;
-                    case 2:
-                        point = [self makePointx:move.x y:move.y - 1];
-                        break;
-                    case 3:
-                        point = [self makePointx:move.x - 1 y:move.y];
-                        break;
-                        
-                    default:
-                        break;
-                }
-                if ([self canMoveTo:point]) {
-                    //create move object
-                    MZMove *move = [[MZMove alloc] initWithPoint:point.x y:point.y parent:self.currentMove inDirection:i];
-                    
-                    //put * at the valid move
-                    [self replaceCharAt:self.current withString:@"*"];
-                    
-                    //push it to the queue
-                    [self.queue enqueue:move];
-                    
-                    [self.moves addObject:move];
-                    
-                    //update current and current move
-                    self.current = point;
-                    self.currentMove = move;
-                }
-            }
-        }
-    }
-}
-
--(void)DepthSolveMaze{
-    
-    while(![self isSolved]) {
+        MZMove *move = [self.queue dequeue];
         
-        struct MZPoint point = self.current;
-    
-        for (int i = 0; i < 5; i++) {
+        struct MZPoint point = [self makePointx:move.x y:move.y];
+        
+        for (int i = 0; i < 4; i++) {
             
             switch (i) {
                 case 0:
-                    point = [self makePointx:self.current.x y:self.current.y + 1];
-                    break;
+                    point = [self makePointx:move.x y:move.y + 1]; break;
                 case 1:
-                    point = [self makePointx:self.current.x + 1 y:self.current.y];
-                    break;
+                    point = [self makePointx:move.x + 1 y:move.y]; break;
                 case 2:
-                    point = [self makePointx:self.current.x y:self.current.y - 1];
-                    break;
+                    point = [self makePointx:move.x y:move.y - 1]; break;
                 case 3:
-                    point = [self makePointx:self.current.x - 1 y:self.current.y];
-                    break;
-                case 4:
-                    //replace invalid move with wall
-                    [self replaceCharAt:[self makePointx:[(MZMove *)[self.stack peek] x] y:[(MZMove *)[self.stack peek] y]] withString:@"@"];
-                    //pop invalid move
-                    [self.stack pop];
-                    self.currentMove = [self.stack peek];
-                    self.current = [self makePointx:self.currentMove.x y:self.currentMove.y];
-                    break;
+                    point = [self makePointx:move.x - 1 y:move.y]; break;
                     
                 default:
                     break;
@@ -131,24 +87,68 @@
             if ([self canMoveTo:point]) {
                 //create move object
                 MZMove *move = [[MZMove alloc] initWithPoint:point.x y:point.y parent:self.currentMove inDirection:i];
+                
                 //put * at the valid move
-                [self replaceCharAt:self.current withString:@"*"];
-                //push it to the stack
-                [self.stack push:move];
+                [[self.maze objectAtIndex:self.current.y] replaceObjectAtIndex:self.current.x withObject:@"*"];
+                
+                //push it to the queue
+                [self.queue enqueue:move];
+                
+                [self.moves addObject:move];
+                
                 //update current and current move
                 self.current = point;
                 self.currentMove = move;
-                break;
             }
         }
     }
 }
 
-#pragma mark - Helper
-
--(NSString *)charAt:(struct MZPoint)point{
-    return (NSString *)[[self.maze objectAtIndex:point.y] objectAtIndex:point.x];
+-(void)DepthSolveMaze{
+    
+    struct MZPoint point = self.current;
+    
+    for (int i = 0; i < 5; i++) {
+        
+        switch (i) {
+            case 0:
+                point = [self makePointx:self.current.x y:self.current.y + 1]; break;
+            case 1:
+                point = [self makePointx:self.current.x + 1 y:self.current.y]; break;
+            case 2:
+                point = [self makePointx:self.current.x y:self.current.y - 1]; break;
+            case 3:
+                point = [self makePointx:self.current.x - 1 y:self.current.y]; break;
+            case 4:
+                //replace invalid move with wall
+                [[self.maze objectAtIndex:[(MZMove *)[self.stack peek] y]] replaceObjectAtIndex:[(MZMove *)[self.stack peek] x] withObject:@"*"];
+                
+                //pop invalid move
+                [self.stack pop];
+                self.currentMove = [self.stack peek];
+                self.current = [self makePointx:self.currentMove.x y:self.currentMove.y];
+                break;
+                
+            default: break;
+        }
+        if ([self canMoveTo:point]) {
+            //create move object
+            MZMove *move = [[MZMove alloc] initWithPoint:point.x y:point.y parent:self.currentMove inDirection:i];
+            
+            //put * at the valid move
+            [[self.maze objectAtIndex:self.current.y] replaceObjectAtIndex:self.current.x withObject:@"*"];
+            
+            //push it to the stack
+            [self.stack push:move];
+            
+            //update current and current move
+            self.current = point;
+            self.currentMove = move;
+        }
+    }
 }
+
+#pragma mark - Helper
 
 +(NSMutableArray <NSMutableArray *> *)convertTextToMaze:(NSString *)maze rowLength:(int)length{
     
@@ -169,15 +169,23 @@
 
 #pragma mark - Private
 
--(void)replaceCharAt:(struct MZPoint)point withString:(NSString *)string{
-    [[self.maze objectAtIndex:point.y] replaceObjectAtIndex:point.x withObject:string];
+-(void)convertArrayToMatrix:(NSArray *)array{
+    
+    NSMutableArray *mat = [NSMutableArray array];
+    for (int i = 0; i < array.count; i++) {
+        NSMutableArray *row = [NSMutableArray array];
+        for (int x = 0; x < [(NSString *)[array objectAtIndex:i] length]; x++) {
+            NSString *chr = [NSString stringWithFormat:@"%c", [(NSString *)[array objectAtIndex:i] characterAtIndex:x]];
+            [row addObject:chr];
+        }
+        [mat addObject:row];
+    }
+    self.maze = mat;
 }
 
--(BOOL)canMoveTo:(struct MZPoint)point{
-    
-    return
-    [[self charAt:[self makePointx:point.x y:point.y]] isEqualToString:@"."];
-}
+-(NSString *)charAt:(struct MZPoint)point{  return (NSString *)[[self.maze objectAtIndex:point.y] objectAtIndex:point.x];   }
+
+-(BOOL)canMoveTo:(struct MZPoint)point{     return [[self charAt:[self makePointx:point.x y:point.y]] isEqualToString:@"."];}
 
 -(BOOL)isSolved{
     
@@ -215,7 +223,6 @@
 }
 
 -(struct MZPoint)makePointx:(int)x y:(int)y{
-    
     struct MZPoint point;
     point.x = x;
     point.y = y;

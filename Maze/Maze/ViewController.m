@@ -12,30 +12,28 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
-
-    //Maze *maze = [[Maze alloc] initWithText:@"####################S#...............##.#.###.#.##########...#...#.........##.###.#########.#.##.#...#.......#.#.##.#####.#####.###.##...#.......#.#...####.#.#####.#.#.#.##...#.#...#.#.#.#.####.#.#.#.#.#.#.#.##...#...#.#.#...#.##.#######.##########.......#.#.......######.#.#.#.#####.##...#.#.#...#...#.##.###.#.#####.#.#.##.....#.......#.#E####################" rowLength:19];
-    //Maze *maze = [[Maze alloc] initWithText:@"#######S##.##.##E####" rowLength:3];
-    Maze *maze = [[Maze alloc] initWithText:@"#########S...#####.#...###.##.###..#.#####...#E###.#...#########" rowLength:8];
+    NSString *filepath = [@"~/Desktop/mediumMaze.txt" stringByExpandingTildeInPath];
+    NSArray* allLinedStrings = [[NSString stringWithContentsOfFile:filepath encoding:NSUTF8StringEncoding error:nil] componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    NSLog(@"files: %@", allLinedStrings);
     
+    Maze *maze = [[Maze alloc] initWithFile:allLinedStrings];
     [maze mazeBegin:MZSolveModeBreadth];
-    NSLog(@"");
-    [maze BreadthSolveMaze];
     [maze.moves print];
-    NSLog(@"");
     
-//    // Load the SKScene from 'GameScene.sks'
-//    GameScene *scene = (GameScene *)[SKScene nodeWithFileNamed:@"GameScene"];
-//    
-//    // Set the scale mode to scale to fit the window
-//    scene.scaleMode = SKSceneScaleModeAspectFill;
-//    
-//    // Present the scene
-//    [self.skView presentScene:scene];
-//    
-//    self.skView.showsFPS = YES;
-//    self.skView.showsNodeCount = YES;
+    // Load the SKScene from 'GameScene.sks'
+    GameScene *scene = (GameScene *)[SKScene nodeWithFileNamed:@"GameScene"];
+    
+    // Set the scale mode to scale to fit the window
+    scene.scaleMode = SKSceneScaleModeAspectFill;
+    
+    // Present the scene
+    [self.skView presentScene:scene];
+    
+    self.skView.showsFPS = YES;
+    self.skView.showsNodeCount = YES;
 }
 
 @end

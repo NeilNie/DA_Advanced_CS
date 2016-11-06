@@ -17,6 +17,15 @@ typedef enum MZSolveMode {
     MZSolveModeDepth
 } MZSolveMode;
 
+typedef enum MZObjectType {
+    MZObjectWall = 0,
+    MZObjectMove,
+    MZObjectTrace,
+    MZObjectInvalidMove,
+    MZObjectStart,
+    MZObjectTypeEnd
+} MZObjectType;
+
 //struct for x,y point/
 struct MZPoint {
     int x;
@@ -26,6 +35,8 @@ struct MZPoint {
 @interface Maze : NSObject
 
 /**Properties**/
+
+@property (strong, nonatomic) id delegate;
 
 //maze data, which is array of arrays containing char (NSString *)
 @property (strong, nonatomic) NSMutableArray <NSMutableArray *> *maze;
@@ -63,10 +74,15 @@ struct MZPoint {
 //solve maze with breadth first search
 -(void)BreadthSolveMaze;
 
-//return char at a certain index
--(NSString *)charAt:(struct MZPoint)point;
-
 //setup the maze for solving the maze.
 -(void)mazeBegin:(MZSolveMode)mode;
+
+-(instancetype)initWithFile:(NSArray *)array;
+
+@end
+
+@protocol MazeDelegate <NSObject>
+
+-(void)drawObjectAt:(struct MZPoint)point objectType:(MZObjectType)objectType;
 
 @end
