@@ -19,7 +19,6 @@ typedef enum MZSolveMode {
 
 typedef enum MZObjectType {
     MZObjectWall = 0,
-    MZObjectMove,
     MZObjectTrace,
     MZObjectInvalidMove,
     MZObjectStart,
@@ -77,7 +76,7 @@ struct MZPoint {
 //setup the maze for solving the maze.
 -(void)mazeBegin:(MZSolveMode)mode;
 
--(instancetype)initWithFile:(NSArray *)array;
+-(void)convertArrayToMatrix:(NSArray *)array;
 
 @end
 

@@ -12,7 +12,7 @@
 		28D6F9CC1DC8CC290064A333 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 28D6F9CB1DC8CC290064A333 /* GameScene.sks */; };
 		28D6F9CE1DC8CC290064A333 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 28D6F9CD1DC8CC290064A333 /* Actions.sks */; };
 		28D6F9D11DC8CC290064A333 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6F9D01DC8CC290064A333 /* GameScene.m */; };
-		28D6F9D41DC8CC290064A333 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6F9D31DC8CC290064A333 /* ViewController.m */; };
+		28D6F9D41DC8CC290064A333 /* MazeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6F9D31DC8CC290064A333 /* MazeViewController.m */; };
 		28D6F9D61DC8CC290064A333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28D6F9D51DC8CC290064A333 /* Assets.xcassets */; };
 		28D6F9D91DC8CC290064A333 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D6F9D71DC8CC290064A333 /* Main.storyboard */; };
 		28D6F9E41DC8CC2A0064A333 /* MazeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D6F9E31DC8CC2A0064A333 /* MazeTests.m */; };
@@ -50,8 +50,8 @@
 		28D6F9CD1DC8CC290064A333 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		28D6F9CF1DC8CC290064A333 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		28D6F9D01DC8CC290064A333 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
-		28D6F9D21DC8CC290064A333 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		28D6F9D31DC8CC290064A333 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		28D6F9D21DC8CC290064A333 /* MazeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MazeViewController.h; sourceTree = "<group>"; };
+		28D6F9D31DC8CC290064A333 /* MazeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MazeViewController.m; sourceTree = "<group>"; };
 		28D6F9D51DC8CC290064A333 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28D6F9D81DC8CC290064A333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28D6F9DA1DC8CC2A0064A333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -191,8 +191,8 @@
 		28D6FA1D1DC94A340064A333 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				28D6F9D21DC8CC290064A333 /* ViewController.h */,
-				28D6F9D31DC8CC290064A333 /* ViewController.m */,
+				28D6F9D21DC8CC290064A333 /* MazeViewController.h */,
+				28D6F9D31DC8CC290064A333 /* MazeViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -340,7 +340,7 @@
 				28D6FA131DC8CD310064A333 /* LinkedList.m in Sources */,
 				28D6F9CA1DC8CC290064A333 /* main.m in Sources */,
 				28D6F9D11DC8CC290064A333 /* GameScene.m in Sources */,
-				28D6F9D41DC8CC290064A333 /* ViewController.m in Sources */,
+				28D6F9D41DC8CC290064A333 /* MazeViewController.m in Sources */,
 				28D6FA141DC8CD310064A333 /* LinkedListNode.m in Sources */,
 				28D6F9C71DC8CC290064A333 /* AppDelegate.m in Sources */,
 				28D6FA171DC922BB0064A333 /* Maze.m in Sources */,

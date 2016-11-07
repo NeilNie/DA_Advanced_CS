@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2548a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C32f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -677,21 +678,14 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
+        <!--Maze View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="MazeViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1oV-sn-nYV">
-                                <rect key="frame" x="363" y="552" width="74" height="32"/>
-                                <buttonCell key="cell" type="push" title="Solve" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="82C-wl-shM">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FIH-CJ-ttq">
                                 <rect key="frame" x="18" y="556" width="161" height="26"/>
                                 <popUpButtonCell key="cell" type="push" title="Breadth First Search" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="XaZ-Bc-n88" id="VUU-Pj-p9p">
@@ -705,8 +699,8 @@
                                     </menu>
                                 </popUpButtonCell>
                             </popUpButton>
-                            <popUpButton verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mt9-ys-IUa">
-                                <rect key="frame" x="709" y="556" width="86" height="26"/>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mt9-ys-IUa">
+                                <rect key="frame" x="697" y="556" width="86" height="26"/>
                                 <popUpButtonCell key="cell" type="push" title="Small" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="SKR-Xn-k1N" id="WY0-d0-O3g">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
@@ -719,17 +713,41 @@
                                     </menu>
                                 </popUpButtonCell>
                             </popUpButton>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HAe-Gm-FgZ">
+                                <rect key="frame" x="364" y="552" width="72" height="32"/>
+                                <buttonCell key="cell" type="push" title="Draw" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gCs-4U-M1i">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="beginSolve:" target="XfG-lQ-9wD" id="mKv-kl-ko8"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1oV-sn-nYV">
+                                <rect key="frame" x="363" y="519" width="74" height="32"/>
+                                <buttonCell key="cell" type="push" title="Solve" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="82C-wl-shM">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="solve:" target="XfG-lQ-9wD" id="CFJ-Mj-w5e"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="HAe-Gm-FgZ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="2F9-Ux-9ao"/>
                             <constraint firstItem="FIH-CJ-ttq" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="9mG-Lm-Flf"/>
                             <constraint firstItem="Mt9-ys-IUa" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="I8g-5L-1de"/>
                             <constraint firstItem="1oV-sn-nYV" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="N7F-0n-eJo"/>
                             <constraint firstAttribute="trailing" secondItem="Mt9-ys-IUa" secondAttribute="trailing" constant="20" id="SKF-cV-nA6"/>
                             <constraint firstItem="FIH-CJ-ttq" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="YhY-Ne-MBJ"/>
-                            <constraint firstItem="1oV-sn-nYV" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="oyl-f0-Fz4"/>
+                            <constraint firstItem="HAe-Gm-FgZ" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="i1o-3h-pav"/>
+                            <constraint firstItem="1oV-sn-nYV" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="53" id="oyl-f0-Fz4"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="selectMode" destination="FIH-CJ-ttq" id="T8q-YX-gef"/>
+                        <outlet property="selectSize" destination="Mt9-ys-IUa" id="8jX-k6-qVk"/>
                         <outlet property="skView" destination="m2S-Jp-Qdl" id="qux-te-cT3"/>
                     </connections>
                 </viewController>

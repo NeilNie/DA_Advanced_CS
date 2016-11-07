@@ -11,9 +11,15 @@
 #import <GameplayKit/GameplayKit.h>
 #import "Maze.h"
 
-@interface ViewController : NSViewController
+@interface MazeViewController : NSViewController <MazeDelegate>
 
+@property (weak) IBOutlet NSPopUpButton *selectMode;
+@property (weak) IBOutlet NSPopUpButton *selectSize;
 @property (assign) IBOutlet SKView *skView;
+
+@property (strong) Maze *maze;
+
+- (IBAction)beginSolve:(id)sender;
 
 @end
 
