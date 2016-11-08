@@ -13,6 +13,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    Soduku *soduku = [[Soduku alloc] init];
+    [soduku solvePuzzle];
+    NSLog(@"%i", [soduku rowValid:1]);
+    [soduku.stack print];
     // Do any additional setup after loading the view.
 }
 

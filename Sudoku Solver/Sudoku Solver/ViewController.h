@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Soduku.h"
 
 @interface ViewController : NSViewController
 
