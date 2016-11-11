@@ -9,12 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "LinkedList.h"
 #import "Stack.h"
-
-//struct for x,y point/
-struct SKPoint {
-    int x;
-    int y;
-};
+#import "SKPoint.h"
 
 typedef enum SKObjectType {
     SKObject = 0,
@@ -32,6 +27,8 @@ typedef enum SKObjectType {
 
 @property (strong, nonatomic) NSMutableArray <NSMutableArray *> *sodukuSolution;
 
+@property (strong, nonatomic) SKPoint *currentMove;
+
 //stack used for depth first search
 @property (strong, nonatomic) Stack *stack;
 
@@ -44,10 +41,12 @@ typedef enum SKObjectType {
 
 -(BOOL)rowValid:(int)row;
 
+-(NSMutableArray *)getSqrWithPoint:(SKPoint *)point;
+
 @end
 
 @protocol MazeDelegate <NSObject>
 
--(void)drawObjectAt:(struct SKPoint)point objectType:(SKObjectType)objectType;
+-(void)drawObjectAt:(SKPoint *)point objectType:(SKObjectType)objectType;
 
 @end

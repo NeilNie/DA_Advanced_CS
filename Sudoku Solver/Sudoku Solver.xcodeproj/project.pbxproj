@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		282F128A1DD56BEC00771EDC /* SKPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 282F12891DD56BEC00771EDC /* SKPoint.m */; };
 		28A0DCC81DCD14B000B67AA2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A0DCC71DCD14B000B67AA2 /* AppDelegate.m */; };
 		28A0DCCB1DCD14B000B67AA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A0DCCA1DCD14B000B67AA2 /* main.m */; };
 		28A0DCCE1DCD14B000B67AA2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A0DCCD1DCD14B000B67AA2 /* ViewController.m */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		282F12881DD56BEC00771EDC /* SKPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKPoint.h; sourceTree = "<group>"; };
+		282F12891DD56BEC00771EDC /* SKPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKPoint.m; sourceTree = "<group>"; };
 		28A0DCC31DCD14B000B67AA2 /* Sudoku Solver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sudoku Solver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28A0DCC61DCD14B000B67AA2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		28A0DCC71DCD14B000B67AA2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 				28A0DCCD1DCD14B000B67AA2 /* ViewController.m */,
 				28A8CD981DD0C12000ACD5F1 /* Sudoku.h */,
 				28A8CD991DD0C12000ACD5F1 /* Sudoku.m */,
+				282F12881DD56BEC00771EDC /* SKPoint.h */,
+				282F12891DD56BEC00771EDC /* SKPoint.m */,
 				28A8CD9B1DD0C12B00ACD5F1 /* Classes */,
 				28A0DCCF1DCD14B000B67AA2 /* Assets.xcassets */,
 				28A0DCD11DCD14B000B67AA2 /* Main.storyboard */,
@@ -311,6 +316,7 @@
 				28A8CD941DD0C0F200ACD5F1 /* LinkedListNode.m in Sources */,
 				28A0DCCE1DCD14B000B67AA2 /* ViewController.m in Sources */,
 				28A0DCCB1DCD14B000B67AA2 /* main.m in Sources */,
+				282F128A1DD56BEC00771EDC /* SKPoint.m in Sources */,
 				28A8CD9A1DD0C12000ACD5F1 /* Sudoku.m in Sources */,
 				28A0DCC81DCD14B000B67AA2 /* AppDelegate.m in Sources */,
 			);

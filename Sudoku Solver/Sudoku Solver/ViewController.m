@@ -13,10 +13,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    Soduku *soduku = [[Soduku alloc] init];
-    [soduku solvePuzzle];
+    Sudoku *soduku = [[Sudoku alloc] init];
+    //[soduku solvePuzzle];
     NSLog(@"%i", [soduku rowValid:1]);
-    [soduku.stack print];
+    NSLog(@"%@", [soduku getSqrWithPoint:[[SKPoint alloc] initWithx:3 y:2 var:1]]);
     // Do any additional setup after loading the view.
 }
 
