@@ -78,6 +78,8 @@ struct MZPoint {
 
 -(void)convertArrayToMatrix:(NSArray *)array;
 
+-(BOOL)isSolved;
+
 @end
 
 @protocol MazeDelegate <NSObject>

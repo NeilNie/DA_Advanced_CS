@@ -21,14 +21,12 @@
     if (objectType == MZObjectWall) {
         node.lineWidth = 2.5;
     }else if (objectType == MZObjectTrace){
+        node.position = CGPointMake(-260 + ((point.x - 1) * 30 + 5), 280 - ((point.y + 1) * 30 - 5));
         node.lineWidth = 5.0;
         node.strokeColor = [NSColor blueColor];
-    }else if (objectType == MZObjectInvalidMove){
-        node.lineWidth = 5.0;
-        node.strokeColor = [NSColor redColor];
     }else if (objectType == MZObjectStart){
         node.fillColor = [NSColor greenColor];
-    }else if(MZObjectTypeEnd){
+    }else if (objectType == MZObjectTypeEnd){
         node.fillColor = [NSColor yellowColor];
     }
     [self.skView.scene addChild:node];
@@ -44,10 +42,20 @@
         return;
     }
     [self.maze mazeBegin:MZSolveModeDepth];
-    [self.maze.stack print];
+    
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(makeNextMove) userInfo:nil repeats:YES];
 }
 
--(IBAction)beginSolve:(id)sender{
+-(void)makeNextMove{
+    
+    if (![self.maze isSolved]) {
+        [self.maze DepthSolveMaze];
+    }else{
+        [self.timer invalidate];
+    }
+}
+
+-(IBAction)drawMaze:(id)sender{
     
     if (self.maze.maze.count > 1) {
         NSAlert *alert = [[NSAlert alloc] init];
@@ -70,15 +78,9 @@
     
     [super viewDidLoad];
     
-    // Load the SKScene from 'GameScene.sks'
     GameScene *scene = (GameScene *)[SKScene nodeWithFileNamed:@"GameScene"];
-    
-    // Set the scale mode to scale to fit the window
     scene.scaleMode = SKSceneScaleModeAspectFill;
-    
-    // Present the scene
     [self.skView presentScene:scene];
-    
     self.skView.showsFPS = YES;
     self.skView.showsNodeCount = YES;
 }

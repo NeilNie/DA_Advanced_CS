@@ -13,13 +13,11 @@
 
 @interface MazeViewController : NSViewController <MazeDelegate>
 
+@property (strong) NSTimer *timer;
+@property (strong) Maze *maze;
 @property (weak) IBOutlet NSPopUpButton *selectMode;
 @property (weak) IBOutlet NSPopUpButton *selectSize;
 @property (assign) IBOutlet SKView *skView;
-
-@property (strong) Maze *maze;
-
-- (IBAction)beginSolve:(id)sender;
 
 @end
 

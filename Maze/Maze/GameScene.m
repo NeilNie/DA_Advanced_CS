@@ -31,24 +31,15 @@
 
 
 - (void)touchDownAtPoint:(CGPoint)pos {
-    SKShapeNode *n = [_spinnyNode copy];
-    n.position = pos;
-    n.strokeColor = [SKColor greenColor];
-    [self addChild:n];
+
 }
 
 - (void)touchMovedToPoint:(CGPoint)pos {
-    SKShapeNode *n = [_spinnyNode copy];
-    n.position = pos;
-    n.strokeColor = [SKColor blueColor];
-    [self addChild:n];
+
 }
 
 - (void)touchUpAtPoint:(CGPoint)pos {
-    SKShapeNode *n = [_spinnyNode copy];
-    n.position = pos;
-    n.strokeColor = [SKColor redColor];
-    [self addChild:n];
+
 }
 
 - (void)keyDown:(NSEvent *)theEvent {
@@ -64,16 +55,18 @@
 }
 
 - (void)mouseDown:(NSEvent *)theEvent {
-    [self touchDownAtPoint:[theEvent locationInNode:self]];
+    
 }
 - (void)mouseDragged:(NSEvent *)theEvent {
-    [self touchMovedToPoint:[theEvent locationInNode:self]];
+    
 }
 - (void)mouseUp:(NSEvent *)theEvent {
-    [self touchUpAtPoint:[theEvent locationInNode:self]];
+    
 }
 
 -(void)update:(CFTimeInterval)currentTime {
+    
+    
     // Called before each frame is rendered
 }
 

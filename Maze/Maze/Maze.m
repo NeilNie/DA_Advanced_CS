@@ -45,14 +45,8 @@
     
     if (mode == MZSolveModeDepth) {
         [self.stack push:self.currentMove];
-        while (![self isSolved]) {
-            [self DepthSolveMaze];
-        }
     }else{
         [self.queue enqueue:self.currentMove];
-        while (![self isSolved]) {
-            [self BreadthSolveMaze];
-        }
     }
 }
 
@@ -126,7 +120,6 @@
                 [self.stack pop];
                 self.currentMove = [self.stack peek];
                 self.current = [self makePointx:self.currentMove.x y:self.currentMove.y];
-                //[NSThread sleepForTimeInterval:1.0];
                 break;
                 
             default: break;
