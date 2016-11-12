@@ -10,7 +10,7 @@
 		282F128A1DD56BEC00771EDC /* SKPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 282F12891DD56BEC00771EDC /* SKPoint.m */; };
 		28A0DCC81DCD14B000B67AA2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A0DCC71DCD14B000B67AA2 /* AppDelegate.m */; };
 		28A0DCCB1DCD14B000B67AA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A0DCCA1DCD14B000B67AA2 /* main.m */; };
-		28A0DCCE1DCD14B000B67AA2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A0DCCD1DCD14B000B67AA2 /* ViewController.m */; };
+		28A0DCCE1DCD14B000B67AA2 /* SudokuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A0DCCD1DCD14B000B67AA2 /* SudokuViewController.m */; };
 		28A0DCD01DCD14B000B67AA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28A0DCCF1DCD14B000B67AA2 /* Assets.xcassets */; };
 		28A0DCD31DCD14B000B67AA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A0DCD11DCD14B000B67AA2 /* Main.storyboard */; };
 		28A0DCDE1DCD14B000B67AA2 /* Sudoku_SolverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A0DCDD1DCD14B000B67AA2 /* Sudoku_SolverTests.m */; };
@@ -46,8 +46,8 @@
 		28A0DCC61DCD14B000B67AA2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		28A0DCC71DCD14B000B67AA2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		28A0DCCA1DCD14B000B67AA2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		28A0DCCC1DCD14B000B67AA2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		28A0DCCD1DCD14B000B67AA2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		28A0DCCC1DCD14B000B67AA2 /* SudokuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SudokuViewController.h; sourceTree = "<group>"; };
+		28A0DCCD1DCD14B000B67AA2 /* SudokuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SudokuViewController.m; sourceTree = "<group>"; };
 		28A0DCCF1DCD14B000B67AA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28A0DCD21DCD14B000B67AA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28A0DCD41DCD14B000B67AA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -119,8 +119,8 @@
 			children = (
 				28A0DCC61DCD14B000B67AA2 /* AppDelegate.h */,
 				28A0DCC71DCD14B000B67AA2 /* AppDelegate.m */,
-				28A0DCCC1DCD14B000B67AA2 /* ViewController.h */,
-				28A0DCCD1DCD14B000B67AA2 /* ViewController.m */,
+				28A0DCCC1DCD14B000B67AA2 /* SudokuViewController.h */,
+				28A0DCCD1DCD14B000B67AA2 /* SudokuViewController.m */,
 				28A8CD981DD0C12000ACD5F1 /* Sudoku.h */,
 				28A8CD991DD0C12000ACD5F1 /* Sudoku.m */,
 				282F12881DD56BEC00771EDC /* SKPoint.h */,
@@ -314,7 +314,7 @@
 				28A8CD921DD0C0F200ACD5F1 /* Queue.m in Sources */,
 				28A8CD911DD0C0F200ACD5F1 /* Stack.m in Sources */,
 				28A8CD941DD0C0F200ACD5F1 /* LinkedListNode.m in Sources */,
-				28A0DCCE1DCD14B000B67AA2 /* ViewController.m in Sources */,
+				28A0DCCE1DCD14B000B67AA2 /* SudokuViewController.m in Sources */,
 				28A0DCCB1DCD14B000B67AA2 /* main.m in Sources */,
 				282F128A1DD56BEC00771EDC /* SKPoint.m in Sources */,
 				28A8CD9A1DD0C12000ACD5F1 /* Sudoku.m in Sources */,

@@ -22,7 +22,7 @@
 }
 
 -(NSString *)description{
-    return [NSString stringWithFormat:@"x: %i \n y: %i \n value: %i \n", self.x, self.y, self.var];
+    return [NSString stringWithFormat:@"\n x: %i \n y: %i \n value: %i \n", self.x, self.y, self.var];
 }
 
 @end

@@ -125,7 +125,7 @@
         }
         return node;
     }
-    @throw [NSException exceptionWithName:@"Linked List Out of Bounds" reason:@"index < 0 || index > LinkedList upperbound" userInfo:nil];
+    return nil;
 }
 
 //print out node, implemented recursively

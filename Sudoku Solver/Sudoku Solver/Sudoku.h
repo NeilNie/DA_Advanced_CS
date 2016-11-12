@@ -39,14 +39,16 @@ typedef enum SKObjectType {
 
 -(void)solvePuzzle;
 
--(BOOL)rowValid:(int)row;
+-(BOOL)rowValid:(int)row var:(int)var;
+
+-(BOOL)columnValid:(int)column var:(int)var;
 
 -(NSMutableArray *)getSqrWithPoint:(SKPoint *)point;
 
 @end
 
-@protocol MazeDelegate <NSObject>
+@protocol SudokuDelegate <NSObject>
 
--(void)drawObjectAt:(SKPoint *)point objectType:(SKObjectType)objectType;
+-(void)setValue;
 
 @end
