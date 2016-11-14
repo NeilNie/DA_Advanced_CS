@@ -48,8 +48,16 @@
     }
 }
 
+-(void)solveSudoku{
+    if ([self.sudoku nextMove]) {
+        [self.sudoku solvePuzzle];
+    }else{
+        [self.timer invalidate];
+    }
+}
+
 -(IBAction)solve:(id)sender{
-    [self.sudoku solvePuzzle];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(solveSudoku) userInfo:nil repeats:YES];
 }
 
 - (void)viewDidLoad {
@@ -58,6 +66,7 @@
     self.sudoku = [[Sudoku alloc] init];
     self.sudoku.delegate = self;
     [self setValue];
+    
     // Do any additional setup after loading the view.
 }
 

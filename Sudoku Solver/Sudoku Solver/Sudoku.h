@@ -45,6 +45,8 @@ typedef enum SKObjectType {
 
 -(NSMutableArray *)getSqrWithPoint:(SKPoint *)point;
 
+-(SKPoint *)nextMove;
+
 @end
 
 @protocol SudokuDelegate <NSObject>

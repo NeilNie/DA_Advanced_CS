@@ -26,40 +26,39 @@
 -(NSMutableArray *)constructPuzzle{
     
     NSMutableArray *array = [[NSMutableArray alloc] initWithObjects:
-                          [[NSMutableArray alloc] initWithObjects:@5, @3, @4, @0, @7, @8, @9, @1, @2, nil],
+                          [[NSMutableArray alloc] initWithObjects:@5, @0, @4, @0, @7, @8, @0, @1, @2, nil],
                           [[NSMutableArray alloc] initWithObjects:@6, @7, @2, @1, @9, @5, @0, @0, @0, nil],
                           [[NSMutableArray alloc] initWithObjects:@0, @9, @8, @0, @0, @0, @0, @6, @0, nil],
                           [[NSMutableArray alloc] initWithObjects:@8, @5, @0, @0, @6, @0, @0, @0, @3, nil],
                           [[NSMutableArray alloc] initWithObjects:@4, @0, @0, @8, @0, @3, @0, @0, @1, nil],
                           [[NSMutableArray alloc] initWithObjects:@7, @0, @0, @0, @2, @0, @8, @0, @6, nil],
-                          [[NSMutableArray alloc] initWithObjects:@0, @6, @1, @5, @0, @7, @2, @8, @0, nil],
-                          [[NSMutableArray alloc] initWithObjects:@2, @8, @7, @4, @1, @9, @0, @0, @5, nil],
-                          [[NSMutableArray alloc] initWithObjects:@3, @4, @0, @2, @8, @6, @0, @7, @9, nil],
+                          [[NSMutableArray alloc] initWithObjects:@0, @6, @0, @5, @0, @7, @2, @8, @0, nil],
+                          [[NSMutableArray alloc] initWithObjects:@2, @0, @7, @4, @1, @9, @0, @0, @5, nil],
+                          [[NSMutableArray alloc] initWithObjects:@3, @0, @0, @2, @8, @6, @0, @7, @9, nil],
                           nil];
     return array;
 }
 
 -(void)solvePuzzle{
     
-    while ([self nextMove]) {
+    for (int i = (self.currentMove.var != 0)? self.currentMove.var + 1 : 1; i < 11; i++) {
         
-        for (int i = (self.currentMove.var != 0)? self.currentMove.var + 1 : 1; i < 11; i++) {
-            
-            if (i == 10) {
-                [[self.soduku objectAtIndex:self.currentMove.y] replaceObjectAtIndex:self.currentMove.x withObject:@0];
-                [self.stack pop];
-                self.currentMove = [self.stack peek];
-                break;
-            }else
-                self.currentMove.var = i;
-            
-            if ([self validMoveTo:self.currentMove]) {
-                [self.stack push:self.currentMove];
-                [[self.soduku objectAtIndex:self.currentMove.y] replaceObjectAtIndex:self.currentMove.x withObject:[NSNumber numberWithInt:self.currentMove.var]];
-                self.currentMove = [self nextMove];
-                [self.delegate setValue];
-                break;
-            }
+        if (i == 10) {
+            SKPoint *previousMove = [self.stack peek];
+            [[self.soduku objectAtIndex:previousMove.y] replaceObjectAtIndex:previousMove.x withObject:@0];
+            [self.delegate setValue];
+            [self.stack pop];
+            self.currentMove = [self.stack peek];
+            break;
+        }else
+            self.currentMove.var = i;
+        
+        if ([self validMoveTo:self.currentMove]) {
+            [self.stack push:self.currentMove];
+            [[self.soduku objectAtIndex:self.currentMove.y] replaceObjectAtIndex:self.currentMove.x withObject:[NSNumber numberWithInt:self.currentMove.var]];
+            self.currentMove = [self nextMove];
+            [self.delegate setValue];
+            break;
         }
     }
 }

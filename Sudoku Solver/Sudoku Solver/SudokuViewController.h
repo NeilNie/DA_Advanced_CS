@@ -12,7 +12,7 @@
 @interface SudokuViewController : NSViewController <SudokuDelegate>
 
 @property (strong) Sudoku *sudoku;
-
+@property (strong) NSTimer *timer; 
 @property (weak) IBOutlet NSTextField *row1;
 @property (weak) IBOutlet NSTextField *row2;
 @property (weak) IBOutlet NSTextField *row3;
