@@ -57,7 +57,12 @@
 }
 
 -(IBAction)solve:(id)sender{
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(solveSudoku) userInfo:nil repeats:YES];
+    //self.timer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(solveSudoku) userInfo:nil repeats:YES];
+    NSLog(@"start");
+    while ([self.sudoku nextMove]) {
+        [self.sudoku solvePuzzle];
+    }
+    NSLog(@"stopped");
 }
 
 - (void)viewDidLoad {
