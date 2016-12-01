@@ -35,4 +35,8 @@
     node.parent = self;
 }
 
+-(NSString *)description{
+    return [NSString stringWithFormat:@"\n ----------- \n value: %i \n left child: %@ \n right child: %@ \n", self.value, self.leftChild, self.rightChild];
+}
+
 @end
