@@ -27,7 +27,7 @@
 
 -(void)remove:(int)object;
 
--(void)contains:(int)object;
+-(BOOL)contains:(int)object;
 
 -(void)preorderTraversal;
 

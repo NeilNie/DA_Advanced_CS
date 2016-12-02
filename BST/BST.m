@@ -18,16 +18,25 @@
 
 -(void)insert:(int)object{
     
-    TreeNode *node = [[TreeNode alloc] initWithParent:nil leftChild:nil rightChild:nil value:object];
+    TreeNode *node = [[TreeNode alloc] initWithLeftChild:nil rightChild:nil value:object];
     [self insertHelper:self.root insertNode:node];
 }
 
 -(void)remove:(int)object{
     
+    TreeNode *rmParent = [self parentOf:object node:self.root];
+    TreeNode *rmNode = [self findNode:self.root object:object];
+    
+    if (rmParent.leftChild == rmNode) {
+        rmParent.leftChild = rmNode.leftChild;
+    }else if (rmParent.rightChild == rmNode){
+        rmParent.rightChild = rmNode.leftChild;
+    }
+    rmNode.leftChild.rightChild = rmNode.rightChild;
 }
 
--(void)contains:(int)object{
-    
+-(BOOL)contains:(int)object{
+    return [self containsHelper:self.root object:object];
 }
 
 #pragma mark - Traversal
@@ -45,6 +54,36 @@
 }
 
 #pragma mark - Private Helpers
+
+-(TreeNode *)parentOf:(int)x node:(TreeNode *)node {
+    
+    if (node.value < x && node.leftChild)
+        return [self parentOf:x node:node.leftChild];
+    else if (node.value > x && node.rightChild)
+        return [self parentOf:x node:node.rightChild];
+    else
+        return node;
+}
+
+-(TreeNode *)findNode:(TreeNode *)node object:(int)x{
+    
+    if (node.value < x && node.leftChild)
+        return [self findNode:node.leftChild object:x];
+    else if (node.value > x && node.rightChild)
+        return [self findNode:node.rightChild object:x];
+    else
+        return node;
+}
+
+-(BOOL)containsHelper:(TreeNode *)node object:(int)x{
+    
+    if (x < node.value)
+        return node.leftChild && [self containsHelper:node.leftChild object:x];
+    else if (x > node.value)
+        return node.rightChild && [self containsHelper:node.rightChild object:x];
+    else
+        return YES;
+}
 
 -(void)preorderTraversalHelper:(TreeNode *)node{
     

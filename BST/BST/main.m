@@ -22,6 +22,7 @@ int main(int argc, const char * argv[]) {
         [bst postorderTraversal];
         NSLog(@"Inorder");
         [bst inorderTravesal];
+        NSLog(@"contains: %i", [bst contains:55]);
     }
     return 0;
 }

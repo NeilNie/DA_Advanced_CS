@@ -10,14 +10,12 @@
 
 @implementation TreeNode
 
-- (instancetype)initWithParent:(TreeNode *)parent
-                     leftChild:(TreeNode *)leftChild
-                    rightChild:(TreeNode *)rightChild
-                         value:(int)value
+- (instancetype)initWithLeftChild:(TreeNode *)leftChild
+                       rightChild:(TreeNode *)rightChild
+                            value:(int)value
 {
     self = [super init];
     if (self) {
-        self.parent = parent;
         self.leftChild = leftChild;
         self.rightChild = rightChild;
         self.value = value;
@@ -31,8 +29,6 @@
         self.rightChild = node;
     else
         self.leftChild = node;
-    
-    node.parent = self;
 }
 
 -(NSString *)description{

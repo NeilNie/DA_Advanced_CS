@@ -13,13 +13,11 @@
 @property int value;
 @property (strong, nonatomic) TreeNode *leftChild;
 @property (strong, nonatomic) TreeNode *rightChild;
-@property (strong, nonatomic) TreeNode *parent;
 
 //constructor
-- (instancetype)initWithParent:(TreeNode *)parent
-                     leftChild:(TreeNode *)leftChild
-                    rightChild:(TreeNode *)rightChild
-                         value:(int)value;
+- (instancetype)initWithLeftChild:(TreeNode *)leftChild
+                       rightChild:(TreeNode *)rightChild
+                            value:(int)value;
 
 -(void)addChild:(TreeNode *)node;
 
