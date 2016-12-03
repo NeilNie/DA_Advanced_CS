@@ -13,6 +13,8 @@
 
 /** Properties **/
 
+@property (strong, nonatomic) id delegate;
+
 @property (strong, nonatomic) TreeNode *root;
 
 @property (strong, nonatomic) NSMutableArray <TreeNode *>*leaves;
@@ -34,5 +36,13 @@
 -(void)postorderTraversal;
 
 -(void)inorderTravesal;
+
+-(void)betterRemove:(int)object;
+
+@end
+
+@protocol BSTDelegate <NSObject>
+
+-(void)drawNode:(int)value isLeft:(BOOL)isLeft;
 
 @end

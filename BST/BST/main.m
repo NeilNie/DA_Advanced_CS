@@ -11,8 +11,6 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
         
         BST *bst = [[BST alloc] initWithFileName:@"~/Desktop/tree.txt"];
         NSLog(@"%@", bst.root);
@@ -23,6 +21,10 @@ int main(int argc, const char * argv[]) {
         NSLog(@"Inorder");
         [bst inorderTravesal];
         NSLog(@"contains: %i", [bst contains:55]);
+        NSLog(@"Begin removing");
+        [bst remove:20];
+        NSLog(@"Inorder");
+        [bst inorderTravesal];
     }
     return 0;
 }

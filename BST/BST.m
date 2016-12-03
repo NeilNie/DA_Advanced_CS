@@ -26,13 +26,40 @@
     
     TreeNode *rmParent = [self parentOf:object node:self.root];
     TreeNode *rmNode = [self findNode:self.root object:object];
-    
-    if (rmParent.leftChild == rmNode) {
-        rmParent.leftChild = rmNode.leftChild;
-    }else if (rmParent.rightChild == rmNode){
-        rmParent.rightChild = rmNode.leftChild;
+
+    if (rmParent.leftChild.value == rmNode.value){
+        if (rmNode.leftChild) {
+            rmParent.leftChild = rmNode.rightChild;
+            TreeNode *leaf = [self findLeftLeaf:rmNode.rightChild];
+            leaf.leftChild = rmNode.leftChild;
+            rmNode = nil;
+        }else
+            rmParent.leftChild = rmNode.leftChild;
+        
+    }else if (rmParent.rightChild.value == rmNode.value){
+        if (rmNode.leftChild) {
+            rmParent.rightChild = rmNode.rightChild;
+            TreeNode *leaf = [self findLeftLeaf:rmNode.rightChild];
+            leaf.leftChild = rmNode.leftChild;
+            rmNode = nil;
+        }else
+            rmParent.rightChild = rmNode.leftChild;
     }
-    rmNode.leftChild.rightChild = rmNode.rightChild;
+}
+
+-(void)betterRemove:(int)object{
+    
+    TreeNode *rmParent = [self parentOf:object node:self.root];
+    
+    if (rmParent.rightChild.value == object){
+        TreeNode *leaf = [self findLeftLeaf:rmParent.rightChild.rightChild];
+        rmParent.rightChild.value = leaf.value;
+        leaf = nil;
+    }else if (rmParent.leftChild.value == object){
+        TreeNode *leaf = [self findLeftLeaf:rmParent.leftChild.rightChild];
+        rmParent.leftChild.value = leaf.value;
+        leaf = nil;
+    }
 }
 
 -(BOOL)contains:(int)object{
@@ -55,11 +82,18 @@
 
 #pragma mark - Private Helpers
 
+-(TreeNode *)findLeftLeaf:(TreeNode *)node{
+    
+    if (node.leftChild)
+        return [self findLeftLeaf:node.leftChild];
+    return node;
+}
+
 -(TreeNode *)parentOf:(int)x node:(TreeNode *)node {
     
-    if (node.value < x && node.leftChild)
+    if (x < node.leftChild.value && node.leftChild.leftChild)
         return [self parentOf:x node:node.leftChild];
-    else if (node.value > x && node.rightChild)
+    else if (x > node.rightChild.value && node.rightChild.rightChild)
         return [self parentOf:x node:node.rightChild];
     else
         return node;
@@ -67,9 +101,9 @@
 
 -(TreeNode *)findNode:(TreeNode *)node object:(int)x{
     
-    if (node.value < x && node.leftChild)
+    if (x < node.value && node.leftChild)
         return [self findNode:node.leftChild object:x];
-    else if (node.value > x && node.rightChild)
+    else if (x > node.value&& node.rightChild)
         return [self findNode:node.rightChild object:x];
     else
         return node;
@@ -118,11 +152,13 @@
         if (!node.leftChild || !node.rightChild)
             [node addChild:insert];
         else{
-            if (insert.value > node.value) {
+            if (insert.value > node.value){
                 [self insertHelper:node.rightChild insertNode:insert];
-            }
-            else if (insert.value < node.value)
+                [self.delegate drawNode:insert.value isLeft:NO];
+            }else if (insert.value < node.value){
                 [self insertHelper:node.leftChild insertNode:insert];
+                [self.delegate drawNode:insert.value isLeft:YES];
+            }
         }
     }else
         self.root = insert;
