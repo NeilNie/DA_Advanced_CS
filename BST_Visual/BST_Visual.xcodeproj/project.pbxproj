@@ -12,7 +12,7 @@
 		2842DE1B1DF1AF6E008B15E7 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2842DE1A1DF1AF6E008B15E7 /* GameScene.sks */; };
 		2842DE1D1DF1AF6E008B15E7 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2842DE1C1DF1AF6E008B15E7 /* Actions.sks */; };
 		2842DE201DF1AF6E008B15E7 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2842DE1F1DF1AF6E008B15E7 /* GameScene.m */; };
-		2842DE231DF1AF6E008B15E7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2842DE221DF1AF6E008B15E7 /* ViewController.m */; };
+		2842DE231DF1AF6E008B15E7 /* BSTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2842DE221DF1AF6E008B15E7 /* BSTViewController.m */; };
 		2842DE251DF1AF6E008B15E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2842DE241DF1AF6E008B15E7 /* Assets.xcassets */; };
 		2842DE281DF1AF6E008B15E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2842DE261DF1AF6E008B15E7 /* Main.storyboard */; };
 		2842DE331DF1AF6F008B15E7 /* BST_VisualTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2842DE321DF1AF6F008B15E7 /* BST_VisualTests.m */; };
@@ -47,8 +47,8 @@
 		2842DE1C1DF1AF6E008B15E7 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		2842DE1E1DF1AF6E008B15E7 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		2842DE1F1DF1AF6E008B15E7 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
-		2842DE211DF1AF6E008B15E7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2842DE221DF1AF6E008B15E7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2842DE211DF1AF6E008B15E7 /* BSTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSTViewController.h; sourceTree = "<group>"; };
+		2842DE221DF1AF6E008B15E7 /* BSTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSTViewController.m; sourceTree = "<group>"; };
 		2842DE241DF1AF6E008B15E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2842DE271DF1AF6E008B15E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2842DE291DF1AF6E008B15E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -165,8 +165,8 @@
 		2842DE521DF1B406008B15E7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2842DE211DF1AF6E008B15E7 /* ViewController.h */,
-				2842DE221DF1AF6E008B15E7 /* ViewController.m */,
+				2842DE211DF1AF6E008B15E7 /* BSTViewController.h */,
+				2842DE221DF1AF6E008B15E7 /* BSTViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -322,7 +322,7 @@
 				2842DE191DF1AF6E008B15E7 /* main.m in Sources */,
 				2842DE4F1DF1B3FA008B15E7 /* BST.m in Sources */,
 				2842DE201DF1AF6E008B15E7 /* GameScene.m in Sources */,
-				2842DE231DF1AF6E008B15E7 /* ViewController.m in Sources */,
+				2842DE231DF1AF6E008B15E7 /* BSTViewController.m in Sources */,
 				2842DE161DF1AF6E008B15E7 /* AppDelegate.m in Sources */,
 				2842DE501DF1B3FA008B15E7 /* TreeNode.m in Sources */,
 			);
@@ -557,6 +557,7 @@
 				2842DE441DF1AF6F008B15E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2842DE451DF1AF6F008B15E7 /* Build configuration list for PBXNativeTarget "BST_VisualTests" */ = {
 			isa = XCConfigurationList;
@@ -565,6 +566,7 @@
 				2842DE471DF1AF6F008B15E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2842DE481DF1AF6F008B15E7 /* Build configuration list for PBXNativeTarget "BST_VisualUITests" */ = {
 			isa = XCConfigurationList;
@@ -573,6 +575,7 @@
 				2842DE4A1DF1AF6F008B15E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

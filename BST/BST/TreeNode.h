@@ -13,6 +13,7 @@
 @property int value;
 @property (strong, nonatomic) TreeNode *leftChild;
 @property (strong, nonatomic) TreeNode *rightChild;
+@property CGPoint position;
 
 //constructor
 - (instancetype)initWithLeftChild:(TreeNode *)leftChild

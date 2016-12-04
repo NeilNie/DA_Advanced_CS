@@ -16,9 +16,6 @@
 - (void)didMoveToView:(SKView *)view {
     // Setup your scene here
     
-    // Get label node from scene and store it for use later
-    //_label = (SKLabelNode *)[self childNodeWithName:@"//helloLabel"];
-    
     _label.alpha = 0.0;
     [_label runAction:[SKAction fadeInWithDuration:2.0]];
     

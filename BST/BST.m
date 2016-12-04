@@ -8,6 +8,12 @@
 
 #import "BST.h"
 
+@interface BST (){
+    NSArray *array;
+}
+
+@end
+
 @implementation BST
 
 #pragma mark - Public Methods
@@ -80,12 +86,51 @@
     [self inorderTraversalHelper:self.root];
 }
 
+//http://cslibrary.stanford.edu/109/TreeListRecursion.html
+/*
+Here's the formal problem statement: Write a recursive function treeToList(Node root) that takes an ordered binary tree and rearranges the internal pointers to make a circular doubly linked list out of the tree nodes. The "previous" pointers should be stored in the "small" field and the "next" pointers should be stored in the "large" field. The list should be arranged so that the nodes are in increasing order. Return the head pointer to the new list. The operation can be done in O(n) time -- essentially operating on each node once. Basically take figure-1 as input and rearrange the pointers to make figure-2.
+Try the problem directly, or see the hints below.
+*/
+
+-(void)treeToList{
+    [self treeToListHelper:self.root];
+}
+
 #pragma mark - Private Helpers
+
+-(void)join:(TreeNode *)a withNode:(TreeNode *)b{
+    a.rightChild = b;
+    b.leftChild = a;
+}
+-(TreeNode *)append:(TreeNode *)a withNode:(TreeNode *)b{
+    if (!a) return b;
+    if (!b) return a;
+    
+    TreeNode *aEnd = a.leftChild;
+    TreeNode *bEnd = b.leftChild;
+    
+    [self join:aEnd withNode:b];
+    [self join:bEnd withNode:a];
+    
+    return a;
+}
+-(TreeNode *)treeToListHelper:(TreeNode *)node{
+    
+    TreeNode *sList = [self treeToListHelper:node.leftChild];
+    TreeNode *bList = [self treeToListHelper:node.rightChild];
+    
+    node.leftChild = node;
+    node.rightChild = node;
+    
+    sList = [self append:sList withNode:node];
+    sList = [self append:sList withNode:bList];
+    
+    return sList;
+}
 
 -(TreeNode *)findLeftLeaf:(TreeNode *)node{
     
-    if (node.leftChild)
-        return [self findLeftLeaf:node.leftChild];
+    if (node.leftChild) return [self findLeftLeaf:node.leftChild];
     return node;
 }
 
@@ -105,8 +150,7 @@
         return [self findNode:node.leftChild object:x];
     else if (x > node.value&& node.rightChild)
         return [self findNode:node.rightChild object:x];
-    else
-        return node;
+    else return node;
 }
 
 -(BOOL)containsHelper:(TreeNode *)node object:(int)x{
@@ -115,8 +159,7 @@
         return node.leftChild && [self containsHelper:node.leftChild object:x];
     else if (x > node.value)
         return node.rightChild && [self containsHelper:node.rightChild object:x];
-    else
-        return YES;
+    else return YES;
 }
 
 -(void)preorderTraversalHelper:(TreeNode *)node{
@@ -149,31 +192,35 @@
 -(void)insertHelper:(TreeNode *)node insertNode:(TreeNode *)insert{
     
     if (self.root) {
-        if (!node.leftChild || !node.rightChild)
-            [node addChild:insert];
-        else{
-            if (insert.value > node.value){
-                [self insertHelper:node.rightChild insertNode:insert];
-                [self.delegate drawNode:insert.value isLeft:NO];
-            }else if (insert.value < node.value){
-                [self insertHelper:node.leftChild insertNode:insert];
-                [self.delegate drawNode:insert.value isLeft:YES];
+        if (!node.leftChild || !node.rightChild){
+            if (insert.value < node.value){
+                node.leftChild = insert;
+                [self.delegate drawNode:node.leftChild parent:node isLeft:1];
+            }else{
+                node.rightChild = insert;
+                [self.delegate drawNode:node.rightChild parent:node isLeft:0];
             }
+        }else{
+            if (insert.value > node.value)
+                [self insertHelper:node.rightChild insertNode:insert];
+            else if (insert.value < node.value)
+                [self insertHelper:node.leftChild insertNode:insert];
         }
-    }else
+    }else{
         self.root = insert;
+        self.root.position = CGPointMake(0, 0);
+        [self.delegate drawNode:self.root parent:nil isLeft:2];
+    }
 }
 
 -(int)heightHelper:(TreeNode *)node{
     
-    if (node.leftChild)
-        return 1 + [self heightHelper:node.leftChild];
-    if (node.rightChild)
-        return 1 + [self heightHelper:node.rightChild];
+    if (node.leftChild)  return 1 + [self heightHelper:node.leftChild];
+    if (node.rightChild) return 1 + [self heightHelper:node.rightChild];
     return 1;
 }
 
--(void)buildTree:(NSArray *)array{
+-(void)buildTree{
     
     for (NSString *number in array)
         [self insert:[number intValue]];
@@ -181,23 +228,12 @@
 
 #pragma mark - Constructors
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        
-    }
-    return self;
-}
-
 -(instancetype)initWithFileName:(NSString *)file{
     
     self = [super init];
     if (self) {
         NSString *filepath = [file stringByExpandingTildeInPath];
-        NSArray* allLinedStrings = [[NSString stringWithContentsOfFile:filepath encoding:NSUTF8StringEncoding error:nil] componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-        NSLog(@"%@", allLinedStrings);
-        [self buildTree:allLinedStrings];
+        array = [[NSString stringWithContentsOfFile:filepath encoding:NSUTF8StringEncoding error:nil] componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     }
     return self;
 }

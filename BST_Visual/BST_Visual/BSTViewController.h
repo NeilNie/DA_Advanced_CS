@@ -11,9 +11,9 @@
 #import <GameplayKit/GameplayKit.h>
 #import "BST.h"
 
-@interface ViewController : NSViewController <BSTDelegate>{
-    int nodePositionX;
-    int nodePostiionY;
+@interface BSTViewController : NSViewController <BSTDelegate>{
+    CGPoint latestPosition;
+    SKLabelNode *lastestNode;
 }
 
 @property (assign) IBOutlet SKView *skView;
