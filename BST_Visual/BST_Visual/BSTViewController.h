@@ -14,6 +14,7 @@
 @interface BSTViewController : NSViewController <BSTDelegate>{
     CGPoint latestPosition;
     SKLabelNode *lastestNode;
+    
 }
 
 @property (assign) IBOutlet SKView *skView;

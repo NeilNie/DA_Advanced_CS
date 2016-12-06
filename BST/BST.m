@@ -18,6 +18,33 @@
 
 #pragma mark - Public Methods
 
+-(void)drawTree{
+    
+    self.root.position = CGPointMake(0, 0);
+    [self.delegate drawNode:self.root parent:nil isLeft:2 currentHeight:0];
+    
+    [self drawTreeHelper:self.root index:1];
+}
+
+-(void)drawTreeHelper:(TreeNode *)node index:(int)index{
+    
+    if (node.leftChild){
+        [self.delegate drawNode:node.leftChild parent:node isLeft:1 currentHeight:index];
+        [self drawTreeHelper:node.leftChild index:index + 1];
+    }
+    if (node.rightChild){
+        [self.delegate drawNode:node.rightChild parent:node isLeft:0 currentHeight:index];
+        [self drawTreeHelper:node.rightChild index:index + 1];
+    }
+}
+
+-(int)width:(TreeNode *)node{
+    if (node.rightChild && node.leftChild) {
+        return 1 + MAX([self width:node.rightChild], [self width:node.leftChild]);
+    }
+    return 0;
+}
+
 -(int)height{
     return [self heightHelper:self.root];
 }
@@ -32,7 +59,7 @@
     
     TreeNode *rmParent = [self parentOf:object node:self.root];
     TreeNode *rmNode = [self findNode:self.root object:object];
-
+    
     if (rmParent.leftChild.value == rmNode.value){
         if (rmNode.leftChild) {
             rmParent.leftChild = rmNode.rightChild;
@@ -88,9 +115,9 @@
 
 //http://cslibrary.stanford.edu/109/TreeListRecursion.html
 /*
-Here's the formal problem statement: Write a recursive function treeToList(Node root) that takes an ordered binary tree and rearranges the internal pointers to make a circular doubly linked list out of the tree nodes. The "previous" pointers should be stored in the "small" field and the "next" pointers should be stored in the "large" field. The list should be arranged so that the nodes are in increasing order. Return the head pointer to the new list. The operation can be done in O(n) time -- essentially operating on each node once. Basically take figure-1 as input and rearrange the pointers to make figure-2.
-Try the problem directly, or see the hints below.
-*/
+ Here's the formal problem statement: Write a recursive function treeToList(Node root) that takes an ordered binary tree and rearranges the internal pointers to make a circular doubly linked list out of the tree nodes. The "previous" pointers should be stored in the "small" field and the "next" pointers should be stored in the "large" field. The list should be arranged so that the nodes are in increasing order. Return the head pointer to the new list. The operation can be done in O(n) time -- essentially operating on each node once. Basically take figure-1 as input and rearrange the pointers to make figure-2.
+ Try the problem directly, or see the hints below.
+ */
 
 -(void)treeToList{
     [self treeToListHelper:self.root];
@@ -140,8 +167,7 @@ Try the problem directly, or see the hints below.
         return [self parentOf:x node:node.leftChild];
     else if (x > node.rightChild.value && node.rightChild.rightChild)
         return [self parentOf:x node:node.rightChild];
-    else
-        return node;
+    else return node;
 }
 
 -(TreeNode *)findNode:(TreeNode *)node object:(int)x{
@@ -165,59 +191,52 @@ Try the problem directly, or see the hints below.
 -(void)preorderTraversalHelper:(TreeNode *)node{
     
     NSLog(@"%i", node.value);
-    if (node.leftChild)
-        [self preorderTraversalHelper:node.leftChild];
-    if (node.rightChild)
-        [self preorderTraversalHelper:node.rightChild];
+    if (node.leftChild)  [self preorderTraversalHelper:node.leftChild];
+    if (node.rightChild) [self preorderTraversalHelper:node.rightChild];
 }
 
 -(void)postorderTraversalHelper:(TreeNode *)node{
     
-    if (node.leftChild)
-        [self postorderTraversalHelper:node.leftChild];
-    if (node.rightChild)
-        [self postorderTraversalHelper:node.rightChild];
+    if (node.leftChild)  [self postorderTraversalHelper:node.leftChild];
+    if (node.rightChild) [self postorderTraversalHelper:node.rightChild];
     NSLog(@"%i", node.value);
 }
 
 -(void)inorderTraversalHelper:(TreeNode *)node{
     
-    if (node.leftChild)
-        [self inorderTraversalHelper:node.leftChild];
+    if (node.leftChild)  [self inorderTraversalHelper:node.leftChild];
     NSLog(@"%i", node.value);
-    if (node.rightChild)
-        [self inorderTraversalHelper:node.rightChild];
+    if (node.rightChild) [self inorderTraversalHelper:node.rightChild];
 }
 
 -(void)insertHelper:(TreeNode *)node insertNode:(TreeNode *)insert{
     
     if (self.root) {
         if (!node.leftChild || !node.rightChild){
-            if (insert.value < node.value){
+            if (insert.value < node.value)
                 node.leftChild = insert;
-                [self.delegate drawNode:node.leftChild parent:node isLeft:1];
-            }else{
+            else
                 node.rightChild = insert;
-                [self.delegate drawNode:node.rightChild parent:node isLeft:0];
-            }
+            
         }else{
             if (insert.value > node.value)
                 [self insertHelper:node.rightChild insertNode:insert];
             else if (insert.value < node.value)
                 [self insertHelper:node.leftChild insertNode:insert];
         }
-    }else{
+    }else
         self.root = insert;
-        self.root.position = CGPointMake(0, 0);
-        [self.delegate drawNode:self.root parent:nil isLeft:2];
-    }
 }
 
 -(int)heightHelper:(TreeNode *)node{
     
-    if (node.leftChild)  return 1 + [self heightHelper:node.leftChild];
-    if (node.rightChild) return 1 + [self heightHelper:node.rightChild];
-    return 1;
+    if (node.leftChild && node.rightChild)
+        return 1 + MAX([self heightHelper:node.leftChild], [self heightHelper:node.rightChild]);
+    else if (!node.leftChild && node.rightChild)
+        return 1 + [self heightHelper:node.rightChild];
+    else if (!node.rightChild && node.leftChild)
+        return 1 + [self heightHelper:node.leftChild];
+    return 0;
 }
 
 -(void)buildTree{

@@ -21,6 +21,10 @@
 
 /** Methods **/
 
+-(void)drawTree;
+
+-(int)width:(TreeNode *)node;
+
 -(void)buildTree;
 
 -(instancetype)initWithFileName:(NSString *)file;
@@ -45,6 +49,6 @@
 
 @protocol BSTDelegate <NSObject>
 
--(void)drawNode:(TreeNode *)node parent:(TreeNode *)parent isLeft:(int)isLeft;
+-(void)drawNode:(TreeNode *)node parent:(TreeNode *)parent isLeft:(int)isLeft currentHeight:(int)h;
 
 @end

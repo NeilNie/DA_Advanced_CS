@@ -13,6 +13,8 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         BST *bst = [[BST alloc] initWithFileName:@"~/Desktop/tree.txt"];
+        [bst buildTree];
+        NSLog(@"%i", [bst height]);
         NSLog(@"%@", bst.root);
         NSLog(@"Preorder");
         [bst preorderTraversal];
@@ -21,10 +23,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"Inorder");
         [bst inorderTravesal];
         NSLog(@"contains: %i", [bst contains:55]);
-        NSLog(@"Begin removing");
-        [bst remove:20];
-        NSLog(@"Inorder");
-        [bst inorderTravesal];
+        NSLog(@"width: %i", [bst width:bst.root.leftChild]);
     }
     return 0;
 }
