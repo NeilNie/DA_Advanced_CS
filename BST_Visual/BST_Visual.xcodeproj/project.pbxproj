@@ -19,6 +19,7 @@
 		2842DE3E1DF1AF6F008B15E7 /* BST_VisualUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2842DE3D1DF1AF6F008B15E7 /* BST_VisualUITests.m */; };
 		2842DE4F1DF1B3FA008B15E7 /* BST.m in Sources */ = {isa = PBXBuildFile; fileRef = 2842DE4C1DF1B3FA008B15E7 /* BST.m */; };
 		2842DE501DF1B3FA008B15E7 /* TreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2842DE4E1DF1B3FA008B15E7 /* TreeNode.m */; };
+		28BCA3411DF7A84B004CDAB6 /* tree.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28BCA3401DF7A84B004CDAB6 /* tree.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		2842DE4C1DF1B3FA008B15E7 /* BST.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BST.m; path = ../../BST/BST.m; sourceTree = "<group>"; };
 		2842DE4D1DF1B3FA008B15E7 /* TreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TreeNode.h; path = ../../BST/BST/TreeNode.h; sourceTree = "<group>"; };
 		2842DE4E1DF1B3FA008B15E7 /* TreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TreeNode.m; path = ../../BST/BST/TreeNode.m; sourceTree = "<group>"; };
+		28BCA3401DF7A84B004CDAB6 /* tree.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tree.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		2842DE131DF1AF6E008B15E7 /* BST_Visual */ = {
 			isa = PBXGroup;
 			children = (
+				28BCA3401DF7A84B004CDAB6 /* tree.txt */,
 				2842DE261DF1AF6E008B15E7 /* Main.storyboard */,
 				2842DE531DF1B40E008B15E7 /* SceneKit */,
 				2842DE521DF1B406008B15E7 /* ViewController */,
@@ -295,6 +298,7 @@
 				2842DE251DF1AF6E008B15E7 /* Assets.xcassets in Resources */,
 				2842DE1D1DF1AF6E008B15E7 /* Actions.sks in Resources */,
 				2842DE281DF1AF6E008B15E7 /* Main.storyboard in Resources */,
+				28BCA3411DF7A84B004CDAB6 /* tree.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,11 +11,13 @@
 #import <GameplayKit/GameplayKit.h>
 #import "BST.h"
 
-@interface BSTViewController : NSViewController <BSTDelegate>{
-    CGPoint latestPosition;
-    SKLabelNode *lastestNode;
-    
-}
+@interface BSTViewController : NSViewController <BSTDelegate>
+
+@property (weak) IBOutlet NSTextField *avgHeight;
+@property (weak) IBOutlet NSTextField *maxHeight;
+@property (weak) IBOutlet NSTextField *optHeight;
+@property (weak) IBOutlet NSTextField *size;
+@property (weak) IBOutlet NSTextField *textField;
 
 @property (assign) IBOutlet SKView *skView;
 

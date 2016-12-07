@@ -11,55 +11,80 @@
 
 @implementation BSTViewController
 
--(void)drawNode:(TreeNode *)node parent:(TreeNode *)parent isLeft:(int)isLeft currentHeight:(int)h{
+-(void)drawNode:(TreeNode *)node parent:(TreeNode *)parent isLeft:(int)isLeft index:(int)index width:(int)width{
     
     if (isLeft == 1) {
-        node.position = CGPointMake(parent.position.x - 60 - pow(4, ([self.bst height] + 1) - h), -1 * h * 50);
+        node.position = CGPointMake(parent.position.x - (80 * width / index), - index * 60 + 300);
     }else if (isLeft == 0){
-        node.position = CGPointMake(parent.position.x + 60 + pow(4, ([self.bst height] + 1) - h), -1 * h * 50);
+        node.position = CGPointMake(parent.position.x + (80 * width / index), - index * 60 + 300);
     }
+    
+    SKShapeNode *circle = [SKShapeNode shapeNodeWithEllipseOfSize:CGSizeMake(8, 8)];
+    circle.lineWidth = 6;
+    circle.position = CGPointMake(node.position.x, node.position.y + circle.yScale / 3);
+    [self.skView.scene addChild:circle];
+    
+    if (isLeft != 2) {
+        [self drawLine:parent.position toPoint:node.position];
+    }
+    
+    self.avgHeight.stringValue = [NSString stringWithFormat:@"Average Height: %d", ([self.bst heightHelper:self.bst.root.rightChild] +
+                                                                    [self.bst heightHelper:self.bst.root.leftChild]) / 2];
+    self.maxHeight.stringValue = [NSString stringWithFormat:@"Max Height: %i", [self.bst height]];
+    self.optHeight.stringValue = [NSString stringWithFormat:@"Opt Height: %f", log10f([self.bst size:self.bst.root]) / log10f(2)];
+    self.size.stringValue = [NSString stringWithFormat:@"Size: %i", [self.bst size:self.bst.root]];
+}
 
-    SKLabelNode *label = [SKLabelNode labelNodeWithText:[NSString stringWithFormat:@"%i", node.value]];
-    label.fontColor = [NSColor whiteColor];
-    label.position = node.position;
-    [self.skView.scene addChild:label];
+-(void)drawLine:(CGPoint)a toPoint:(CGPoint)b{
     
-    SKShapeNode *rightLine = [SKShapeNode shapeNodeWithRectOfSize:CGSizeMake(40, 1.5) cornerRadius:0.3];
-    rightLine.fillColor = [NSColor whiteColor];
-    rightLine.strokeColor = [NSColor whiteColor];
-    rightLine.lineWidth = 1.5;
-    [rightLine runAction:[SKAction rotateByAngle:M_PI / 3 duration:0.0]];
-    rightLine.position = CGPointMake(-label.frame.size.width/2, -13);
-    [label addChild:rightLine];
+    float deltaX = a.x - b.x;
+    float deltaY = a.y - b.y;
+    float dist = sqrt(pow(deltaX, 2.0) + pow(deltaY, 2.0));
     
-    SKShapeNode *leftLine = [SKShapeNode shapeNodeWithRectOfSize:CGSizeMake(40, 1.5) cornerRadius:0.3];
+    float angle;
+    if (deltaX != 0 && deltaY != 0) {
+        angle = atanf(deltaY / deltaX);
+    }
+    
+    SKShapeNode *leftLine = [SKShapeNode shapeNodeWithRectOfSize:CGSizeMake(dist, 1.5) cornerRadius:0.3];
     leftLine.fillColor = [NSColor whiteColor];
     leftLine.strokeColor = [NSColor whiteColor];
     leftLine.lineWidth = 1.5;
-    [leftLine runAction:[SKAction rotateByAngle:M_PI * 1.65 duration:0.0]];
-    leftLine.position = CGPointMake(label.frame.size.width - 5, - 13);
-    [label addChild:leftLine];
-
-}
-
--(SKLabelNode *)findLabelNode:(int)x{
+    [leftLine runAction:[SKAction rotateByAngle:angle duration:0.0]];
     
-    SKLabelNode *parent;
-    if (self.skView.scene.children.count > 0) {
-        parent = (SKLabelNode *)[self.skView.scene.children objectAtIndex:0];
-    }
-         
-    for (SKLabelNode *node in parent.children) {
-        if ([node isKindOfClass:[SKLabelNode class]] && [node.text isEqualToString:[NSString stringWithFormat:@"%i", x]]) {
-            return node;
-        }
-    }
-    return NULL;
+    leftLine.position = CGPointMake(a.x - deltaX / 2, a.y - 30);
+    
+    [self.skView.scene addChild:leftLine];
 }
+
+#pragma mark - IBActions
 
 -(IBAction)move:(id)sender{
-    [self.skView.scene removeAllChildren];
+    [self.bst drawTree];
 }
+
+-(IBAction)reset:(id)sender{
+    
+    [self.skView.scene removeAllChildren];
+    self.bst = [[BST alloc] initWithFileName:[[NSBundle mainBundle] pathForResource:@"tree" ofType:@"txt"]];
+    self.bst.delegate = self;
+    [self.bst buildTree];
+    
+    while ([self.bst size:self.bst.root] < 80) {
+        int x = arc4random()%200;
+        [self.bst insert:x];
+    }
+    [self.bst drawTree];
+}
+
+-(IBAction)insertValue:(id)sender{
+    
+    [self.bst insert:[self.textField.stringValue intValue]];
+    [self.skView.scene removeAllChildren];
+    [self.bst drawTree];
+}
+
+#pragma mark - Life Cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -76,13 +101,14 @@
     self.skView.showsFPS = YES;
     self.skView.showsNodeCount = YES;
     
-    latestPosition = CGPointMake(0, 300);
-    
-    self.bst = [[BST alloc] initWithFileName:@"~/Desktop/tree.txt"];
+    self.bst = [[BST alloc] initWithFileName:[[NSBundle mainBundle] pathForResource:@"tree" ofType:@"txt"]];
     self.bst.delegate = self;
     [self.bst buildTree];
-    NSLog(@"%i", [self.bst height]);
-    [self.bst drawTree];
+    
+    while ([self.bst size:self.bst.root] < 80) {
+        int x = arc4random()%200;
+        [self.bst insert:x];
+    }
 }
 
 @end

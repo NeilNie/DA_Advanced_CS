@@ -20,21 +20,27 @@
 
 -(void)drawTree{
     
-    self.root.position = CGPointMake(0, 0);
-    [self.delegate drawNode:self.root parent:nil isLeft:2 currentHeight:0];
+//    float leftWidth = [self width:self.root.leftChild];
+//    float rightWidth = [self width:self.root.rightChild];
+//    
+//    float average = 1200 / (leftWidth + rightWidth);
+    
+    self.root.position = CGPointMake(0, 300);
+    [self.delegate drawNode:self.root parent:nil isLeft:2 index:0 width:[self width:self.root] + 1];
     
     [self drawTreeHelper:self.root index:1];
 }
 
 -(void)drawTreeHelper:(TreeNode *)node index:(int)index{
     
-    if (node.leftChild){
-        [self.delegate drawNode:node.leftChild parent:node isLeft:1 currentHeight:index];
-        [self drawTreeHelper:node.leftChild index:index + 1];
-    }
     if (node.rightChild){
-        [self.delegate drawNode:node.rightChild parent:node isLeft:0 currentHeight:index];
+        [self.delegate drawNode:node.rightChild parent:node isLeft:0 index:index width:[self width:node.rightChild.leftChild] + 1];
         [self drawTreeHelper:node.rightChild index:index + 1];
+    }
+    
+    if (node.leftChild){
+        [self.delegate drawNode:node.leftChild parent:node isLeft:1 index:index width:[self width:node.leftChild.rightChild] + 1];
+        [self drawTreeHelper:node.leftChild index:index + 1];
     }
 }
 
@@ -49,10 +55,27 @@
     return [self heightHelper:self.root];
 }
 
+-(int)heightHelper:(TreeNode *)node{
+    
+    if (node.leftChild && node.rightChild)
+        return 1 + MAX([self heightHelper:node.leftChild], [self heightHelper:node.rightChild]);
+    else if (!node.leftChild && node.rightChild)
+        return 1 + [self heightHelper:node.rightChild];
+    else if (!node.rightChild && node.leftChild)
+        return 1 + [self heightHelper:node.leftChild];
+    return 0;
+}
+
 -(void)insert:(int)object{
     
     TreeNode *node = [[TreeNode alloc] initWithLeftChild:nil rightChild:nil value:object];
-    [self insertHelper:self.root insertNode:node];
+    
+    if (!self.root){
+        self.root = node;
+        return;
+    }
+    if (![self contains:object])
+        [self insertHelper:self.root insertNode:node];
 }
 
 -(void)remove:(int)object{
@@ -125,6 +148,22 @@
 
 #pragma mark - Private Helpers
 
+-(int)size:(TreeNode *)node{
+    
+    int left = 0, right = 0;
+    if (node.leftChild)
+        left = [self size:node.leftChild];
+    else if ([node isEqual:self.root] && (!node.rightChild || !node.leftChild))
+        @throw [NSException exceptionWithName:@"Unbalanced tree" reason:@"The tree has no left branch. Please rebalance the tree" userInfo:nil];
+    
+    if (node.rightChild)
+        right = [self size:node.rightChild];
+    else if ([node isEqual:self.root] && (!node.rightChild || !node.leftChild))
+        @throw [NSException exceptionWithName:@"Unbalanced tree" reason:@"The tree has no right branch. Please rebalance the tree" userInfo:nil];
+    
+    return left + right + 1;
+}
+
 -(void)join:(TreeNode *)a withNode:(TreeNode *)b{
     a.rightChild = b;
     b.leftChild = a;
@@ -181,6 +220,8 @@
 
 -(BOOL)containsHelper:(TreeNode *)node object:(int)x{
     
+//    if (![node isEqual:self.root] && (!node.leftChild || !node.rightChild) && [self height] != 0)
+//        @throw [NSException exceptionWithName:@"Unbalanced tree" reason:@"The tree is not balanced, therefore can not perform searches." userInfo:nil];
     if (x < node.value)
         return node.leftChild && [self containsHelper:node.leftChild object:x];
     else if (x > node.value)
@@ -211,36 +252,20 @@
 
 -(void)insertHelper:(TreeNode *)node insertNode:(TreeNode *)insert{
     
-    if (self.root) {
-        if (!node.leftChild || !node.rightChild){
-            if (insert.value < node.value)
-                node.leftChild = insert;
-            else
-                node.rightChild = insert;
-            
-        }else{
-            if (insert.value > node.value)
-                [self insertHelper:node.rightChild insertNode:insert];
-            else if (insert.value < node.value)
-                [self insertHelper:node.leftChild insertNode:insert];
-        }
-    }else
-        self.root = insert;
-}
-
--(int)heightHelper:(TreeNode *)node{
-    
-    if (node.leftChild && node.rightChild)
-        return 1 + MAX([self heightHelper:node.leftChild], [self heightHelper:node.rightChild]);
-    else if (!node.leftChild && node.rightChild)
-        return 1 + [self heightHelper:node.rightChild];
-    else if (!node.rightChild && node.leftChild)
-        return 1 + [self heightHelper:node.leftChild];
-    return 0;
+    if (!node.leftChild || !node.rightChild){
+        if (insert.value < node.value)
+            node.leftChild = insert;
+        else
+            node.rightChild = insert;
+    }else{
+        if (insert.value > node.value)
+            [self insertHelper:node.rightChild insertNode:insert];
+        else if (insert.value < node.value)
+            [self insertHelper:node.leftChild insertNode:insert];
+    }
 }
 
 -(void)buildTree{
-    
     for (NSString *number in array)
         [self insert:[number intValue]];
 }

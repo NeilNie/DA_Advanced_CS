@@ -45,10 +45,14 @@
 
 -(void)betterRemove:(int)object;
 
+-(int)size:(TreeNode *)node;
+
+-(int)heightHelper:(TreeNode *)node;
+
 @end
 
 @protocol BSTDelegate <NSObject>
 
--(void)drawNode:(TreeNode *)node parent:(TreeNode *)parent isLeft:(int)isLeft currentHeight:(int)h;
+-(void)drawNode:(TreeNode *)node parent:(TreeNode *)parent isLeft:(int)isLeft index:(int)index width:(int)width;
 
 @end
