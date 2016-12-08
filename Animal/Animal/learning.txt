@@ -1,0 +1,4 @@
+It can fly
+It is a bird
+It can walk
+It is a cat

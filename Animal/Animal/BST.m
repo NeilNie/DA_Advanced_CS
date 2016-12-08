@@ -18,27 +18,6 @@
 
 #pragma mark - Public Methods
 
--(void)drawTree{
-    
-    self.root.position = CGPointMake(0, 300);
-    [self.delegate drawNode:self.root parent:nil isLeft:2 index:0 width:[self width:self.root] + 1];
-    
-    [self drawTreeHelper:self.root index:1];
-}
-
--(void)drawTreeHelper:(TreeNode *)node index:(int)index{
-    
-    if (node.rightChild){
-        [self.delegate drawNode:node.rightChild parent:node isLeft:0 index:index width:[self width:node.rightChild.leftChild] + 1];
-        [self drawTreeHelper:node.rightChild index:index + 1];
-    }
-    
-    if (node.leftChild){
-        [self.delegate drawNode:node.leftChild parent:node isLeft:1 index:index width:[self width:node.leftChild.rightChild] + 1];
-        [self drawTreeHelper:node.leftChild index:index + 1];
-    }
-}
-
 -(int)width:(TreeNode *)node{
     if (node.rightChild && node.leftChild) {
         return 1 + MAX([self width:node.rightChild], [self width:node.leftChild]);
@@ -57,7 +36,7 @@
     return 1+MAX([self heightHelper:node.leftChild], [self heightHelper:node.rightChild]);
 }
 
--(void)insert:(int)object{
+-(void)insert:(NSString *)object{
     
     TreeNode *node = [[TreeNode alloc] initWithLeftChild:nil rightChild:nil value:object];
     
@@ -69,7 +48,7 @@
         [self insertHelper:self.root insertNode:node];
 }
 
--(void)remove:(int)object{
+-(void)remove:(NSString *)object{
     
     TreeNode *rmParent = [self parentOf:object node:self.root];
     TreeNode *rmNode = [self findNode:self.root object:object];
@@ -94,15 +73,15 @@
     }
 }
 
--(void)betterRemove:(int)object{
+-(void)betterRemove:(NSString *)object{
     
     TreeNode *rmParent = [self parentOf:object node:self.root];
     
-    if (rmParent.rightChild.value == object){
+    if ([rmParent.rightChild.value isEqualToString:object]){
         TreeNode *leaf = [self findLeftLeaf:rmParent.rightChild.rightChild];
         rmParent.rightChild.value = leaf.value;
         leaf = nil;
-    }else if (rmParent.leftChild.value == object){
+    }else if ([rmParent.leftChild.value isEqualToString:object]){
         TreeNode *leaf = [self findLeftLeaf:rmParent.leftChild.rightChild];
         rmParent.leftChild.value = leaf.value;
         leaf = nil;
@@ -191,7 +170,7 @@
     return node;
 }
 
--(TreeNode *)parentOf:(NSString)x node:(TreeNode *)node {
+-(TreeNode *)parentOf:(NSString *)x node:(TreeNode *)node {
     
     if (x < node.leftChild.value && node.leftChild.leftChild)
         return [self parentOf:x node:node.leftChild];
@@ -200,7 +179,7 @@
     else return node;
 }
 
--(TreeNode *)findNode:(TreeNode *)node object:(int)x{
+-(TreeNode *)findNode:(TreeNode *)node object:(NSString *)x{
     
     if (x < node.value && node.leftChild)
         return [self findNode:node.leftChild object:x];
@@ -209,24 +188,14 @@
     else return node;
 }
 
--(BOOL)containsHelper:(TreeNode *)node object:(int)x{
+-(BOOL)containsHelper:(TreeNode *)node object:(NSString *)x{
     
-    //    if (![node isEqual:self.root] && (!node.leftChild || !node.rightChild) && [self height] != 0)
-    //        @throw [NSException exceptionWithName:@"Unbalanced tree" reason:@"The tree is not balanced, therefore can not perform searches." userInfo:nil];
     if(node==nil)
         return NO;
     
-    return (x==node.value||
+    return ([x isEqualToString:node.value]||
             [self containsHelper:node.leftChild object:x]||
             [self containsHelper:node.rightChild object:x]);
-    
-    
-    
-    if (x < node.value)
-        return node.leftChild && [self containsHelper:node.leftChild object:x];
-    else if (x > node.value)
-        return node.rightChild && [self containsHelper:node.rightChild object:x];
-    else return YES;
 }
 
 -(void)preorderTraversalHelper:(TreeNode *)node{
@@ -270,8 +239,12 @@
 }
 
 -(void)buildTree{
-    for (NSString *number in array)
-        [self insert:[number intValue]];
+    
+    self.root = [[TreeNode alloc] initWithLeftChild:nil rightChild:nil value:[array objectAtIndex:0]];
+    TreeNode *current = self.root;
+    
+    current.leftChild = [[TreeNode alloc] initWithLeftChild:nil rightChild:nil value:[array objectAtIndex:1]];
+    current.rightChild = [[TreeNode alloc] initWithLeftChild:nil rightChild:nil value:[array objectAtIndex:2]];
 }
 
 #pragma mark - Constructors

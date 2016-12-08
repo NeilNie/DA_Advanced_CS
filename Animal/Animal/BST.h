@@ -20,8 +20,6 @@
 
 /** Methods **/
 
--(void)drawTree;
-
 -(int)width:(TreeNode *)node;
 
 -(void)buildTree;
@@ -30,11 +28,11 @@
 
 -(int)height;
 
--(void)insert:(int)object;
+-(void)insert:(NSString *)object;
 
--(void)remove:(int)object;
+-(void)remove:(NSString *)object;
 
--(BOOL)contains:(int)object;
+-(BOOL)contains:(NSString *)object;
 
 -(void)preorderTraversal;
 
@@ -42,7 +40,7 @@
 
 -(void)inorderTravesal;
 
--(void)betterRemove:(int)object;
+-(void)betterRemove:(NSString *)object;
 
 -(int)size:(TreeNode *)node;
 
