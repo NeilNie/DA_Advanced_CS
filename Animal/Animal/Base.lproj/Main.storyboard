@@ -687,9 +687,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aVM-Zv-CVF">
-                                <rect key="frame" x="241" y="13" width="81" height="32"/>
+                                <rect key="frame" x="240" y="13" width="83" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="RBj-bZ-pex">
+                                <buttonCell key="cell" type="push" title="Submit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="RBj-bZ-pex">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -773,6 +773,28 @@
                                     <segue destination="a11-rp-c0w" kind="show" id="Ek3-eg-7oS"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U5W-QJ-Rdo">
+                                <rect key="frame" x="172" y="13" width="58" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="No" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CvC-U8-WWf">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="noClick:" target="5gI-5U-AMq" id="MuQ-wT-zar"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k4l-Na-NvC">
+                                <rect key="frame" x="331" y="13" width="62" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Yes" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Gki-G5-XvA">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="yesClick:" target="5gI-5U-AMq" id="wME-ui-thw"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -784,10 +806,10 @@
             </objects>
             <point key="canvasLocation" x="116" y="685.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Instructions-->
         <scene sceneID="dHO-pT-WYg">
             <objects>
-                <viewController id="a11-rp-c0w" sceneMemberID="viewController">
+                <viewController title="Instructions" id="a11-rp-c0w" sceneMemberID="viewController">
                     <view key="view" id="RrA-9h-Qx0">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
