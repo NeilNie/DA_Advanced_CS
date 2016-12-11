@@ -4,15 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Calculator.xcscheme</key>
+		<key>Animal.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>28BAC07C1D8C41B900348A90</key>
+		<key>28A3CF5C1DF7C7D400D236B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>28A3CF751DF7C7D400D236B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>28A3CF801DF7C7D400D236B0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

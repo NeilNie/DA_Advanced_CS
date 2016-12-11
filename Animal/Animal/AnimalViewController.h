@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "BST.h"
+#import <Realm/Realm.h>
 
 @interface AnimalViewController : NSViewController
 

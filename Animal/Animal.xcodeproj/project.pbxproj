@@ -11,7 +11,6 @@
 		28A3CF621DF7C7D400D236B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A3CF611DF7C7D400D236B0 /* AppDelegate.m */; };
 		28A3CF651DF7C7D400D236B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A3CF641DF7C7D400D236B0 /* main.m */; };
 		28A3CF681DF7C7D400D236B0 /* AnimalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A3CF671DF7C7D400D236B0 /* AnimalViewController.m */; };
-		28A3CF6B1DF7C7D400D236B0 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A3CF6A1DF7C7D400D236B0 /* Document.m */; };
 		28A3CF6D1DF7C7D400D236B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28A3CF6C1DF7C7D400D236B0 /* Assets.xcassets */; };
 		28A3CF701DF7C7D400D236B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A3CF6E1DF7C7D400D236B0 /* Main.storyboard */; };
 		28A3CF7B1DF7C7D400D236B0 /* AnimalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A3CF7A1DF7C7D400D236B0 /* AnimalTests.m */; };
@@ -48,8 +47,6 @@
 		28A3CF641DF7C7D400D236B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		28A3CF661DF7C7D400D236B0 /* AnimalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimalViewController.h; sourceTree = "<group>"; };
 		28A3CF671DF7C7D400D236B0 /* AnimalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimalViewController.m; sourceTree = "<group>"; };
-		28A3CF691DF7C7D400D236B0 /* Document.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
-		28A3CF6A1DF7C7D400D236B0 /* Document.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
 		28A3CF6C1DF7C7D400D236B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28A3CF6F1DF7C7D400D236B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28A3CF711DF7C7D400D236B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -170,8 +167,6 @@
 		28D56F2C1DFAF2830092131B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				28A3CF691DF7C7D400D236B0 /* Document.h */,
-				28A3CF6A1DF7C7D400D236B0 /* Document.m */,
 				28DFAF761DF84DDC001EB090 /* BST.h */,
 				28DFAF771DF84DDC001EB090 /* BST.m */,
 				28DFAF781DF84DDC001EB090 /* TreeNode.h */,
@@ -486,7 +481,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28A3CF6B1DF7C7D400D236B0 /* Document.m in Sources */,
 				28DFAF7A1DF84DDC001EB090 /* BST.m in Sources */,
 				28A3CF681DF7C7D400D236B0 /* AnimalViewController.m in Sources */,
 				28A3CF651DF7C7D400D236B0 /* main.m in Sources */,
@@ -630,6 +624,7 @@
 			baseConfigurationReference = 6CCB536EFF3897BCC7C17708 /* Pods-Animal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8NZ8K5GNH8;
 				INFOPLIST_FILE = Animal/Info.plist;
@@ -644,6 +639,7 @@
 			baseConfigurationReference = 674F6C0BF57BDBA691B558AC /* Pods-Animal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8NZ8K5GNH8;
 				INFOPLIST_FILE = Animal/Info.plist;

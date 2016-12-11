@@ -1,4 +1,4 @@
-It can fly
+Can it fly
 bird
-It can walk
+Can it walk
 It is a cat

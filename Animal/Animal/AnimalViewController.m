@@ -21,6 +21,7 @@
 @implementation AnimalViewController
 
 -(IBAction)yesClick:(id)sender{
+    
     if (self.currentNode.leftChild){
         self.currentNode = self.currentNode.leftChild;
         self.response.string =  [self.response.string stringByAppendingString:[NSString stringWithFormat:@"Is it %@?\n", self.currentNode.value]];
@@ -31,6 +32,7 @@
 }
 
 -(IBAction)noClick:(id)sender{
+    
     if(self.currentNode.rightChild){
         self.currentNode = self.currentNode.rightChild;
         self.response.string =  [self.response.string stringByAppendingString:[NSString stringWithFormat:@"%@?\n", self.currentNode.value]];
@@ -43,9 +45,12 @@
 -(IBAction)submit:(id)sender{
     
     if ([self.userInput.stringValue containsString:@"It"]) {
+        
+        [[RLMRealm defaultRealm] beginWriteTransaction];
         self.currentNode.rightChild = [[TreeNode alloc] initWithLeftChild:nil rightChild:nil value:self.userInput.stringValue];
         self.currentNode.rightChild.leftChild = [[TreeNode alloc] initWithLeftChild:nil rightChild:nil value:addedA];
         self.response.string = [self.response.string stringByAppendingString:@"Now I know"];
+        [[RLMRealm defaultRealm] commitWriteTransaction];
     
     }else if (![self.userInput.stringValue containsString:@" "]) {
         self.response.string = [self.response.string stringByAppendingString:
@@ -57,21 +62,31 @@
 }
 
 -(IBAction)restart:(id)sender{
-    self.currentNode = self.tree.root;
+    self.currentNode = (TreeNode *)[[TreeNode allObjects] objectAtIndex:0];
     self.userInput.stringValue = @"";
     self.response.string = [NSString stringWithFormat:@"%@?\n", self.currentNode.value];
     isQ = YES;
+}
+- (IBAction)clearDatabase:(id)sender {
+    
+    [[RLMRealm defaultRealm] beginWriteTransaction];
+    [[RLMRealm defaultRealm] deleteAllObjects];
+    [[RLMRealm defaultRealm] commitWriteTransaction];
+    self.tree = [[BST alloc] initWithFileName:[[NSBundle mainBundle] pathForResource:@"learning" ofType:@"txt"]];
+    [self.tree buildTree];
+    self.currentNode = self.tree.root;
+    self.response.string = [NSString stringWithFormat:@"%@?\n", self.currentNode.value];
+    isQ = YES;
+    NSLog(@"%@", [[[RLMRealm defaultRealm] configuration] fileURL]);
 }
 
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    self.tree = [[BST alloc] initWithFileName:[[NSBundle mainBundle] pathForResource:@"learning" ofType:@"txt"]];
-    [self.tree buildTree];
-    self.currentNode = self.tree.root;
+    self.currentNode = (TreeNode *)[[TreeNode allObjects] objectAtIndex:0];
     self.response.string = [self.response.string stringByAppendingString:[NSString stringWithFormat:@"%@?\n", self.currentNode.value]];
     isQ = YES;
-    self.tree.root.rightChild.leftChild = [[TreeNode alloc] initWithLeftChild:nil rightChild:nil value:@"Dog"];
+    NSLog(@"%@", [[[RLMRealm defaultRealm] configuration] fileURL]);
     // Do any additional setup after loading the view.
 }
 

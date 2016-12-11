@@ -240,11 +240,15 @@
 
 -(void)buildTree{
     
-    self.root = [[TreeNode alloc] initWithLeftChild:nil rightChild:nil value:[array objectAtIndex:0]];
-    TreeNode *current = self.root;
+    [[RLMRealm defaultRealm] beginWriteTransaction];
     
-    current.leftChild = [[TreeNode alloc] initWithLeftChild:nil rightChild:nil value:[array objectAtIndex:1]];
-    current.rightChild = [[TreeNode alloc] initWithLeftChild:nil rightChild:nil value:[array objectAtIndex:2]];
+    self.root = [[TreeNode alloc] initWithLeftChild:nil rightChild:nil value:[array objectAtIndex:0]];
+    
+    self.root.leftChild = [[TreeNode alloc] initWithLeftChild:nil rightChild:nil value:[array objectAtIndex:1]];
+    self.root.rightChild = [[TreeNode alloc] initWithLeftChild:nil rightChild:nil value:[array objectAtIndex:2]];
+    self.root.rightChild.leftChild = [[TreeNode alloc] initWithLeftChild:nil rightChild:nil value:@"Dog"];
+    [[RLMRealm defaultRealm] addObject:self.root];
+    [[RLMRealm defaultRealm] commitWriteTransaction];
 }
 
 #pragma mark - Constructors

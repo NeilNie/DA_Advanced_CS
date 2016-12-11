@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Realm/Realm.h>
 
-@interface TreeNode : NSObject
+@interface TreeNode : RLMObject
 
 @property (strong, nonatomic) NSString *value;
 @property (strong, nonatomic) TreeNode *leftChild;
