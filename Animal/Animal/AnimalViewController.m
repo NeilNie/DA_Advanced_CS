@@ -23,6 +23,7 @@
 -(IBAction)yesClick:(id)sender{
     
     if (self.currentNode.leftChild){
+        self.previousNode = self.currentNode;
         self.currentNode = self.currentNode.leftChild;
         self.response.string =  [self.response.string stringByAppendingString:[NSString stringWithFormat:@"Is it %@?\n", self.currentNode.value]];
     }
@@ -34,6 +35,7 @@
 -(IBAction)noClick:(id)sender{
     
     if(self.currentNode.rightChild){
+        self.previousNode = self.currentNode;
         self.currentNode = self.currentNode.rightChild;
         self.response.string =  [self.response.string stringByAppendingString:[NSString stringWithFormat:@"%@?\n", self.currentNode.value]];
         isQ = YES;
@@ -51,13 +53,19 @@
         self.currentNode.rightChild.leftChild = [[TreeNode alloc] initWithLeftChild:nil rightChild:nil value:addedA];
         self.response.string = [self.response.string stringByAppendingString:@"Now I know"];
         [[RLMRealm defaultRealm] commitWriteTransaction];
-    
-    }else if (![self.userInput.stringValue containsString:@" "]) {
+        
+    }else if (![self.userInput.stringValue containsString:@" "] && !self.currentNode.leftChild) {
         self.response.string = [self.response.string stringByAppendingString:
-                                [NSString stringWithFormat:@"What's a difference between %@ and a %@\n",
-                                 self.currentNode.leftChild.value,
+                                [NSString stringWithFormat:@"What's a difference between a %@ and a %@\n",
+                                 (self.currentNode.leftChild.value)? self.currentNode.leftChild.value : self.previousNode.leftChild.value,
                                  self.userInput.stringValue]];
         addedA = self.userInput.stringValue;
+    
+    }else if (![self.userInput.stringValue containsString:@" "] && self.currentNode.leftChild){
+        [[RLMRealm defaultRealm] beginWriteTransaction];
+        self.currentNode.rightChild = [[TreeNode alloc] initWithLeftChild:nil rightChild:nil value:self.userInput.stringValue];
+        self.response.string = [self.response.string stringByAppendingString:@"Now I know"];
+        [[RLMRealm defaultRealm] commitWriteTransaction];
     }
 }
 
@@ -83,17 +91,22 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    self.currentNode = (TreeNode *)[[TreeNode allObjects] objectAtIndex:0];
-    self.response.string = [self.response.string stringByAppendingString:[NSString stringWithFormat:@"%@?\n", self.currentNode.value]];
-    isQ = YES;
-    NSLog(@"%@", [[[RLMRealm defaultRealm] configuration] fileURL]);
+    if ([TreeNode allObjects].count > 1) {
+        self.currentNode = (TreeNode *)[[TreeNode allObjects] objectAtIndex:0];
+        self.response.string = [self.response.string stringByAppendingString:[NSString stringWithFormat:@"%@?\n", self.currentNode.value]];
+        isQ = YES;
+        NSLog(@"%@", [[[RLMRealm defaultRealm] configuration] fileURL]);
+    }else{
+        [self clearDatabase:nil];
+    }
+    
     // Do any additional setup after loading the view.
 }
 
 
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
-
+    
     // Update the view, if already loaded.
 }
 

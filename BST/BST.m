@@ -210,23 +210,13 @@
 }
 
 -(BOOL)containsHelper:(TreeNode *)node object:(int)x{
-    
-    //    if (![node isEqual:self.root] && (!node.leftChild || !node.rightChild) && [self height] != 0)
-    //        @throw [NSException exceptionWithName:@"Unbalanced tree" reason:@"The tree is not balanced, therefore can not perform searches." userInfo:nil];
-    if(node==nil)
+
+    if(node == nil)
         return NO;
     
-    return (x==node.value||
+    return (x == node.value||
             [self containsHelper:node.leftChild object:x]||
             [self containsHelper:node.rightChild object:x]);
-    
-    
-    
-    if (x < node.value)
-        return node.leftChild && [self containsHelper:node.leftChild object:x];
-    else if (x > node.value)
-        return node.rightChild && [self containsHelper:node.rightChild object:x];
-    else return YES;
 }
 
 -(void)preorderTraversalHelper:(TreeNode *)node{

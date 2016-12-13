@@ -13,6 +13,7 @@
 @interface AnimalViewController : NSViewController
 
 @property (strong) BST *tree;
+@property (strong) TreeNode *previousNode;
 @property (strong) TreeNode *currentNode;
 @property (weak) IBOutlet NSTextView *response;
 @property (weak) IBOutlet NSTextField *userInput;
