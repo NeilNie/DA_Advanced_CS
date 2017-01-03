@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Merge Sort/Merge Sort.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Insertion Sort/Insert Sort.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Animal/Animal.xcodeproj">
    </FileRef>
    <FileRef
