@@ -18,10 +18,8 @@
     int middle = (int)[unsortedArray count] / 2;
     NSArray *rightArr = [unsortedArray subarrayWithRange:NSMakeRange(0, middle)];
     NSArray *leftArr = [unsortedArray subarrayWithRange:NSMakeRange(middle, ([unsortedArray count] - middle))];
-    //Or iterate through the unsortedArray and create your left and right array
-    //for left array iteration starts at index =0 and stops at middle, for right array iteration starts at midde and end at the end of the unsorted array
-    NSArray *resultArray =[MergeSort mergeLeft:[MergeSort mergeSort:leftArr] right:[MergeSort mergeSort:rightArr]];
-    return resultArray;
+    
+    return [MergeSort mergeLeft:[MergeSort mergeSort:leftArr] right:[MergeSort mergeSort:rightArr]];
 }
 
 +(NSArray *)mergeLeft:(NSArray *)left right:(NSArray *)right{
@@ -57,10 +55,10 @@
     return ordered;
 }
 
-/*
- 
- the other implementation
 
+ 
+// the other implementation
+/*
 +(NSArray *)merge:(NSArray *)leftArr andRight:(NSArray *)rightArr{
     
     NSMutableArray *result = [[NSMutableArray alloc] init];
@@ -84,6 +82,5 @@
     newLeft = [result arrayByAddingObjectsFromArray:newLeft];
     return [newLeft arrayByAddingObjectsFromArray:newRight];
 }
-
 */
 @end
