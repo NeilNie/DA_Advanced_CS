@@ -14,7 +14,7 @@
 {
     if ([unsortedArray count] < 2)
         return unsortedArray;
-
+    
     int middle = (int)[unsortedArray count] / 2;
     NSArray *rightArr = [unsortedArray subarrayWithRange:NSMakeRange(0, middle)];
     NSArray *leftArr = [unsortedArray subarrayWithRange:NSMakeRange(middle, ([unsortedArray count] - middle))];
@@ -59,7 +59,7 @@
 -(void)beginExperiment{
     
     for (int i = 10; i < 100000000; i = i * 10) {
-
+        
         NSDate *methodStart = [NSDate date];
         
         NSMutableArray *numbers  = [NSMutableArray array];
