@@ -12,4 +12,6 @@
 
 +(NSArray * __nonnull)mergeSort:(NSArray * __nonnull)array;
 
+-(void)beginExperiment;
+
 @end

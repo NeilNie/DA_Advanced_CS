@@ -41,7 +41,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
             endingLineNumber = "50"
-            landmarkName = "-BreadthSolveMaze"
+            landmarkName = "-mazeBegin:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -56,31 +56,32 @@
 }
 
 
- 
-// the other implementation
-/*
-+(NSArray *)merge:(NSArray *)leftArr andRight:(NSArray *)rightArr{
+-(void)beginExperiment{
     
-    NSMutableArray *result = [[NSMutableArray alloc] init];
-    int right = 0;
-    int left = 0;
-    while (left < [leftArr count] && right < [rightArr count]){
+    for (int i = 10; i < 100000000; i = i * 10) {
+
+        NSDate *methodStart = [NSDate date];
         
-        if ([[leftArr objectAtIndex:left] intValue] < [[rightArr objectAtIndex:right] intValue]){
-            [result addObject:[leftArr objectAtIndex:left++]];
+        NSMutableArray *numbers  = [NSMutableArray array];
+        while (numbers.count < i) {
+            long x = arc4random()%i * 10;
+            [numbers addObject:[NSNumber numberWithLong:x]];
         }
-        else{
-            [result addObject:[rightArr objectAtIndex:right++]];
-        }
+        NSLog(@"count; %li", numbers.count);
+        
+        NSDate *methodFinish = [NSDate date];
+        NSTimeInterval executionTime = [methodFinish timeIntervalSinceDate:methodStart];
+        NSLog(@"construction executionTime = %f", executionTime);
+        
+        NSDate *method2Start = [NSDate date];
+        
+        [MergeSort mergeSort:numbers];
+        
+        NSDate *method2Finish = [NSDate date];
+        NSTimeInterval executionTime2 = [method2Finish timeIntervalSinceDate:method2Start];
+        NSLog(@"sorting executionTime = %f", executionTime2);
+        
+        NSLog(@"------------------------------");
     }
-    NSRange leftRange = NSMakeRange(left, ([leftArr count] - left));
-    NSRange rightRange = NSMakeRange(right, ([rightArr count] - right));
-    
-    NSArray *newRight = [rightArr subarrayWithRange:rightRange];
-    NSArray *newLeft = [leftArr subarrayWithRange:leftRange];
-    
-    newLeft = [result arrayByAddingObjectsFromArray:newLeft];
-    return [newLeft arrayByAddingObjectsFromArray:newRight];
 }
-*/
 @end

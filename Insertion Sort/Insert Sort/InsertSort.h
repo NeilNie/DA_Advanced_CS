@@ -10,6 +10,8 @@
 
 @interface InsertSort : NSObject
 
--(NSMutableArray *)insertionSort:(NSMutableArray *)array;
++(NSMutableArray *)insertionSort:(NSMutableArray *)array;
+
++(void)beginExperiment;
 
 @end

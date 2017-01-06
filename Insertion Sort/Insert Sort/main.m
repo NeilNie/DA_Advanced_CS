@@ -12,9 +12,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        InsertSort *sort = [[InsertSort alloc] init];
-        NSMutableArray *array = [[NSMutableArray alloc] initWithObjects:@1,@5,@4,@2,@8,@3, nil];
-        NSLog(@"%@", [sort insertionSort:array]);
+        [InsertSort beginExperiment];
     }
     return 0;
 }

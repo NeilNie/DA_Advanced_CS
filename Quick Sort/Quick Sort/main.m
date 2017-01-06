@@ -14,14 +14,7 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         // insert code here...
-        NSLog(@"Hello, World!");
-        
-        while (<#condition#>) {
-            <#statements#>
-        }
-        NSMutableArray *array = [[NSMutableArray alloc] initWithObjects:@5,@7,@2,@9,@5,@3,@4,@6,@10,@1, nil];
-        QuickSort *quickSort = [[QuickSort alloc] init];
-        NSLog(@"%@", [quickSort quickSort:array]);
+        [QuickSort beginExperiment];
     }
     return 0;
 }

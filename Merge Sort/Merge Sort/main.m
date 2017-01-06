@@ -11,10 +11,8 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSArray *array = [[NSArray alloc] initWithObjects:@3, @6, @1, @2, @4, @5, @9, @7, @8, nil];
-        NSLog(@"%@", array);
-        NSLog(@"%@", [MergeSort mergeSort:array]);
+    
+        [[[MergeSort alloc] init] beginExperiment];
     }
     return 0;
 }
