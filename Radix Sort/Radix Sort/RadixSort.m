@@ -38,26 +38,26 @@
 +(NSMutableArray *)countSort:(NSMutableArray *)array exp:(int)exp{
     
     NSMutableArray *output = [RadixSort fill:(int)array.count n:0];
-    NSMutableArray *count = [RadixSort fill:10 n:0];
+    NSMutableArray *count = [RadixSort fill:2 n:0];
     
     // Store count of occurrences in count[]
     for (int i = 0; i < array.count; i++){
-        int x = [[count objectAtIndex:([[array objectAtIndex:i] intValue] / exp) %10] intValue] + 1;
-        [count replaceObjectAtIndex:([[array objectAtIndex:i] intValue] / exp) %10  withObject:[NSNumber numberWithInt:x]];
+        int x = [[count objectAtIndex:([[array objectAtIndex:i] intValue] / exp) %2] intValue] + 1;
+        [count replaceObjectAtIndex:([[array objectAtIndex:i] intValue] / exp) %2  withObject:[NSNumber numberWithInt:x]];
     }
     
     // Change count[i] so that count[i] now contains actual
     //  position of this digit in output[]
-    for (int i = 1; i < 10; i++){
+    for (int i = 1; i < 2; i++){
         int x = [[count objectAtIndex:i] intValue] + [[count objectAtIndex:i - 1] intValue];
         [count replaceObjectAtIndex:i withObject:[NSNumber numberWithInt:x]];
     }
     
     // Build the output array
     for (int i = (int)array.count - 1; i >= 0; i--){
-        [output replaceObjectAtIndex:[[count objectAtIndex:([[array objectAtIndex:i] intValue] / exp)%10 ] intValue] - 1 withObject:[array objectAtIndex:i]];
-        int x = [[count objectAtIndex:([[array objectAtIndex:i] intValue] / exp) %10] intValue] - 1;
-        [count replaceObjectAtIndex:([[array objectAtIndex:i] intValue] / exp) %10 withObject:[NSNumber numberWithInt:x]];
+        [output replaceObjectAtIndex:[[count objectAtIndex:([[array objectAtIndex:i] intValue] / exp)%2 ] intValue] - 1 withObject:[array objectAtIndex:i]];
+        int x = [[count objectAtIndex:([[array objectAtIndex:i] intValue] / exp) %2] intValue] - 1;
+        [count replaceObjectAtIndex:([[array objectAtIndex:i] intValue] / exp) %2 withObject:[NSNumber numberWithInt:x]];
     }
     return output;
 }
@@ -66,7 +66,7 @@
     
     int m = [RadixSort maxVal:array];
     
-    for (int i = 1; m / i > 0; i *= 10) {
+    for (int i = 1; m / i > 0; i *= 2) {
         array = [RadixSort countSort:array exp:i];
     }
     return array;
@@ -74,20 +74,13 @@
 
 +(void)beginExperiment{
     
-    for (int i = 10; i < 100000000; i = i * 10) {
-        
-        //        NSDate *methodStart = [NSDate date];
+    for (int i = 1; i < 100000000; i = i * 10) {
         
         NSMutableArray *numbers  = [NSMutableArray array];
         while (numbers.count < i) {
             long x = arc4random()%i * 10;
             [numbers addObject:[NSNumber numberWithLong:x]];
         }
-        //MDLog(@"count; %li", numbers.count);
-        
-        //        NSDate *methodFinish = [NSDate date];
-        //        NSTimeInterval executionTime = [methodFinish timeIntervalSinceDate:methodStart];
-        //        MDLog(@"%f", executionTime);
         
         NSDate *method2Start = [NSDate date];
         
@@ -96,8 +89,6 @@
         NSDate *method2Finish = [NSDate date];
         NSTimeInterval executionTime2 = [method2Finish timeIntervalSinceDate:method2Start];
         MDLog(@"%f", executionTime2);
-        
-        //NSLog(@"------------------------------");
     }
 }
 

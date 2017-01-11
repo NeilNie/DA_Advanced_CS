@@ -65,28 +65,28 @@
     
     for (int i = 10; i < 100000000; i = i * 10) {
         
-//        NSDate *methodStart = [NSDate date];
+        NSDate *methodStart = [NSDate date];
         
         NSMutableArray *numbers  = [NSMutableArray array];
         while (numbers.count < i) {
             long x = arc4random()%i * 10;
             [numbers addObject:[NSNumber numberWithLong:x]];
         }
-        //MDLog(@"count; %li", numbers.count);
+        MDLog(@"count; %li", numbers.count);
         
-//        NSDate *methodFinish = [NSDate date];
-//        NSTimeInterval executionTime = [methodFinish timeIntervalSinceDate:methodStart];
-//        MDLog(@"%f", executionTime);
+        NSDate *methodFinish = [NSDate date];
+        NSTimeInterval executionTime = [methodFinish timeIntervalSinceDate:methodStart];
+        MDLog(@"%f", executionTime);
         
         NSDate *method2Start = [NSDate date];
         
-        [QuickSort quickSort:numbers];
+        [QuickSort quickSort:numbers];1`
         
         NSDate *method2Finish = [NSDate date];
         NSTimeInterval executionTime2 = [method2Finish timeIntervalSinceDate:method2Start];
         MDLog(@"%f", executionTime2);
         
-        //NSLog(@"------------------------------");
+        NSLog(@"------------------------------");
     }
 }
 

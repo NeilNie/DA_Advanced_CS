@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Word Ladder/Word Ladder.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Radix Sort/Radix Sort.xcodeproj">
    </FileRef>
    <FileRef

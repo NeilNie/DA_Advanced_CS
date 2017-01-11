@@ -13,10 +13,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        for (int i = 0; i < 3; i++) {
-            [RadixSort beginExperiment];
-            NSLog(@"ended");
-        }
+        [RadixSort beginExperiment];
     }
     return 0;
 }

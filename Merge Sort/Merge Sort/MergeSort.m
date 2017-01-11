@@ -58,7 +58,7 @@
 
 -(void)beginExperiment{
     
-    for (int i = 10; i < 100000000; i = i * 10) {
+    for (int i = 10; i < 100000; i = i * 10) {
         
         NSDate *methodStart = [NSDate date];
         
@@ -75,6 +75,7 @@
         
         NSDate *method2Start = [NSDate date];
         
+        //NSLog(@"%@", numbers);
         [MergeSort mergeSort:numbers];
         
         NSDate *method2Finish = [NSDate date];

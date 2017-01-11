@@ -14,6 +14,8 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         // insert code here...
+        //[QuickSort beginExperiment];
+        
         [QuickSort beginExperiment];
     }
     return 0;
