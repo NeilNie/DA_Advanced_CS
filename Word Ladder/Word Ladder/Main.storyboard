@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="XYY-g4-Fkh">
             <objects>
-                <viewController id="LTa-xF-NxG" sceneMemberID="viewController">
+                <viewController id="LTa-xF-NxG" customClass="MainViewController" sceneMemberID="viewController">
                     <view key="view" id="Wpi-gT-9Ni">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>

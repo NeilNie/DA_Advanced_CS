@@ -7,7 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Graph.h"
 
-@interface ViewController : NSViewController
+@interface MainViewController : NSViewController
 
 @end
