@@ -24,38 +24,60 @@
 
 #pragma mark - Instance Methods
 
+-(void)addVertex:(NSString *)key withObjects:(NSMutableArray *)objects{
+    
+    self.count+=1;
+    Vertex *v = [[Vertex alloc] initWithKey:key];
+    v.connections = objects;
+    [self.adjacencyList setObject:v forKey:key];
+}
+
 //adds an instance of Vertex to the graph.
 -(void)addVertex:(NSString *)key{
     
     self.count+=1;
-    [self.adjacencyList setObject:[[NSMutableArray alloc] init] forKey:key];
+    if (![self getVertex:key]) {
+        Vertex *v = [[Vertex alloc] initWithKey:key];
+        [self.adjacencyList setObject:v forKey:key];
+    }
 }
 
 //Adds a new, directed edge to the graph that connects two vertices.
 -(void)addEdge:(NSString *)from toVert:(NSString *)to{
     
-    NSMutableArray *fromArray = [self.adjacencyList objectForKey:from];
-    [fromArray addObject:to];
-    [self.adjacencyList setObject:fromArray forKey:from];
+    Vertex *f = [self getVertex:from];
+    if (f) {
+        [f.connections addObject:to];
+    }else
+        [self addVertex:from withObjects:[NSMutableArray arrayWithObjects:to, nil]];
     
-    NSMutableArray *toArray = [self.adjacencyList objectForKey:to];
-    [toArray addObject:from];
-    [self.adjacencyList setObject:toArray forKey:to];
+    Vertex *t = [self getVertex:to];
+    if (t) {
+        [t.connections addObject:from];
+    }else
+        [self addVertex:to withObjects:[NSMutableArray arrayWithObjects:from, nil]];
 }
 
 //Adds a new, weighted, directed edge to the graph that connects two vertices.
--(void)addEdge:(Vertex *)from toVert:(Vertex *)to weight:(int)weight{
+-(void)addEdge:(NSString *)from toVert:(NSString *)to weight:(int)weight{
     
+}
+
+-(Vertex *)getVertex:(NSString *)key{
+    
+    return [self.adjacencyList objectForKey:key];
 }
 
 //finds the vertex in the graph named vertKey.
 -(NSMutableArray *)getConnections:(NSString *)key{
     
-    return [self.adjacencyList objectForKey:key];
+    return [(Vertex *)[self.adjacencyList objectForKey:key] connections];
 }
 
--(BOOL)contains:(NSString *)key{
-    return [self.adjacencyList objectForKey:key] ? YES : NO;
+#pragma mark - Override
+
+-(NSString *)description{
+    return [self.adjacencyList description];
 }
 
 @end

@@ -4,15 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Calculator.xcscheme</key>
+		<key>Quick Sort.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>13</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>28BAC07C1D8C41B900348A90</key>
+		<key>28F1DC8B1E1D27B40068E418</key>
 		<dict>
 			<key>primary</key>
 			<true/>

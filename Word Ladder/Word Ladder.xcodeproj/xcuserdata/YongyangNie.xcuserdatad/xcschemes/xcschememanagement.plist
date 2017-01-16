@@ -4,15 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Calculator.xcscheme</key>
+		<key>Word Ladder.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>10</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>28BAC07C1D8C41B900348A90</key>
+		<key>280F49E31E2674460002061D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>280F49F61E2674460002061D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>280F4A011E2674460002061D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

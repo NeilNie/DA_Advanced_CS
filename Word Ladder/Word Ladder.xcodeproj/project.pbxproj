@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		002D517F1E2BF7F10062064D /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 002D517E1E2BF7F10062064D /* Queue.m */; };
+		008D21441E2C15A20006C669 /* Vertex.m in Sources */ = {isa = PBXBuildFile; fileRef = 008D21431E2C15A20006C669 /* Vertex.m */; };
 		2808302F1E26765A007F5D72 /* Graph.m in Sources */ = {isa = PBXBuildFile; fileRef = 2808302E1E26765A007F5D72 /* Graph.m */; };
-		280830321E2676B9007F5D72 /* Vertex.m in Sources */ = {isa = PBXBuildFile; fileRef = 280830311E2676B9007F5D72 /* Vertex.m */; };
 		280F49E91E2674460002061D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 280F49E81E2674460002061D /* AppDelegate.m */; };
 		280F49EC1E2674460002061D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 280F49EB1E2674460002061D /* main.m */; };
 		280F49EE1E2674460002061D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280F49ED1E2674460002061D /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 		280F4A071E2674460002061D /* Word_LadderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 280F4A061E2674460002061D /* Word_LadderUITests.m */; };
 		280F4A171E26749A0002061D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280F4A161E26749A0002061D /* Main.storyboard */; };
 		280F4A1A1E2674B50002061D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280F4A191E2674B50002061D /* MainViewController.m */; };
+		28EBE2611E2D430D00673705 /* four_letter_words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28EBE2601E2D430D00673705 /* four_letter_words.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		002D517D1E2BF7F10062064D /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
+		002D517E1E2BF7F10062064D /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
+		008D21421E2C15A20006C669 /* Vertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertex.h; sourceTree = "<group>"; };
+		008D21431E2C15A20006C669 /* Vertex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vertex.m; sourceTree = "<group>"; };
 		2808302D1E26765A007F5D72 /* Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Graph.h; sourceTree = "<group>"; };
 		2808302E1E26765A007F5D72 /* Graph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Graph.m; sourceTree = "<group>"; };
-		280830301E2676B9007F5D72 /* Vertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertex.h; sourceTree = "<group>"; };
-		280830311E2676B9007F5D72 /* Vertex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vertex.m; sourceTree = "<group>"; };
 		280F49E41E2674460002061D /* Word Ladder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Word Ladder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		280F49E71E2674460002061D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		280F49E81E2674460002061D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -57,6 +61,7 @@
 		280F4A161E26749A0002061D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		280F4A181E2674B50002061D /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		280F4A191E2674B50002061D /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		28EBE2601E2D430D00673705 /* four_letter_words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = four_letter_words.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +89,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		002D51801E2BF82F0062064D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				008D21421E2C15A20006C669 /* Vertex.h */,
+				008D21431E2C15A20006C669 /* Vertex.m */,
+				002D517D1E2BF7F10062064D /* Queue.h */,
+				002D517E1E2BF7F10062064D /* Queue.m */,
+				2808302D1E26765A007F5D72 /* Graph.h */,
+				2808302E1E26765A007F5D72 /* Graph.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		280F49DB1E2674460002061D = {
 			isa = PBXGroup;
 			children = (
@@ -107,15 +125,13 @@
 		280F49E61E2674460002061D /* Word Ladder */ = {
 			isa = PBXGroup;
 			children = (
+				28EBE2601E2D430D00673705 /* four_letter_words.txt */,
 				280F49E71E2674460002061D /* AppDelegate.h */,
 				280F49E81E2674460002061D /* AppDelegate.m */,
 				280F4A161E26749A0002061D /* Main.storyboard */,
 				280F4A181E2674B50002061D /* MainViewController.h */,
 				280F4A191E2674B50002061D /* MainViewController.m */,
-				280830301E2676B9007F5D72 /* Vertex.h */,
-				280830311E2676B9007F5D72 /* Vertex.m */,
-				2808302D1E26765A007F5D72 /* Graph.h */,
-				2808302E1E26765A007F5D72 /* Graph.m */,
+				002D51801E2BF82F0062064D /* Classes */,
 				280F49EA1E2674460002061D /* Supporting Files */,
 			);
 			path = "Word Ladder";
@@ -259,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28EBE2611E2D430D00673705 /* four_letter_words.txt in Resources */,
 				280F4A171E26749A0002061D /* Main.storyboard in Resources */,
 				280F49EE1E2674460002061D /* Assets.xcassets in Resources */,
 				280F49F11E2674460002061D /* MainMenu.xib in Resources */,
@@ -286,9 +303,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				002D517F1E2BF7F10062064D /* Queue.m in Sources */,
+				008D21441E2C15A20006C669 /* Vertex.m in Sources */,
 				2808302F1E26765A007F5D72 /* Graph.m in Sources */,
 				280F4A1A1E2674B50002061D /* MainViewController.m in Sources */,
-				280830321E2676B9007F5D72 /* Vertex.m in Sources */,
 				280F49EC1E2674460002061D /* main.m in Sources */,
 				280F49E91E2674460002061D /* AppDelegate.m in Sources */,
 			);

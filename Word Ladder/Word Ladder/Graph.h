@@ -27,7 +27,6 @@
 //finds the vertex in the graph named vertKey.
 -(NSMutableArray *)getConnections:(NSString *)key;
 
-//check if graph contains the vertex. 
--(BOOL)contains:(NSString *)key;
+-(Vertex *)getVertex:(NSString *)key;
 
 @end
