@@ -12,9 +12,13 @@
 		2882AC3D1E2D8FE1009ED5C4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2882AC3C1E2D8FE1009ED5C4 /* ViewController.m */; };
 		2882AC3F1E2D8FE1009ED5C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2882AC3E1E2D8FE1009ED5C4 /* Assets.xcassets */; };
 		2882AC421E2D8FE1009ED5C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2882AC401E2D8FE1009ED5C4 /* Main.storyboard */; };
-		2882AC4D1E2D8FE1009ED5C4 /* Map_Routing___DijikstraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2882AC4C1E2D8FE1009ED5C4 /* Map_Routing___DijikstraTests.m */; };
-		2882AC581E2D8FE1009ED5C4 /* Map_Routing___DijikstraUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2882AC571E2D8FE1009ED5C4 /* Map_Routing___DijikstraUITests.m */; };
 		2882AC671E2D8FF1009ED5C4 /* program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2882AC651E2D8FF1009ED5C4 /* program.cpp */; };
+		28F9F5D51E2DAFC30005D0F6 /* Graph.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F9F5D41E2DAFC30005D0F6 /* Graph.m */; };
+		28F9F5D81E2DAFCC0005D0F6 /* Vertex.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F9F5D71E2DAFCC0005D0F6 /* Vertex.m */; };
+		28F9F5DF1E2DB0DC0005D0F6 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F9F5DE1E2DB0DC0005D0F6 /* Queue.m */; };
+		28F9F5E21E2DB1080005D0F6 /* Heap.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F9F5E11E2DB1080005D0F6 /* Heap.m */; };
+		28F9F5E51E2DB11C0005D0F6 /* PQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F9F5E41E2DB11C0005D0F6 /* PQ.m */; };
+		28F9F5E81E2DB71D0005D0F6 /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F9F5E71E2DB71D0005D0F6 /* Heap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,13 +49,21 @@
 		2882AC411E2D8FE1009ED5C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2882AC431E2D8FE1009ED5C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2882AC481E2D8FE1009ED5C4 /* Map Routing - DijkstraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Map Routing - DijkstraTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2882AC4C1E2D8FE1009ED5C4 /* Map_Routing___DijikstraTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Map_Routing___DijikstraTests.m"; sourceTree = "<group>"; };
-		2882AC4E1E2D8FE1009ED5C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2882AC531E2D8FE1009ED5C4 /* Map Routing - DijkstraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Map Routing - DijkstraUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2882AC571E2D8FE1009ED5C4 /* Map_Routing___DijikstraUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Map_Routing___DijikstraUITests.m"; sourceTree = "<group>"; };
-		2882AC591E2D8FE1009ED5C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2882AC651E2D8FF1009ED5C4 /* program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = program.cpp; sourceTree = "<group>"; };
 		2882AC661E2D8FF1009ED5C4 /* program.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = program.hpp; sourceTree = "<group>"; };
+		28F9F5D31E2DAFC30005D0F6 /* Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Graph.h; sourceTree = "<group>"; };
+		28F9F5D41E2DAFC30005D0F6 /* Graph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Graph.m; sourceTree = "<group>"; };
+		28F9F5D61E2DAFCC0005D0F6 /* Vertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertex.h; sourceTree = "<group>"; };
+		28F9F5D71E2DAFCC0005D0F6 /* Vertex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vertex.m; sourceTree = "<group>"; };
+		28F9F5DD1E2DB0DC0005D0F6 /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
+		28F9F5DE1E2DB0DC0005D0F6 /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
+		28F9F5E01E2DB1080005D0F6 /* Heap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Heap.h; sourceTree = "<group>"; };
+		28F9F5E11E2DB1080005D0F6 /* Heap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Heap.m; sourceTree = "<group>"; };
+		28F9F5E31E2DB11C0005D0F6 /* PQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PQ.h; sourceTree = "<group>"; };
+		28F9F5E41E2DB11C0005D0F6 /* PQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PQ.m; sourceTree = "<group>"; };
+		28F9F5E61E2DB71D0005D0F6 /* Map Routing - Dijkstra-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Map Routing - Dijkstra-Bridging-Header.h"; sourceTree = "<group>"; };
+		28F9F5E71E2DB71D0005D0F6 /* Heap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				2882AC341E2D8FE1009ED5C4 /* Map Routing - Dijikstra */,
-				2882AC4B1E2D8FE1009ED5C4 /* Map Routing - DijikstraTests */,
-				2882AC561E2D8FE1009ED5C4 /* Map Routing - DijikstraUITests */,
 				2882AC331E2D8FE1009ED5C4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,6 +118,7 @@
 				2882AC3C1E2D8FE1009ED5C4 /* ViewController.m */,
 				2882AC651E2D8FF1009ED5C4 /* program.cpp */,
 				2882AC661E2D8FF1009ED5C4 /* program.hpp */,
+				28F9F5DC1E2DB0100005D0F6 /* Classes */,
 				2882AC3E1E2D8FE1009ED5C4 /* Assets.xcassets */,
 				2882AC401E2D8FE1009ED5C4 /* Main.storyboard */,
 				2882AC431E2D8FE1009ED5C4 /* Info.plist */,
@@ -124,22 +135,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		2882AC4B1E2D8FE1009ED5C4 /* Map Routing - DijikstraTests */ = {
+		28F9F5DC1E2DB0100005D0F6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				2882AC4C1E2D8FE1009ED5C4 /* Map_Routing___DijikstraTests.m */,
-				2882AC4E1E2D8FE1009ED5C4 /* Info.plist */,
+				28F9F5E71E2DB71D0005D0F6 /* Heap.swift */,
+				28F9F5E31E2DB11C0005D0F6 /* PQ.h */,
+				28F9F5E41E2DB11C0005D0F6 /* PQ.m */,
+				28F9F5E01E2DB1080005D0F6 /* Heap.h */,
+				28F9F5E11E2DB1080005D0F6 /* Heap.m */,
+				28F9F5D31E2DAFC30005D0F6 /* Graph.h */,
+				28F9F5D41E2DAFC30005D0F6 /* Graph.m */,
+				28F9F5D61E2DAFCC0005D0F6 /* Vertex.h */,
+				28F9F5D71E2DAFCC0005D0F6 /* Vertex.m */,
+				28F9F5DD1E2DB0DC0005D0F6 /* Queue.h */,
+				28F9F5DE1E2DB0DC0005D0F6 /* Queue.m */,
+				28F9F5E61E2DB71D0005D0F6 /* Map Routing - Dijkstra-Bridging-Header.h */,
 			);
-			path = "Map Routing - DijikstraTests";
-			sourceTree = "<group>";
-		};
-		2882AC561E2D8FE1009ED5C4 /* Map Routing - DijikstraUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2882AC571E2D8FE1009ED5C4 /* Map_Routing___DijikstraUITests.m */,
-				2882AC591E2D8FE1009ED5C4 /* Info.plist */,
-			);
-			path = "Map Routing - DijikstraUITests";
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +222,7 @@
 					2882AC311E2D8FE1009ED5C4 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 8NZ8K5GNH8;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					2882AC471E2D8FE1009ED5C4 = {
@@ -278,9 +291,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2882AC671E2D8FF1009ED5C4 /* program.cpp in Sources */,
+				28F9F5E81E2DB71D0005D0F6 /* Heap.swift in Sources */,
+				28F9F5D81E2DAFCC0005D0F6 /* Vertex.m in Sources */,
+				28F9F5E51E2DB11C0005D0F6 /* PQ.m in Sources */,
 				2882AC3D1E2D8FE1009ED5C4 /* ViewController.m in Sources */,
 				2882AC3A1E2D8FE1009ED5C4 /* main.m in Sources */,
+				28F9F5D51E2DAFC30005D0F6 /* Graph.m in Sources */,
 				2882AC371E2D8FE1009ED5C4 /* AppDelegate.m in Sources */,
+				28F9F5DF1E2DB0DC0005D0F6 /* Queue.m in Sources */,
+				28F9F5E21E2DB1080005D0F6 /* Heap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +307,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2882AC4D1E2D8FE1009ED5C4 /* Map_Routing___DijikstraTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +314,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2882AC581E2D8FE1009ED5C4 /* Map_Routing___DijikstraUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,12 +435,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8NZ8K5GNH8;
 				INFOPLIST_FILE = "Map Routing - Dijikstra/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yongyang.Map-Routing---Dijikstra";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Map Routing - Dijikstra/Map Routing - Dijkstra-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -431,18 +452,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8NZ8K5GNH8;
 				INFOPLIST_FILE = "Map Routing - Dijikstra/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yongyang.Map-Routing---Dijikstra";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Map Routing - Dijikstra/Map Routing - Dijkstra-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		2882AC601E2D8FE1009ED5C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8NZ8K5GNH8;
@@ -457,6 +482,7 @@
 		2882AC611E2D8FE1009ED5C4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8NZ8K5GNH8;
@@ -471,6 +497,7 @@
 		2882AC631E2D8FE1009ED5C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8NZ8K5GNH8;
 				INFOPLIST_FILE = "Map Routing - DijikstraUITests/Info.plist";
@@ -484,6 +511,7 @@
 		2882AC641E2D8FE1009ED5C4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8NZ8K5GNH8;
 				INFOPLIST_FILE = "Map Routing - DijikstraUITests/Info.plist";

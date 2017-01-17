@@ -7,12 +7,15 @@
 //
 
 #import "ViewController.h"
+#import "Heap.h"
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    Heap *heap = [[Heap alloc] initWithObjects:@[@8, @7, @1, @3, @9, @4, @5]];
+    [heap print];
     // Do any additional setup after loading the view.
 }
 
