@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "28BAC07C1D8C41B900348A90"
-               BuildableName = "Calculator"
-               BlueprintName = "Calculator"
-               ReferencedContainer = "container:Calculator.xcodeproj">
+               BlueprintIdentifier = "2882AC311E2D8FE1009ED5C4"
+               BuildableName = "Map Routing - Dijkstra.app"
+               BlueprintName = "Map Routing - Dijkstra"
+               ReferencedContainer = "container:Map Routing - Dijkstra.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,14 +28,34 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2882AC471E2D8FE1009ED5C4"
+               BuildableName = "Map Routing - DijkstraTests.xctest"
+               BlueprintName = "Map Routing - DijkstraTests"
+               ReferencedContainer = "container:Map Routing - Dijkstra.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2882AC521E2D8FE1009ED5C4"
+               BuildableName = "Map Routing - DijkstraUITests.xctest"
+               BlueprintName = "Map Routing - DijkstraUITests"
+               ReferencedContainer = "container:Map Routing - Dijkstra.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "28BAC07C1D8C41B900348A90"
-            BuildableName = "Calculator"
-            BlueprintName = "Calculator"
-            ReferencedContainer = "container:Calculator.xcodeproj">
+            BlueprintIdentifier = "2882AC311E2D8FE1009ED5C4"
+            BuildableName = "Map Routing - Dijkstra.app"
+            BlueprintName = "Map Routing - Dijkstra"
+            ReferencedContainer = "container:Map Routing - Dijkstra.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "28BAC07C1D8C41B900348A90"
-            BuildableName = "Calculator"
-            BlueprintName = "Calculator"
-            ReferencedContainer = "container:Calculator.xcodeproj">
+            BlueprintIdentifier = "2882AC311E2D8FE1009ED5C4"
+            BuildableName = "Map Routing - Dijkstra.app"
+            BlueprintName = "Map Routing - Dijkstra"
+            ReferencedContainer = "container:Map Routing - Dijkstra.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "28BAC07C1D8C41B900348A90"
-            BuildableName = "Calculator"
-            BlueprintName = "Calculator"
-            ReferencedContainer = "container:Calculator.xcodeproj">
+            BlueprintIdentifier = "2882AC311E2D8FE1009ED5C4"
+            BuildableName = "Map Routing - Dijkstra.app"
+            BlueprintName = "Map Routing - Dijkstra"
+            ReferencedContainer = "container:Map Routing - Dijkstra.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
