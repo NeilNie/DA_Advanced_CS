@@ -58,11 +58,6 @@
         [self addVertex:to withObjects:[NSMutableArray arrayWithObjects:from, nil]];
 }
 
-//Adds a new, weighted, directed edge to the graph that connects two vertices.
--(void)addEdge:(NSString *)from toVert:(NSString *)to weight:(int)weight{
-    
-}
-
 -(Vertex *)getVertex:(NSString *)key{
     
     return [self.adjacencyList objectForKey:key];

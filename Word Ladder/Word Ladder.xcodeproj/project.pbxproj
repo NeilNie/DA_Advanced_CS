@@ -14,8 +14,6 @@
 		280F49EC1E2674460002061D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 280F49EB1E2674460002061D /* main.m */; };
 		280F49EE1E2674460002061D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280F49ED1E2674460002061D /* Assets.xcassets */; };
 		280F49F11E2674460002061D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280F49EF1E2674460002061D /* MainMenu.xib */; };
-		280F49FC1E2674460002061D /* Word_LadderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 280F49FB1E2674460002061D /* Word_LadderTests.m */; };
-		280F4A071E2674460002061D /* Word_LadderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 280F4A061E2674460002061D /* Word_LadderUITests.m */; };
 		280F4A171E26749A0002061D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280F4A161E26749A0002061D /* Main.storyboard */; };
 		280F4A1A1E2674B50002061D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280F4A191E2674B50002061D /* MainViewController.m */; };
 		28EBE2611E2D430D00673705 /* four_letter_words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28EBE2601E2D430D00673705 /* four_letter_words.txt */; };
@@ -53,11 +51,7 @@
 		280F49F01E2674460002061D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		280F49F21E2674460002061D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		280F49F71E2674460002061D /* Word LadderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Word LadderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		280F49FB1E2674460002061D /* Word_LadderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Word_LadderTests.m; sourceTree = "<group>"; };
-		280F49FD1E2674460002061D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		280F4A021E2674460002061D /* Word LadderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Word LadderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		280F4A061E2674460002061D /* Word_LadderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Word_LadderUITests.m; sourceTree = "<group>"; };
-		280F4A081E2674460002061D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		280F4A161E26749A0002061D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		280F4A181E2674B50002061D /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		280F4A191E2674B50002061D /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
@@ -106,8 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				280F49E61E2674460002061D /* Word Ladder */,
-				280F49FA1E2674460002061D /* Word LadderTests */,
-				280F4A051E2674460002061D /* Word LadderUITests */,
 				280F49E51E2674460002061D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -146,24 +138,6 @@
 				280F49EB1E2674460002061D /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		280F49FA1E2674460002061D /* Word LadderTests */ = {
-			isa = PBXGroup;
-			children = (
-				280F49FB1E2674460002061D /* Word_LadderTests.m */,
-				280F49FD1E2674460002061D /* Info.plist */,
-			);
-			path = "Word LadderTests";
-			sourceTree = "<group>";
-		};
-		280F4A051E2674460002061D /* Word LadderUITests */ = {
-			isa = PBXGroup;
-			children = (
-				280F4A061E2674460002061D /* Word_LadderUITests.m */,
-				280F4A081E2674460002061D /* Info.plist */,
-			);
-			path = "Word LadderUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,7 +290,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				280F49FC1E2674460002061D /* Word_LadderTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +297,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				280F4A071E2674460002061D /* Word_LadderUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
