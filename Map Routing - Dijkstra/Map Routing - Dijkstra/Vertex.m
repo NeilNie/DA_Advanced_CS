@@ -33,7 +33,7 @@
     return self;
 }
 
-+(struct Coordinate)makeCoordinate:(int)x y:(int)y{
++(struct Coordinate)makeCoordinate:(float)x y:(float)y{
     struct Coordinate c;
     c.x = x;
     c.y = y;

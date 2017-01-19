@@ -100,6 +100,7 @@
     for (NSString *key in [s.connections allKeys]) {
         Vertex *v = [self vertextForKey:key];
         v.cost = [[s.connections objectForKey:key] intValue];
+        v.previous = s;
         [pq enqueue:v];
     }
     
@@ -107,11 +108,15 @@
         
         Vertex *v = [pq dequeue];
         for (NSString *key in [v.connections allKeys]) {
-            if ([self vertextForKey:key].cost >  v.cost + [[v.connections objectForKey:key] intValue])
-                [self vertextForKey:key].cost = v.cost + [[v.connections objectForKey:key] intValue];
+            Vertex *vertex = [self vertextForKey:key];
+            if (vertex.cost >  v.cost + [[v.connections objectForKey:key] intValue]){
+                vertex.cost = v.cost + [[v.connections objectForKey:key] intValue];
+                vertex.previous = v;
+                [pq enqueue:vertex];
+            }
         }
     }
-    
+    NSLog(@"%@", self);
 }
 
 -(void)print{

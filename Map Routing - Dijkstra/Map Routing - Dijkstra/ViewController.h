@@ -17,6 +17,8 @@
 
 @interface ViewController : NSViewController
 
+@property (weak) IBOutlet NSTextField *source;
+@property (weak) IBOutlet NSTextField *destination;
 @property (assign) IBOutlet SKView *skView;
 @property (strong, nonatomic) Graph *g;
 

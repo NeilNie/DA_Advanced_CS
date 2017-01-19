@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28202FEF1E305C7400705648 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 28202FEE1E305C7400705648 /* map.png */; };
+		28202FF11E305DCC00705648 /* USA-full.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28202FF01E305DCC00705648 /* USA-full.txt */; };
 		284AFAEF1E30394E00932ED1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 284AFAEE1E30394E00932ED1 /* AppDelegate.m */; };
 		284AFAF21E30394E00932ED1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 284AFAF11E30394E00932ED1 /* main.m */; };
 		284AFAF41E30394E00932ED1 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 284AFAF31E30394E00932ED1 /* GameScene.sks */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28202FEE1E305C7400705648 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		28202FF01E305DCC00705648 /* USA-full.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "USA-full.txt"; sourceTree = "<group>"; };
 		284AFAEA1E30394E00932ED1 /* Map Routing - Dijkstra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Map Routing - Dijkstra.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		284AFAED1E30394E00932ED1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		284AFAEE1E30394E00932ED1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 		284AFB431E303ABC00932ED1 /* Recourses */ = {
 			isa = PBXGroup;
 			children = (
+				28202FF01E305DCC00705648 /* USA-full.txt */,
+				28202FEE1E305C7400705648 /* map.png */,
 				284AFB2A1E303AAC00932ED1 /* Small.txt */,
 				284AFB2B1E303AAC00932ED1 /* usa-10.txt */,
 				284AFB2C1E303AAC00932ED1 /* usa-1000long.txt */,
@@ -221,8 +227,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28202FEF1E305C7400705648 /* map.png in Resources */,
 				284AFAF41E30394E00932ED1 /* GameScene.sks in Resources */,
 				284AFAFE1E30394E00932ED1 /* Assets.xcassets in Resources */,
+				28202FF11E305DCC00705648 /* USA-full.txt in Resources */,
 				284AFB351E303AAC00932ED1 /* usa.txt in Resources */,
 				284AFB331E303AAC00932ED1 /* usa-5000short.txt in Resources */,
 				284AFB341E303AAC00932ED1 /* usa-50000short.txt in Resources */,
@@ -403,6 +411,7 @@
 				284AFB071E30394E00932ED1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

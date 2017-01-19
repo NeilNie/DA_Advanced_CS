@@ -4,7 +4,7 @@
 //
 //  Created by Yongyang Nie on 1/18/17.
 //  Copyright © 2017 Yongyang Nie. All rights reserved.
-//
+// using: http://www.clipartbest.com/cliparts/zyT/oy4/zyToy48iE.jpeg
 
 #import <Cocoa/Cocoa.h>
 

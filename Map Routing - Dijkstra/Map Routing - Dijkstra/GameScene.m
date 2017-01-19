@@ -15,28 +15,12 @@
 }
 
 - (void)sceneDidLoad {
-    // Setup your scene here
     
-    // Initialize update time
-    _lastUpdateTime = 0;
+    SKSpriteNode *sn = [SKSpriteNode spriteNodeWithImageNamed:@"map.png"];
+    sn.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+    [self addChild:sn];
     
-    // Get label node from scene and store it for use later
-    _label = (SKLabelNode *)[self childNodeWithName:@"//helloLabel"];
-    
-    _label.alpha = 0.0;
-    [_label runAction:[SKAction fadeInWithDuration:2.0]];
-    
-    CGFloat w = (self.size.width + self.size.height) * 0.05;
-    
-    _spinnyNode = [SKShapeNode shapeNodeWithRectOfSize:CGSizeMake(w, w) cornerRadius:w * 0.3];
-    _spinnyNode.lineWidth = 2.5;
-    
-    [_spinnyNode runAction:[SKAction repeatActionForever:[SKAction rotateByAngle:M_PI duration:1]]];
-    [_spinnyNode runAction:[SKAction sequence:@[
-                                                [SKAction waitForDuration:0.5],
-                                                [SKAction fadeOutWithDuration:0.5],
-                                                [SKAction removeFromParent],
-                                                ]]];
+    self.backgroundColor = [NSColor whiteColor];
 }
 
 

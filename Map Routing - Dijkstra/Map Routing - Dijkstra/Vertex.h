@@ -24,6 +24,6 @@ struct Coordinate{
 
 - (instancetype)initWithKey:(NSString *)key cost:(int)cost coordinate:(struct Coordinate)coordinate;
 
-+(struct Coordinate)makeCoordinate:(int)x y:(int)y;
++(struct Coordinate)makeCoordinate:(float)x y:(float)y;
 
 @end
