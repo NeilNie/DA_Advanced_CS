@@ -15,6 +15,16 @@
 
 @implementation MainViewController
 
+-(void)method{
+    
+    //1
+    NSDictionary *d = @{@"Key": @98};
+    
+    //2
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    //[dic set]
+}
+
 #pragma mark - IBAction
 
 -(IBAction)action:(id)sender{
@@ -37,9 +47,13 @@
 }
 
 -(NSMutableArray *)retreiveFourLetterWords{
+    
     NSString *stringFromFileAtURL = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"https://raw.githubusercontent.com/dwyl/english-words/master/words2.txt"] encoding:NSUTF8StringEncoding error:nil];
+    
     NSArray *masterArray = [stringFromFileAtURL componentsSeparatedByString:@"\n"];
+    
     NSMutableArray *wordsArray = [NSMutableArray array];
+    
     for (NSString *str in masterArray)
         if ([str length] == 4)
             [wordsArray addObject:str];
@@ -49,7 +63,7 @@
 -(void)saveToFile:(NSString *)content{
     
     //make a file name to write the data to using the documents directory:
-    NSString *fileName = [NSString stringWithFormat:@"/Users/Neil/four_letter_words.txt"];
+    NSString *fileName = [NSString stringWithFormat:@"/Users/Neil/maps.txt"];
     
     [content writeToFile:fileName atomically:NO encoding:NSStringEncodingConversionAllowLossy error:nil];
 }
@@ -145,8 +159,8 @@
                 [d setObject:[[NSMutableArray alloc] initWithObjects:word, nil] forKey:bucket];
         }
     }
+    NSLog(@"%@", d);
     
-    NSLog(@"Size of dictionary %@: %zd", NSStringFromClass([d class]), malloc_size((__bridge const void *) d));
     for (NSString *bucket in [d allKeys]) {
         for (NSString *word1 in d[bucket])
             for (NSString *word2 in d[bucket])
@@ -155,6 +169,8 @@
 
     }
 
+    NSLog(@"%@", g.adjacencyList);
+    
     NSDate *method2Finish = [NSDate date];
     NSTimeInterval executionTime2 = [method2Finish timeIntervalSinceDate:method2Start];
     NSLog(@"method time: %f", executionTime2);

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		28202FEF1E305C7400705648 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 28202FEE1E305C7400705648 /* map.png */; };
 		28202FF11E305DCC00705648 /* USA-full.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28202FF01E305DCC00705648 /* USA-full.txt */; };
+		282FCA681E3162C400A9E568 /* map-short-wc.txt in Resources */ = {isa = PBXBuildFile; fileRef = 282FCA671E3162C400A9E568 /* map-short-wc.txt */; };
 		284AFAEF1E30394E00932ED1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 284AFAEE1E30394E00932ED1 /* AppDelegate.m */; };
 		284AFAF21E30394E00932ED1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 284AFAF11E30394E00932ED1 /* main.m */; };
 		284AFAF41E30394E00932ED1 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 284AFAF31E30394E00932ED1 /* GameScene.sks */; };
@@ -18,7 +19,6 @@
 		284AFAFE1E30394E00932ED1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284AFAFD1E30394E00932ED1 /* Assets.xcassets */; };
 		284AFB011E30394E00932ED1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284AFAFF1E30394E00932ED1 /* Main.storyboard */; };
 		284AFB291E30397300932ED1 /* program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 284AFB271E30397300932ED1 /* program.cpp */; };
-		284AFB301E303AAC00932ED1 /* Small.txt in Resources */ = {isa = PBXBuildFile; fileRef = 284AFB2A1E303AAC00932ED1 /* Small.txt */; };
 		284AFB311E303AAC00932ED1 /* usa-10.txt in Resources */ = {isa = PBXBuildFile; fileRef = 284AFB2B1E303AAC00932ED1 /* usa-10.txt */; };
 		284AFB321E303AAC00932ED1 /* usa-1000long.txt in Resources */ = {isa = PBXBuildFile; fileRef = 284AFB2C1E303AAC00932ED1 /* usa-1000long.txt */; };
 		284AFB331E303AAC00932ED1 /* usa-5000short.txt in Resources */ = {isa = PBXBuildFile; fileRef = 284AFB2D1E303AAC00932ED1 /* usa-5000short.txt */; };
@@ -28,11 +28,14 @@
 		284AFB3F1E303AB200932ED1 /* Heap.m in Sources */ = {isa = PBXBuildFile; fileRef = 284AFB391E303AB200932ED1 /* Heap.m */; };
 		284AFB401E303AB200932ED1 /* PQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 284AFB3B1E303AB200932ED1 /* PQ.m */; };
 		284AFB411E303AB200932ED1 /* Vertex.m in Sources */ = {isa = PBXBuildFile; fileRef = 284AFB3D1E303AB200932ED1 /* Vertex.m */; };
+		284CB74A1E31A4A200A5C43A /* map2.png in Resources */ = {isa = PBXBuildFile; fileRef = 284CB7491E31A4A200A5C43A /* map2.png */; };
+		284CB74D1E31A61500A5C43A /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284CB74C1E31A61500A5C43A /* WindowController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		28202FEE1E305C7400705648 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		28202FF01E305DCC00705648 /* USA-full.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "USA-full.txt"; sourceTree = "<group>"; };
+		282FCA671E3162C400A9E568 /* map-short-wc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "map-short-wc.txt"; sourceTree = "<group>"; };
 		284AFAEA1E30394E00932ED1 /* Map Routing - Dijkstra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Map Routing - Dijkstra.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		284AFAED1E30394E00932ED1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		284AFAEE1E30394E00932ED1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -48,7 +51,6 @@
 		284AFB021E30394E00932ED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		284AFB271E30397300932ED1 /* program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = program.cpp; sourceTree = "<group>"; };
 		284AFB281E30397300932ED1 /* program.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = program.hpp; sourceTree = "<group>"; };
-		284AFB2A1E303AAC00932ED1 /* Small.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Small.txt; sourceTree = "<group>"; };
 		284AFB2B1E303AAC00932ED1 /* usa-10.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "usa-10.txt"; sourceTree = "<group>"; };
 		284AFB2C1E303AAC00932ED1 /* usa-1000long.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "usa-1000long.txt"; sourceTree = "<group>"; };
 		284AFB2D1E303AAC00932ED1 /* usa-5000short.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "usa-5000short.txt"; sourceTree = "<group>"; };
@@ -62,6 +64,9 @@
 		284AFB3B1E303AB200932ED1 /* PQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PQ.m; sourceTree = "<group>"; };
 		284AFB3C1E303AB200932ED1 /* Vertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertex.h; sourceTree = "<group>"; };
 		284AFB3D1E303AB200932ED1 /* Vertex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vertex.m; sourceTree = "<group>"; };
+		284CB7491E31A4A200A5C43A /* map2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map2.png; sourceTree = "<group>"; };
+		284CB74B1E31A61500A5C43A /* WindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowController.h; sourceTree = "<group>"; };
+		284CB74C1E31A61500A5C43A /* WindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +102,7 @@
 				284AFB421E303AB700932ED1 /* Classes */,
 				284AFB431E303ABC00932ED1 /* Recourses */,
 				284AFB451E303B2500932ED1 /* SceneKit */,
-				284AFB441E303B1900932ED1 /* ViewControllers */,
+				284AFB441E303B1900932ED1 /* Controllers */,
 				284AFAF01E30394E00932ED1 /* Supporting Files */,
 			);
 			path = "Map Routing - Dijkstra";
@@ -136,9 +141,10 @@
 		284AFB431E303ABC00932ED1 /* Recourses */ = {
 			isa = PBXGroup;
 			children = (
+				282FCA671E3162C400A9E568 /* map-short-wc.txt */,
+				284CB7491E31A4A200A5C43A /* map2.png */,
 				28202FEE1E305C7400705648 /* map.png */,
 				28202FF01E305DCC00705648 /* USA-full.txt */,
-				284AFB2A1E303AAC00932ED1 /* Small.txt */,
 				284AFB2B1E303AAC00932ED1 /* usa-10.txt */,
 				284AFB2C1E303AAC00932ED1 /* usa-1000long.txt */,
 				284AFB2D1E303AAC00932ED1 /* usa-5000short.txt */,
@@ -148,13 +154,15 @@
 			name = Recourses;
 			sourceTree = "<group>";
 		};
-		284AFB441E303B1900932ED1 /* ViewControllers */ = {
+		284AFB441E303B1900932ED1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				284CB74B1E31A61500A5C43A /* WindowController.h */,
+				284CB74C1E31A61500A5C43A /* WindowController.m */,
 				284AFAFA1E30394E00932ED1 /* ViewController.h */,
 				284AFAFB1E30394E00932ED1 /* ViewController.m */,
 			);
-			name = ViewControllers;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		284AFB451E303B2500932ED1 /* SceneKit */ = {
@@ -231,11 +239,12 @@
 				284AFAF41E30394E00932ED1 /* GameScene.sks in Resources */,
 				284AFAFE1E30394E00932ED1 /* Assets.xcassets in Resources */,
 				28202FF11E305DCC00705648 /* USA-full.txt in Resources */,
+				284CB74A1E31A4A200A5C43A /* map2.png in Resources */,
 				284AFB351E303AAC00932ED1 /* usa.txt in Resources */,
 				284AFB331E303AAC00932ED1 /* usa-5000short.txt in Resources */,
 				284AFB341E303AAC00932ED1 /* usa-50000short.txt in Resources */,
-				284AFB301E303AAC00932ED1 /* Small.txt in Resources */,
 				284AFB311E303AAC00932ED1 /* usa-10.txt in Resources */,
+				282FCA681E3162C400A9E568 /* map-short-wc.txt in Resources */,
 				284AFAF61E30394E00932ED1 /* Actions.sks in Resources */,
 				284AFB011E30394E00932ED1 /* Main.storyboard in Resources */,
 				284AFB321E303AAC00932ED1 /* usa-1000long.txt in Resources */,
@@ -254,6 +263,7 @@
 				284AFB3E1E303AB200932ED1 /* Graph.m in Sources */,
 				284AFB291E30397300932ED1 /* program.cpp in Sources */,
 				284AFAF21E30394E00932ED1 /* main.m in Sources */,
+				284CB74D1E31A61500A5C43A /* WindowController.m in Sources */,
 				284AFAF91E30394E00932ED1 /* GameScene.m in Sources */,
 				284AFAFC1E30394E00932ED1 /* ViewController.m in Sources */,
 				284AFAEF1E30394E00932ED1 /* AppDelegate.m in Sources */,
