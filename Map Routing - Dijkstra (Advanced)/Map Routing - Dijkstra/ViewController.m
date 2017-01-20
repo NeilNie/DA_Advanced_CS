@@ -25,12 +25,13 @@
         
         Vertex *start = [self closest:self.start];
         Vertex *end = [self closest:self.end];
+        
         [self path:start.key toKey:end.key];
     }
     SKShapeNode *circle = [SKShapeNode shapeNodeWithEllipseOfSize:CGSizeMake(5, 5)];
     circle.strokeColor = [NSColor redColor];
     circle.fillColor = [NSColor redColor];
-    circle.position = CGPointMake(x, y); //x: / 12.0 - 400.0 //y:   / 9.3 - 175.0
+    circle.position = CGPointMake(x, y);
     [self.skView.scene addChild:circle];
 }
 
@@ -78,17 +79,17 @@
 
 -(Vertex *)closest:(struct Coordinate)c{
     
-    Vertex *v;
-    SKNode *closest = [self.skView.scene.children objectAtIndex:0];
-    float diff = [self distance:c.x y: c.y x2:closest.position.x y2:closest.position.y];
+    Vertex *v = [self.g vertextForKey:@"1"];
+    SKNode *node = [[self.skView.scene children] objectAtIndex:10];
+    float diff = [self distance:c.x y:c.y x2: node.position.x y2: node.position.y];
     
-    for (SKNode *node in self.skView.scene.children) {
+    for (SKNode *node in [self.skView.scene children]) {
         
-        float n = [self distance:c.x y: c.y x2:node.position.x y2:node.position.y];
-        if (n < diff) {
+        Vertex *vertex = [self.g vertextForKey:node.name];
+        float n = [self distance:c.x y:c.y x2: node.position.x y2: node.position.y];
+        if (n < diff && vertex) {
             diff = n;
-            closest = node;
-            v = [self.g vertextForKey:node.name];
+            v = vertex;
         }
     }
     NSLog(@"difference %f", diff);
@@ -133,8 +134,11 @@
     }
 }
 
--(float)distance:(float)x y:(float)y x2:(int)x2 y2:(int)y2{
-    return sqrtf(pow(x + x2, 2.0) + pow(y + y2, 2.0));
+-(float)distance:(float)x y:(float)y x2:(float)x2 y2:(float)y2{
+    double dx = (x-x2);
+    double dy = (y-y2);
+    float dist = sqrt(dx*dx + dy*dy);
+    return dist;
 }
 
 -(void)drawCities:(struct Coordinate)c withKey:(NSString *)key{
@@ -144,6 +148,7 @@
     circle.strokeColor = [NSColor blackColor];
     circle.fillColor = [NSColor blackColor];
     circle.position = CGPointMake(c.x / 12.0 - 400.0, c.y / 9.3 - 175.0); //x:* 139 - 407 //y:  * 139 - 297
+    NSLog(@"%f:%f", circle.position.x, circle.position.y);
     [self.skView.scene addChild:circle];
 }
 

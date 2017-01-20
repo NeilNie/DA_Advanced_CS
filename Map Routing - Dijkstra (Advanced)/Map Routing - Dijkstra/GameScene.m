@@ -23,7 +23,8 @@
 
 
 - (void)touchDownAtPoint:(CGPoint)pos {
-
+    [self.sceneDelegate setLocation:pos.x y:pos.y];
+    NSLog(@"point %f : %f", pos.x, pos.y);
 }
 
 - (void)touchMovedToPoint:(CGPoint)pos {
@@ -34,16 +35,9 @@
 
 }
 
-- (void)keyDown:(NSEvent *)theEvent {
-
-}
-
 - (void)mouseDown:(NSEvent *)theEvent {
-    [self.sceneDelegate setLocation:[theEvent locationInNode:self].x y:[theEvent locationInNode:self].y];
-    NSLog(@"%f : %f", [theEvent locationInNode:self].x, [theEvent locationInNode:self].y);
-}
-- (void)mouseDragged:(NSEvent *)theEvent {
-
+    
+    [self touchDownAtPoint:[theEvent locationInNode:self]];
 }
 - (void)mouseUp:(NSEvent *)theEvent {
 
