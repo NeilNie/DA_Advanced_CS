@@ -15,11 +15,10 @@
 
 -(void)setLocation:(float)x y:(float)y{
     
-    if (self.start.x == 0 && self.start.y == 0) {
+    if (self.start.x == 0 && self.start.y == 0)
         self.start = [Vertex makeCoordinate:x y:y];
-    }else{
+    else
         self.end = [Vertex makeCoordinate:x y:y];
-    }
     
     if (self.start.x != 0 && self.start.y != 0 && self.end.x != 0 && self.end.y != 0) {
         
@@ -37,9 +36,30 @@
 
 #pragma mark - Actions
 
-- (IBAction)draw:(id)sender {
+- (IBAction)clear:(id)sender {
     
-    NSLog(@"%lu", (unsigned long)self.g.adjacencyList.allKeys.count);
+    NSDate *method2Start = [NSDate date];
+    self.g = [[Graph alloc] init];
+    [self buildGraph];
+    [self.skView.scene removeAllChildren];
+    [self loadScene];
+    [self draw:nil];
+    
+    self.opTimeLabel.stringValue = @"Opertion Time:";
+    self.distanceLabel.stringValue = @"Distance:";
+    self.connectionLabel.stringValue = @"Connections:";
+    self.resultView.string = @"";
+    
+    self.start = [Vertex makeCoordinate:0 y:0];
+    self.end = [Vertex makeCoordinate:0 y:0];
+    
+    NSDate *method2Finish = [NSDate date];
+    NSTimeInterval executionTime = [method2Finish timeIntervalSinceDate:method2Start];
+    NSLog(@"reseting time: %f", executionTime);
+}
+
+- (IBAction)draw:(id)sender {
+
     int i = 0;
     for (NSString *string in self.g.adjacencyList.allKeys) {
         Vertex *v = [self.g vertextForKey:string];
@@ -59,15 +79,23 @@
 
 -(void)path:(NSString *)start toKey:(NSString *)destination{
     
+    NSDate *method2Start = [NSDate date];
+    
     [self.g dijkstra:start destination:destination];
     
+    double d = 0.0;
+    NSMutableArray *result = [NSMutableArray array];
+    
     Vertex *vt = [self.g vertextForKey:destination];
+    [result addObject:vt.key];
+    
     while (vt.previous) {
-        NSLog(@"%@", vt.key);
+        [result addObject:vt.key];
         SKShapeNode *line = [SKShapeNode node];
         CGMutablePathRef path = CGPathCreateMutable();
-        CGPathMoveToPoint(path, nil, vt.coordinate.x / 12.0 - 390.0, vt.coordinate.y / 9.3 - 170.0);
-        CGPathAddLineToPoint(path, nil, vt.previous.coordinate.x / 12.0 - 390.0, vt.previous.coordinate.y / 9.3 - 170.0);
+        CGPathMoveToPoint(path, nil, vt.coordinate.x / 12.0 - 400.0, vt.coordinate.y / 9.3 - 175.0);
+        CGPathAddLineToPoint(path, nil, vt.previous.coordinate.x / 12.0 - 400.0, vt.previous.coordinate.y / 9.3 - 175.0);
+        d = d + [self distance:vt.coordinate.x y:vt.coordinate.y x2:vt.previous.coordinate.x y2:vt.previous.coordinate.y];
         [line setPath:path];
         line.lineWidth = 5;
         line.strokeColor = [NSColor redColor];
@@ -75,6 +103,14 @@
         
         vt = vt.previous;
     }
+    
+    NSDate *method2Finish = [NSDate date];
+    NSTimeInterval executionTime = [method2Finish timeIntervalSinceDate:method2Start];
+    
+    self.opTimeLabel.stringValue = [NSString stringWithFormat:@"Opertion Time: %f", executionTime];
+    self.distanceLabel.stringValue = [NSString stringWithFormat:@"Distance: %.04f miles", d / 3.2];
+    self.connectionLabel.stringValue = [NSString stringWithFormat:@"Connections: %lu", (unsigned long)result.count];
+    self.resultView.string = [[result valueForKey:@"description"] componentsJoinedByString:@"\n"];
 }
 
 -(Vertex *)closest:(struct Coordinate)c{
@@ -147,12 +183,11 @@
     circle.name = key;
     circle.strokeColor = [NSColor blackColor];
     circle.fillColor = [NSColor blackColor];
-    circle.position = CGPointMake(c.x / 12.0 - 400.0, c.y / 9.3 - 175.0); //x:* 139 - 407 //y:  * 139 - 297
-    NSLog(@"%f:%f", circle.position.x, circle.position.y);
+    circle.position = CGPointMake(c.x / 12.0 - 400.0, c.y / 9.3 - 175.0);
     [self.skView.scene addChild:circle];
 }
 
-- (void)viewDidLoad {
+-(void)loadScene{
     
     // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
     // including entities and graphs.
@@ -175,10 +210,20 @@
     self.skView.showsFPS = YES;
     self.skView.showsNodeCount = YES;
     // Do any additional setup after loading the view.
+}
+
+- (void)viewDidLoad {
     
+    NSDate *method2Start = [NSDate date];
+
+    [self loadScene];
     self.g = [[Graph alloc] init];
     [self buildGraph];
-    //[self writeToFile];
+    [self draw:nil];
+    
+    NSDate *method2Finish = [NSDate date];
+    NSTimeInterval executionTime = [method2Finish timeIntervalSinceDate:method2Start];
+    NSLog(@"begining time: %f", executionTime);
     
     [super viewDidLoad];
 }

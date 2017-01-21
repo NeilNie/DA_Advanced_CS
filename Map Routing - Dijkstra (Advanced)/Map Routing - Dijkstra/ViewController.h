@@ -19,6 +19,11 @@
 
 @interface ViewController : NSViewController <SceneKitDelegate>
 
+@property (weak) IBOutlet NSTextView *resultView;
+@property (weak) IBOutlet NSTextField *distanceLabel;
+@property (weak) IBOutlet NSTextField *connectionLabel;
+@property (weak) IBOutlet NSTextField *opTimeLabel;
+
 @property struct Coordinate start;
 @property struct Coordinate end;
 @property (weak) IBOutlet NSTextField *source;
