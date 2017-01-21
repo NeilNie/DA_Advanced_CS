@@ -36,11 +36,6 @@
 
 -(IBAction)setValuePressed:(id)sender{
     
-    NSString *number = [(UIButton *)sender titleLabel].text;
-    int x = [number intValue];
-    
-    
-    
     [self.calculator setValue:[[(UIButton *)sender titleLabel].text UTF8String][0]];
     self.calculator.OperationValue = 0;
     self.display.text = @"";

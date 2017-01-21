@@ -97,7 +97,7 @@
         CGPathAddLineToPoint(path, nil, vt.previous.coordinate.x / 12.0 - 400.0, vt.previous.coordinate.y / 9.3 - 175.0);
         d = d + [self distance:vt.coordinate.x y:vt.coordinate.y x2:vt.previous.coordinate.x y2:vt.previous.coordinate.y];
         [line setPath:path];
-        line.lineWidth = 5;
+        line.lineWidth = 3;
         line.strokeColor = [NSColor redColor];
         [self.skView.scene addChild:line];
         

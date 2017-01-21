@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28202FF11E305DCC00705648 /* USA-full.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28202FF01E305DCC00705648 /* USA-full.txt */; };
+		282FCA681E3162C400A9E568 /* map-short-wc.txt in Resources */ = {isa = PBXBuildFile; fileRef = 282FCA671E3162C400A9E568 /* map-short-wc.txt */; };
+		284AFAEF1E30394E00932ED1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 284AFAEE1E30394E00932ED1 /* AppDelegate.m */; };
+		284AFAF21E30394E00932ED1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 284AFAF11E30394E00932ED1 /* main.m */; };
+		284AFAF41E30394E00932ED1 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 284AFAF31E30394E00932ED1 /* GameScene.sks */; };
+		284AFAF61E30394E00932ED1 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 284AFAF51E30394E00932ED1 /* Actions.sks */; };
+		284AFAF91E30394E00932ED1 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 284AFAF81E30394E00932ED1 /* GameScene.m */; };
+		284AFAFC1E30394E00932ED1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284AFAFB1E30394E00932ED1 /* ViewController.m */; };
+		284AFAFE1E30394E00932ED1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284AFAFD1E30394E00932ED1 /* Assets.xcassets */; };
+		284AFB011E30394E00932ED1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284AFAFF1E30394E00932ED1 /* Main.storyboard */; };
+		284AFB291E30397300932ED1 /* program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 284AFB271E30397300932ED1 /* program.cpp */; };
+		284AFB351E303AAC00932ED1 /* usa.txt in Resources */ = {isa = PBXBuildFile; fileRef = 284AFB2F1E303AAC00932ED1 /* usa.txt */; };
+		284AFB3E1E303AB200932ED1 /* Graph.m in Sources */ = {isa = PBXBuildFile; fileRef = 284AFB371E303AB200932ED1 /* Graph.m */; };
+		284AFB3F1E303AB200932ED1 /* Heap.m in Sources */ = {isa = PBXBuildFile; fileRef = 284AFB391E303AB200932ED1 /* Heap.m */; };
+		284AFB401E303AB200932ED1 /* PQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 284AFB3B1E303AB200932ED1 /* PQ.m */; };
+		284AFB411E303AB200932ED1 /* Vertex.m in Sources */ = {isa = PBXBuildFile; fileRef = 284AFB3D1E303AB200932ED1 /* Vertex.m */; };
+		284CB74A1E31A4A200A5C43A /* map2.png in Resources */ = {isa = PBXBuildFile; fileRef = 284CB7491E31A4A200A5C43A /* map2.png */; };
+		284CB74D1E31A61500A5C43A /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284CB74C1E31A61500A5C43A /* WindowController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		28202FF01E305DCC00705648 /* USA-full.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "USA-full.txt"; sourceTree = "<group>"; };
+		282FCA671E3162C400A9E568 /* map-short-wc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "map-short-wc.txt"; sourceTree = "<group>"; };
+		284AFAEA1E30394E00932ED1 /* Advanced Map Routing - Dijkstra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Advanced Map Routing - Dijkstra.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		284AFAED1E30394E00932ED1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		284AFAEE1E30394E00932ED1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		284AFAF11E30394E00932ED1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		284AFAF31E30394E00932ED1 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		284AFAF51E30394E00932ED1 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		284AFAF71E30394E00932ED1 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		284AFAF81E30394E00932ED1 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		284AFAFA1E30394E00932ED1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		284AFAFB1E30394E00932ED1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		284AFAFD1E30394E00932ED1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		284AFB001E30394E00932ED1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		284AFB021E30394E00932ED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		284AFB271E30397300932ED1 /* program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = program.cpp; sourceTree = "<group>"; };
+		284AFB281E30397300932ED1 /* program.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = program.hpp; sourceTree = "<group>"; };
+		284AFB2F1E303AAC00932ED1 /* usa.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = usa.txt; sourceTree = "<group>"; };
+		284AFB361E303AB200932ED1 /* Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Graph.h; sourceTree = "<group>"; };
+		284AFB371E303AB200932ED1 /* Graph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Graph.m; sourceTree = "<group>"; };
+		284AFB381E303AB200932ED1 /* Heap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Heap.h; sourceTree = "<group>"; };
+		284AFB391E303AB200932ED1 /* Heap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Heap.m; sourceTree = "<group>"; };
+		284AFB3A1E303AB200932ED1 /* PQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PQ.h; sourceTree = "<group>"; };
+		284AFB3B1E303AB200932ED1 /* PQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PQ.m; sourceTree = "<group>"; };
+		284AFB3C1E303AB200932ED1 /* Vertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertex.h; sourceTree = "<group>"; };
+		284AFB3D1E303AB200932ED1 /* Vertex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vertex.m; sourceTree = "<group>"; };
+		284CB7491E31A4A200A5C43A /* map2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map2.png; sourceTree = "<group>"; };
+		284CB74B1E31A61500A5C43A /* WindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowController.h; sourceTree = "<group>"; };
+		284CB74C1E31A61500A5C43A /* WindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		284AFAE71E30394E00932ED1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		284AFAE11E30394E00932ED1 = {
+			isa = PBXGroup;
+			children = (
+				284AFAEC1E30394E00932ED1 /* Map Routing - Dijkstra */,
+				284AFAEB1E30394E00932ED1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		284AFAEB1E30394E00932ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				284AFAEA1E30394E00932ED1 /* Advanced Map Routing - Dijkstra.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		284AFAEC1E30394E00932ED1 /* Map Routing - Dijkstra */ = {
+			isa = PBXGroup;
+			children = (
+				284AFB421E303AB700932ED1 /* Classes */,
+				284AFB431E303ABC00932ED1 /* Recourses */,
+				284AFB451E303B2500932ED1 /* SceneKit */,
+				284AFB441E303B1900932ED1 /* Controllers */,
+				284AFAF01E30394E00932ED1 /* Supporting Files */,
+			);
+			path = "Map Routing - Dijkstra";
+			sourceTree = "<group>";
+		};
+		284AFAF01E30394E00932ED1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				284AFAFD1E30394E00932ED1 /* Assets.xcassets */,
+				284AFAFF1E30394E00932ED1 /* Main.storyboard */,
+				284AFB021E30394E00932ED1 /* Info.plist */,
+				284AFAED1E30394E00932ED1 /* AppDelegate.h */,
+				284AFAEE1E30394E00932ED1 /* AppDelegate.m */,
+				284AFAF11E30394E00932ED1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		284AFB421E303AB700932ED1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				284AFB271E30397300932ED1 /* program.cpp */,
+				284AFB281E30397300932ED1 /* program.hpp */,
+				284AFB361E303AB200932ED1 /* Graph.h */,
+				284AFB371E303AB200932ED1 /* Graph.m */,
+				284AFB381E303AB200932ED1 /* Heap.h */,
+				284AFB391E303AB200932ED1 /* Heap.m */,
+				284AFB3A1E303AB200932ED1 /* PQ.h */,
+				284AFB3B1E303AB200932ED1 /* PQ.m */,
+				284AFB3C1E303AB200932ED1 /* Vertex.h */,
+				284AFB3D1E303AB200932ED1 /* Vertex.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		284AFB431E303ABC00932ED1 /* Recourses */ = {
+			isa = PBXGroup;
+			children = (
+				282FCA671E3162C400A9E568 /* map-short-wc.txt */,
+				284CB7491E31A4A200A5C43A /* map2.png */,
+				28202FF01E305DCC00705648 /* USA-full.txt */,
+				284AFB2F1E303AAC00932ED1 /* usa.txt */,
+			);
+			name = Recourses;
+			sourceTree = "<group>";
+		};
+		284AFB441E303B1900932ED1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				284CB74B1E31A61500A5C43A /* WindowController.h */,
+				284CB74C1E31A61500A5C43A /* WindowController.m */,
+				284AFAFA1E30394E00932ED1 /* ViewController.h */,
+				284AFAFB1E30394E00932ED1 /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		284AFB451E303B2500932ED1 /* SceneKit */ = {
+			isa = PBXGroup;
+			children = (
+				284AFAF31E30394E00932ED1 /* GameScene.sks */,
+				284AFAF51E30394E00932ED1 /* Actions.sks */,
+				284AFAF71E30394E00932ED1 /* GameScene.h */,
+				284AFAF81E30394E00932ED1 /* GameScene.m */,
+			);
+			name = SceneKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		284AFAE91E30394E00932ED1 /* Advanced Map Routing - Dijkstra */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 284AFB051E30394E00932ED1 /* Build configuration list for PBXNativeTarget "Advanced Map Routing - Dijkstra" */;
+			buildPhases = (
+				284AFAE61E30394E00932ED1 /* Sources */,
+				284AFAE71E30394E00932ED1 /* Frameworks */,
+				284AFAE81E30394E00932ED1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Advanced Map Routing - Dijkstra";
+			productName = "Map Routing - Dijkstra";
+			productReference = 284AFAEA1E30394E00932ED1 /* Advanced Map Routing - Dijkstra.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		284AFAE21E30394E00932ED1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Yongyang Nie";
+				TargetAttributes = {
+					284AFAE91E30394E00932ED1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 8NZ8K5GNH8;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 284AFAE51E30394E00932ED1 /* Build configuration list for PBXProject "Advanced Map Routing - Dijkstra" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 284AFAE11E30394E00932ED1;
+			productRefGroup = 284AFAEB1E30394E00932ED1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				284AFAE91E30394E00932ED1 /* Advanced Map Routing - Dijkstra */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		284AFAE81E30394E00932ED1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				284AFAF41E30394E00932ED1 /* GameScene.sks in Resources */,
+				284AFAFE1E30394E00932ED1 /* Assets.xcassets in Resources */,
+				28202FF11E305DCC00705648 /* USA-full.txt in Resources */,
+				284CB74A1E31A4A200A5C43A /* map2.png in Resources */,
+				284AFB351E303AAC00932ED1 /* usa.txt in Resources */,
+				282FCA681E3162C400A9E568 /* map-short-wc.txt in Resources */,
+				284AFAF61E30394E00932ED1 /* Actions.sks in Resources */,
+				284AFB011E30394E00932ED1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		284AFAE61E30394E00932ED1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				284AFB401E303AB200932ED1 /* PQ.m in Sources */,
+				284AFB411E303AB200932ED1 /* Vertex.m in Sources */,
+				284AFB3E1E303AB200932ED1 /* Graph.m in Sources */,
+				284AFB291E30397300932ED1 /* program.cpp in Sources */,
+				284AFAF21E30394E00932ED1 /* main.m in Sources */,
+				284CB74D1E31A61500A5C43A /* WindowController.m in Sources */,
+				284AFAF91E30394E00932ED1 /* GameScene.m in Sources */,
+				284AFAFC1E30394E00932ED1 /* ViewController.m in Sources */,
+				284AFAEF1E30394E00932ED1 /* AppDelegate.m in Sources */,
+				284AFB3F1E303AB200932ED1 /* Heap.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		284AFAFF1E30394E00932ED1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				284AFB001E30394E00932ED1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		284AFB031E30394E00932ED1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		284AFB041E30394E00932ED1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		284AFB061E30394E00932ED1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8NZ8K5GNH8;
+				GCC_NO_COMMON_BLOCKS = NO;
+				INFOPLIST_FILE = "Map Routing - Dijkstra/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yongyang.Map-Routing---Dijkstra";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		284AFB071E30394E00932ED1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8NZ8K5GNH8;
+				GCC_NO_COMMON_BLOCKS = NO;
+				INFOPLIST_FILE = "Map Routing - Dijkstra/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yongyang.Map-Routing---Dijkstra";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		284AFAE51E30394E00932ED1 /* Build configuration list for PBXProject "Advanced Map Routing - Dijkstra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				284AFB031E30394E00932ED1 /* Debug */,
+				284AFB041E30394E00932ED1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		284AFB051E30394E00932ED1 /* Build configuration list for PBXNativeTarget "Advanced Map Routing - Dijkstra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				284AFB061E30394E00932ED1 /* Debug */,
+				284AFB071E30394E00932ED1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 284AFAE21E30394E00932ED1 /* Project object */;
+}

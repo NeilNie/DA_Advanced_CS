@@ -7,51 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		284343B51DA531A600F5B77D /* NYStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 284343B41DA531A600F5B77D /* NYStack.m */; };
-		2846F15B1D9F4CA700D3D05F /* ReverseString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2846F15A1D9F4CA700D3D05F /* ReverseString.m */; };
-		2846F15E1D9F4CB700D3D05F /* PrintBinary.m in Sources */ = {isa = PBXBuildFile; fileRef = 2846F15D1D9F4CB700D3D05F /* PrintBinary.m */; };
-		2846F1611D9F4CC300D3D05F /* DigitSum.m in Sources */ = {isa = PBXBuildFile; fileRef = 2846F1601D9F4CC300D3D05F /* DigitSum.m */; };
-		28615E211D9BF80500FFCEFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28615E201D9BF80500FFCEFA /* main.m */; };
-		28615E241D9BF80500FFCEFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28615E231D9BF80500FFCEFA /* AppDelegate.m */; };
-		28615E271D9BF80500FFCEFA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28615E261D9BF80500FFCEFA /* ViewController.m */; };
-		28615E2A1D9BF80500FFCEFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28615E281D9BF80500FFCEFA /* Main.storyboard */; };
-		28615E2C1D9BF80500FFCEFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28615E2B1D9BF80500FFCEFA /* Assets.xcassets */; };
-		28615E2F1D9BF80500FFCEFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28615E2D1D9BF80500FFCEFA /* LaunchScreen.storyboard */; };
-		28E30AE91DAB1587004501F7 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28E30AE81DAB1587004501F7 /* Media.xcassets */; };
-		28E3E8A51D9FF09C0004A77B /* RecursiveDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E3E8A41D9FF09C0004A77B /* RecursiveDrawing.m */; };
-		28E3E8A81D9FF7D80004A77B /* GCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E3E8A71D9FF7D80004A77B /* GCD.m */; };
-		28E3E8AB1D9FF8260004A77B /* RecursivePuzzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E3E8AA1D9FF8260004A77B /* RecursivePuzzle.m */; };
-		28E3E8AE1D9FF8B20004A77B /* Hanoi.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E3E8AD1D9FF8B20004A77B /* Hanoi.m */; };
+		28666B8E1E33B25100EE0A7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28666B721E33B25100EE0A7F /* AppDelegate.m */; };
+		28666B931E33B25100EE0A7F /* DigitSum.m in Sources */ = {isa = PBXBuildFile; fileRef = 28666B781E33B25100EE0A7F /* DigitSum.m */; };
+		28666B941E33B25100EE0A7F /* GCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 28666B7A1E33B25100EE0A7F /* GCD.m */; };
+		28666B951E33B25100EE0A7F /* Hanoi.m in Sources */ = {isa = PBXBuildFile; fileRef = 28666B7C1E33B25100EE0A7F /* Hanoi.m */; };
+		28666B961E33B25100EE0A7F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28666B7D1E33B25100EE0A7F /* Info.plist */; };
+		28666B971E33B25100EE0A7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28666B7E1E33B25100EE0A7F /* main.m */; };
+		28666B9B1E33B25100EE0A7F /* NYStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 28666B831E33B25100EE0A7F /* NYStack.m */; };
+		28666B9C1E33B25100EE0A7F /* PrintBinary.m in Sources */ = {isa = PBXBuildFile; fileRef = 28666B851E33B25100EE0A7F /* PrintBinary.m */; };
+		28666B9D1E33B25100EE0A7F /* RecursiveDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 28666B871E33B25100EE0A7F /* RecursiveDrawing.m */; };
+		28666B9E1E33B25100EE0A7F /* RecursivePuzzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 28666B891E33B25100EE0A7F /* RecursivePuzzle.m */; };
+		28666B9F1E33B25100EE0A7F /* ReverseString.m in Sources */ = {isa = PBXBuildFile; fileRef = 28666B8B1E33B25100EE0A7F /* ReverseString.m */; };
+		28666BA01E33B25100EE0A7F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28666B8D1E33B25100EE0A7F /* ViewController.m */; };
+		28666BAD1E33B2C900EE0A7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28666BA91E33B2C900EE0A7F /* LaunchScreen.storyboard */; };
+		28666BAE1E33B2C900EE0A7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28666BAB1E33B2C900EE0A7F /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		284343B31DA531A600F5B77D /* NYStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYStack.h; sourceTree = "<group>"; };
-		284343B41DA531A600F5B77D /* NYStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYStack.m; sourceTree = "<group>"; };
-		2846F1591D9F4CA700D3D05F /* ReverseString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReverseString.h; sourceTree = "<group>"; };
-		2846F15A1D9F4CA700D3D05F /* ReverseString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReverseString.m; sourceTree = "<group>"; };
-		2846F15C1D9F4CB700D3D05F /* PrintBinary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintBinary.h; sourceTree = "<group>"; };
-		2846F15D1D9F4CB700D3D05F /* PrintBinary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrintBinary.m; sourceTree = "<group>"; };
-		2846F15F1D9F4CC300D3D05F /* DigitSum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DigitSum.h; sourceTree = "<group>"; };
-		2846F1601D9F4CC300D3D05F /* DigitSum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DigitSum.m; sourceTree = "<group>"; };
 		28615E1C1D9BF80500FFCEFA /* Recursion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recursion.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		28615E201D9BF80500FFCEFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		28615E221D9BF80500FFCEFA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		28615E231D9BF80500FFCEFA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		28615E251D9BF80500FFCEFA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		28615E261D9BF80500FFCEFA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		28615E291D9BF80500FFCEFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		28615E2B1D9BF80500FFCEFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		28615E2E1D9BF80500FFCEFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		28615E301D9BF80500FFCEFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		28E30AE81DAB1587004501F7 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-		28E3E8A31D9FF09C0004A77B /* RecursiveDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecursiveDrawing.h; sourceTree = "<group>"; };
-		28E3E8A41D9FF09C0004A77B /* RecursiveDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecursiveDrawing.m; sourceTree = "<group>"; };
-		28E3E8A61D9FF7D80004A77B /* GCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCD.h; sourceTree = "<group>"; };
-		28E3E8A71D9FF7D80004A77B /* GCD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCD.m; sourceTree = "<group>"; };
-		28E3E8A91D9FF8260004A77B /* RecursivePuzzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecursivePuzzle.h; sourceTree = "<group>"; };
-		28E3E8AA1D9FF8260004A77B /* RecursivePuzzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecursivePuzzle.m; sourceTree = "<group>"; };
-		28E3E8AC1D9FF8B20004A77B /* Hanoi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hanoi.h; sourceTree = "<group>"; };
-		28E3E8AD1D9FF8B20004A77B /* Hanoi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hanoi.m; sourceTree = "<group>"; };
+		28666B711E33B25100EE0A7F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Recursion/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		28666B721E33B25100EE0A7F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Recursion/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		28666B771E33B25100EE0A7F /* DigitSum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DigitSum.h; path = Recursion/DigitSum.h; sourceTree = SOURCE_ROOT; };
+		28666B781E33B25100EE0A7F /* DigitSum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DigitSum.m; path = Recursion/DigitSum.m; sourceTree = SOURCE_ROOT; };
+		28666B791E33B25100EE0A7F /* GCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCD.h; path = Recursion/GCD.h; sourceTree = SOURCE_ROOT; };
+		28666B7A1E33B25100EE0A7F /* GCD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCD.m; path = Recursion/GCD.m; sourceTree = SOURCE_ROOT; };
+		28666B7B1E33B25100EE0A7F /* Hanoi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hanoi.h; path = Recursion/Hanoi.h; sourceTree = SOURCE_ROOT; };
+		28666B7C1E33B25100EE0A7F /* Hanoi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Hanoi.m; path = Recursion/Hanoi.m; sourceTree = SOURCE_ROOT; };
+		28666B7D1E33B25100EE0A7F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Recursion/Info.plist; sourceTree = SOURCE_ROOT; };
+		28666B7E1E33B25100EE0A7F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Recursion/main.m; sourceTree = SOURCE_ROOT; };
+		28666B821E33B25100EE0A7F /* NYStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NYStack.h; path = Recursion/NYStack.h; sourceTree = SOURCE_ROOT; };
+		28666B831E33B25100EE0A7F /* NYStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NYStack.m; path = Recursion/NYStack.m; sourceTree = SOURCE_ROOT; };
+		28666B841E33B25100EE0A7F /* PrintBinary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrintBinary.h; path = Recursion/PrintBinary.h; sourceTree = SOURCE_ROOT; };
+		28666B851E33B25100EE0A7F /* PrintBinary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrintBinary.m; path = Recursion/PrintBinary.m; sourceTree = SOURCE_ROOT; };
+		28666B861E33B25100EE0A7F /* RecursiveDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecursiveDrawing.h; path = Recursion/RecursiveDrawing.h; sourceTree = SOURCE_ROOT; };
+		28666B871E33B25100EE0A7F /* RecursiveDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecursiveDrawing.m; path = Recursion/RecursiveDrawing.m; sourceTree = SOURCE_ROOT; };
+		28666B881E33B25100EE0A7F /* RecursivePuzzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecursivePuzzle.h; path = Recursion/RecursivePuzzle.h; sourceTree = SOURCE_ROOT; };
+		28666B891E33B25100EE0A7F /* RecursivePuzzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecursivePuzzle.m; path = Recursion/RecursivePuzzle.m; sourceTree = SOURCE_ROOT; };
+		28666B8A1E33B25100EE0A7F /* ReverseString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReverseString.h; path = Recursion/ReverseString.h; sourceTree = SOURCE_ROOT; };
+		28666B8B1E33B25100EE0A7F /* ReverseString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReverseString.m; path = Recursion/ReverseString.m; sourceTree = SOURCE_ROOT; };
+		28666B8C1E33B25100EE0A7F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Recursion/ViewController.h; sourceTree = SOURCE_ROOT; };
+		28666B8D1E33B25100EE0A7F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Recursion/ViewController.m; sourceTree = SOURCE_ROOT; };
+		28666BAA1E33B2C900EE0A7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Recursion/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		28666BAC1E33B2C900EE0A7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Recursion/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,47 +62,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2846F1621D9F4CC700D3D05F /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				28E3E8AC1D9FF8B20004A77B /* Hanoi.h */,
-				28E3E8AD1D9FF8B20004A77B /* Hanoi.m */,
-				28E3E8A91D9FF8260004A77B /* RecursivePuzzle.h */,
-				28E3E8AA1D9FF8260004A77B /* RecursivePuzzle.m */,
-				28E3E8A61D9FF7D80004A77B /* GCD.h */,
-				28E3E8A71D9FF7D80004A77B /* GCD.m */,
-				28E3E8A31D9FF09C0004A77B /* RecursiveDrawing.h */,
-				28E3E8A41D9FF09C0004A77B /* RecursiveDrawing.m */,
-				2846F1591D9F4CA700D3D05F /* ReverseString.h */,
-				2846F15A1D9F4CA700D3D05F /* ReverseString.m */,
-				2846F15C1D9F4CB700D3D05F /* PrintBinary.h */,
-				2846F15D1D9F4CB700D3D05F /* PrintBinary.m */,
-				2846F15F1D9F4CC300D3D05F /* DigitSum.h */,
-				2846F1601D9F4CC300D3D05F /* DigitSum.m */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		2846F1631D9F4CDD00D3D05F /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				28615E251D9BF80500FFCEFA /* ViewController.h */,
-				28615E261D9BF80500FFCEFA /* ViewController.m */,
-				284343B31DA531A600F5B77D /* NYStack.h */,
-				284343B41DA531A600F5B77D /* NYStack.m */,
-			);
-			name = ViewControllers;
-			sourceTree = "<group>";
-		};
-		2846F1641D9F4CE500D3D05F /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				28615E221D9BF80500FFCEFA /* AppDelegate.h */,
-				28615E231D9BF80500FFCEFA /* AppDelegate.m */,
-			);
-			name = Helpers;
-			sourceTree = "<group>";
-		};
 		28615E131D9BF80400FFCEFA = {
 			isa = PBXGroup;
 			children = (
@@ -125,34 +81,49 @@
 		28615E1E1D9BF80500FFCEFA /* Recursion */ = {
 			isa = PBXGroup;
 			children = (
-				2846F1641D9F4CE500D3D05F /* Helpers */,
-				2846F1631D9F4CDD00D3D05F /* ViewControllers */,
-				2846F1621D9F4CC700D3D05F /* Models */,
-				28E3E8A21D9FEB070004A77B /* Nib */,
-				28615E1F1D9BF80500FFCEFA /* Supporting Files */,
+				28666B711E33B25100EE0A7F /* AppDelegate.h */,
+				28666B721E33B25100EE0A7F /* AppDelegate.m */,
+				28666B8C1E33B25100EE0A7F /* ViewController.h */,
+				28666B8D1E33B25100EE0A7F /* ViewController.m */,
+				28666BA91E33B2C900EE0A7F /* LaunchScreen.storyboard */,
+				28666BAB1E33B2C900EE0A7F /* Main.storyboard */,
+				28666BA21E33B26E00EE0A7F /* Classes */,
+				28666BA11E33B25D00EE0A7F /* Supporting Files */,
 			);
 			name = Recursion;
 			path = Recursion_HW;
 			sourceTree = "<group>";
 		};
-		28615E1F1D9BF80500FFCEFA /* Supporting Files */ = {
+		28666BA11E33B25D00EE0A7F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				28E30AE81DAB1587004501F7 /* Media.xcassets */,
-				28615E2B1D9BF80500FFCEFA /* Assets.xcassets */,
-				28615E301D9BF80500FFCEFA /* Info.plist */,
-				28615E201D9BF80500FFCEFA /* main.m */,
+				28666B7D1E33B25100EE0A7F /* Info.plist */,
+				28666B7E1E33B25100EE0A7F /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		28E3E8A21D9FEB070004A77B /* Nib */ = {
+		28666BA21E33B26E00EE0A7F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				28615E281D9BF80500FFCEFA /* Main.storyboard */,
-				28615E2D1D9BF80500FFCEFA /* LaunchScreen.storyboard */,
+				28666B771E33B25100EE0A7F /* DigitSum.h */,
+				28666B781E33B25100EE0A7F /* DigitSum.m */,
+				28666B791E33B25100EE0A7F /* GCD.h */,
+				28666B7A1E33B25100EE0A7F /* GCD.m */,
+				28666B7B1E33B25100EE0A7F /* Hanoi.h */,
+				28666B7C1E33B25100EE0A7F /* Hanoi.m */,
+				28666B821E33B25100EE0A7F /* NYStack.h */,
+				28666B831E33B25100EE0A7F /* NYStack.m */,
+				28666B841E33B25100EE0A7F /* PrintBinary.h */,
+				28666B851E33B25100EE0A7F /* PrintBinary.m */,
+				28666B861E33B25100EE0A7F /* RecursiveDrawing.h */,
+				28666B871E33B25100EE0A7F /* RecursiveDrawing.m */,
+				28666B881E33B25100EE0A7F /* RecursivePuzzle.h */,
+				28666B891E33B25100EE0A7F /* RecursivePuzzle.m */,
+				28666B8A1E33B25100EE0A7F /* ReverseString.h */,
+				28666B8B1E33B25100EE0A7F /* ReverseString.m */,
 			);
-			name = Nib;
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,10 +185,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28615E2F1D9BF80500FFCEFA /* LaunchScreen.storyboard in Resources */,
-				28615E2C1D9BF80500FFCEFA /* Assets.xcassets in Resources */,
-				28E30AE91DAB1587004501F7 /* Media.xcassets in Resources */,
-				28615E2A1D9BF80500FFCEFA /* Main.storyboard in Resources */,
+				28666BAE1E33B2C900EE0A7F /* Main.storyboard in Resources */,
+				28666B961E33B25100EE0A7F /* Info.plist in Resources */,
+				28666BAD1E33B2C900EE0A7F /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,37 +198,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2846F15E1D9F4CB700D3D05F /* PrintBinary.m in Sources */,
-				28615E271D9BF80500FFCEFA /* ViewController.m in Sources */,
-				2846F15B1D9F4CA700D3D05F /* ReverseString.m in Sources */,
-				28615E241D9BF80500FFCEFA /* AppDelegate.m in Sources */,
-				28615E211D9BF80500FFCEFA /* main.m in Sources */,
-				284343B51DA531A600F5B77D /* NYStack.m in Sources */,
-				28E3E8AB1D9FF8260004A77B /* RecursivePuzzle.m in Sources */,
-				28E3E8A51D9FF09C0004A77B /* RecursiveDrawing.m in Sources */,
-				28E3E8A81D9FF7D80004A77B /* GCD.m in Sources */,
-				2846F1611D9F4CC300D3D05F /* DigitSum.m in Sources */,
-				28E3E8AE1D9FF8B20004A77B /* Hanoi.m in Sources */,
+				28666B971E33B25100EE0A7F /* main.m in Sources */,
+				28666B9D1E33B25100EE0A7F /* RecursiveDrawing.m in Sources */,
+				28666B941E33B25100EE0A7F /* GCD.m in Sources */,
+				28666B951E33B25100EE0A7F /* Hanoi.m in Sources */,
+				28666B8E1E33B25100EE0A7F /* AppDelegate.m in Sources */,
+				28666BA01E33B25100EE0A7F /* ViewController.m in Sources */,
+				28666B9F1E33B25100EE0A7F /* ReverseString.m in Sources */,
+				28666B9E1E33B25100EE0A7F /* RecursivePuzzle.m in Sources */,
+				28666B931E33B25100EE0A7F /* DigitSum.m in Sources */,
+				28666B9C1E33B25100EE0A7F /* PrintBinary.m in Sources */,
+				28666B9B1E33B25100EE0A7F /* NYStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		28615E281D9BF80500FFCEFA /* Main.storyboard */ = {
+		28666BA91E33B2C900EE0A7F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				28615E291D9BF80500FFCEFA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		28615E2D1D9BF80500FFCEFA /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				28615E2E1D9BF80500FFCEFA /* Base */,
+				28666BAA1E33B2C900EE0A7F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		28666BAB1E33B2C900EE0A7F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28666BAC1E33B2C900EE0A7F /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -359,9 +329,8 @@
 		28615E4A1D9BF80500FFCEFA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8NZ8K5GNH8;
-				INFOPLIST_FILE = Recursion_HW/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Recursion/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yongyang.Recursion-HW";
@@ -372,9 +341,8 @@
 		28615E4B1D9BF80500FFCEFA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8NZ8K5GNH8;
-				INFOPLIST_FILE = Recursion_HW/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Recursion/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yongyang.Recursion-HW";
