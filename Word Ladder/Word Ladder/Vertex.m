@@ -18,7 +18,6 @@
         self.predecessor = [[Vertex alloc] init];
         self.key = key;
         self.state = StateUndiscovered;
-        self.distance = 0;
     }
     return self;
 }

@@ -21,9 +21,6 @@
 //Adds a new, directed edge to the graph that connects two vertices.
 -(void)addEdge:(NSString *)from toVert:(NSString *)to;
 
-//Adds a new, weighted, directed edge to the graph that connects two vertices.
--(void)addEdge:(NSString *)from toVert:(NSString *)to weight:(int)weight;
-
 //finds the vertex in the graph named vertKey.
 -(NSMutableArray *)getConnections:(NSString *)key;
 

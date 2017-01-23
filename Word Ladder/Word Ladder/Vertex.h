@@ -16,7 +16,6 @@ typedef enum VertexState{
 
 @interface Vertex : NSObject
 
-@property int distance;
 @property VertexState state;
 @property (nonatomic, strong) NSString *key;
 @property (nonatomic, strong) Vertex *predecessor;

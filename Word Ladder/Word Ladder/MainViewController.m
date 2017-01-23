@@ -15,16 +15,6 @@
 
 @implementation MainViewController
 
--(void)method{
-    
-    //1
-    NSDictionary *d = @{@"Key": @98};
-    
-    //2
-    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    //[dic set]
-}
-
 #pragma mark - IBAction
 
 -(IBAction)action:(id)sender{
@@ -114,7 +104,6 @@
             Vertex *v = [self.graph getVertex:nbr];
             if ([v state] == StateUndiscovered){
                 v.state = StateDiscovered;
-                v.distance = currentVert.distance + 1;
                 v.predecessor = currentVert;
                 [vertQueue enqueue:v];
             }
@@ -159,7 +148,6 @@
                 [d setObject:[[NSMutableArray alloc] initWithObjects:word, nil] forKey:bucket];
         }
     }
-    NSLog(@"%@", d);
     
     for (NSString *bucket in [d allKeys]) {
         for (NSString *word1 in d[bucket])
@@ -168,8 +156,6 @@
                     [g addEdge:word1 toVert:word2];
 
     }
-
-    NSLog(@"%@", g.adjacencyList);
     
     NSDate *method2Finish = [NSDate date];
     NSTimeInterval executionTime2 = [method2Finish timeIntervalSinceDate:method2Start];
