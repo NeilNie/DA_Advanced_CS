@@ -41,7 +41,7 @@
         [alert runModal];
         return;
     }
-    [self.maze mazeBegin:MZSolveModeDepth];
+    [self.maze mazeBegin:MZSolveModeBreadth];
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(makeNextMove) userInfo:nil repeats:YES];
 }

@@ -19,11 +19,7 @@
 		284AFB011E30394E00932ED1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284AFAFF1E30394E00932ED1 /* Main.storyboard */; };
 		284AFB291E30397300932ED1 /* program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 284AFB271E30397300932ED1 /* program.cpp */; };
 		284AFB301E303AAC00932ED1 /* Small.txt in Resources */ = {isa = PBXBuildFile; fileRef = 284AFB2A1E303AAC00932ED1 /* Small.txt */; };
-		284AFB311E303AAC00932ED1 /* usa-10.txt in Resources */ = {isa = PBXBuildFile; fileRef = 284AFB2B1E303AAC00932ED1 /* usa-10.txt */; };
-		284AFB321E303AAC00932ED1 /* usa-1000long.txt in Resources */ = {isa = PBXBuildFile; fileRef = 284AFB2C1E303AAC00932ED1 /* usa-1000long.txt */; };
 		284AFB331E303AAC00932ED1 /* usa-5000short.txt in Resources */ = {isa = PBXBuildFile; fileRef = 284AFB2D1E303AAC00932ED1 /* usa-5000short.txt */; };
-		284AFB341E303AAC00932ED1 /* usa-50000short.txt in Resources */ = {isa = PBXBuildFile; fileRef = 284AFB2E1E303AAC00932ED1 /* usa-50000short.txt */; };
-		284AFB351E303AAC00932ED1 /* usa.txt in Resources */ = {isa = PBXBuildFile; fileRef = 284AFB2F1E303AAC00932ED1 /* usa.txt */; };
 		284AFB3E1E303AB200932ED1 /* Graph.m in Sources */ = {isa = PBXBuildFile; fileRef = 284AFB371E303AB200932ED1 /* Graph.m */; };
 		284AFB3F1E303AB200932ED1 /* Heap.m in Sources */ = {isa = PBXBuildFile; fileRef = 284AFB391E303AB200932ED1 /* Heap.m */; };
 		284AFB401E303AB200932ED1 /* PQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 284AFB3B1E303AB200932ED1 /* PQ.m */; };
@@ -49,11 +45,7 @@
 		284AFB271E30397300932ED1 /* program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = program.cpp; sourceTree = "<group>"; };
 		284AFB281E30397300932ED1 /* program.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = program.hpp; sourceTree = "<group>"; };
 		284AFB2A1E303AAC00932ED1 /* Small.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Small.txt; sourceTree = "<group>"; };
-		284AFB2B1E303AAC00932ED1 /* usa-10.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "usa-10.txt"; sourceTree = "<group>"; };
-		284AFB2C1E303AAC00932ED1 /* usa-1000long.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "usa-1000long.txt"; sourceTree = "<group>"; };
 		284AFB2D1E303AAC00932ED1 /* usa-5000short.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "usa-5000short.txt"; sourceTree = "<group>"; };
-		284AFB2E1E303AAC00932ED1 /* usa-50000short.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "usa-50000short.txt"; sourceTree = "<group>"; };
-		284AFB2F1E303AAC00932ED1 /* usa.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = usa.txt; sourceTree = "<group>"; };
 		284AFB361E303AB200932ED1 /* Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Graph.h; sourceTree = "<group>"; };
 		284AFB371E303AB200932ED1 /* Graph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Graph.m; sourceTree = "<group>"; };
 		284AFB381E303AB200932ED1 /* Heap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Heap.h; sourceTree = "<group>"; };
@@ -139,11 +131,7 @@
 				28202FEE1E305C7400705648 /* map.png */,
 				28202FF01E305DCC00705648 /* USA-full.txt */,
 				284AFB2A1E303AAC00932ED1 /* Small.txt */,
-				284AFB2B1E303AAC00932ED1 /* usa-10.txt */,
-				284AFB2C1E303AAC00932ED1 /* usa-1000long.txt */,
 				284AFB2D1E303AAC00932ED1 /* usa-5000short.txt */,
-				284AFB2E1E303AAC00932ED1 /* usa-50000short.txt */,
-				284AFB2F1E303AAC00932ED1 /* usa.txt */,
 			);
 			name = Recourses;
 			sourceTree = "<group>";
@@ -231,14 +219,10 @@
 				284AFAF41E30394E00932ED1 /* GameScene.sks in Resources */,
 				284AFAFE1E30394E00932ED1 /* Assets.xcassets in Resources */,
 				28202FF11E305DCC00705648 /* USA-full.txt in Resources */,
-				284AFB351E303AAC00932ED1 /* usa.txt in Resources */,
 				284AFB331E303AAC00932ED1 /* usa-5000short.txt in Resources */,
-				284AFB341E303AAC00932ED1 /* usa-50000short.txt in Resources */,
 				284AFB301E303AAC00932ED1 /* Small.txt in Resources */,
-				284AFB311E303AAC00932ED1 /* usa-10.txt in Resources */,
 				284AFAF61E30394E00932ED1 /* Actions.sks in Resources */,
 				284AFB011E30394E00932ED1 /* Main.storyboard in Resources */,
-				284AFB321E303AAC00932ED1 /* usa-1000long.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

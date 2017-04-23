@@ -17,7 +17,6 @@
 		284AFAFC1E30394E00932ED1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284AFAFB1E30394E00932ED1 /* ViewController.m */; };
 		284AFAFE1E30394E00932ED1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284AFAFD1E30394E00932ED1 /* Assets.xcassets */; };
 		284AFB011E30394E00932ED1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284AFAFF1E30394E00932ED1 /* Main.storyboard */; };
-		284AFB291E30397300932ED1 /* program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 284AFB271E30397300932ED1 /* program.cpp */; };
 		284AFB351E303AAC00932ED1 /* usa.txt in Resources */ = {isa = PBXBuildFile; fileRef = 284AFB2F1E303AAC00932ED1 /* usa.txt */; };
 		284AFB3E1E303AB200932ED1 /* Graph.m in Sources */ = {isa = PBXBuildFile; fileRef = 284AFB371E303AB200932ED1 /* Graph.m */; };
 		284AFB3F1E303AB200932ED1 /* Heap.m in Sources */ = {isa = PBXBuildFile; fileRef = 284AFB391E303AB200932ED1 /* Heap.m */; };
@@ -43,8 +42,6 @@
 		284AFAFD1E30394E00932ED1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		284AFB001E30394E00932ED1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		284AFB021E30394E00932ED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		284AFB271E30397300932ED1 /* program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = program.cpp; sourceTree = "<group>"; };
-		284AFB281E30397300932ED1 /* program.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = program.hpp; sourceTree = "<group>"; };
 		284AFB2F1E303AAC00932ED1 /* usa.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = usa.txt; sourceTree = "<group>"; };
 		284AFB361E303AB200932ED1 /* Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Graph.h; sourceTree = "<group>"; };
 		284AFB371E303AB200932ED1 /* Graph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Graph.m; sourceTree = "<group>"; };
@@ -114,8 +111,6 @@
 		284AFB421E303AB700932ED1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				284AFB271E30397300932ED1 /* program.cpp */,
-				284AFB281E30397300932ED1 /* program.hpp */,
 				284AFB361E303AB200932ED1 /* Graph.h */,
 				284AFB371E303AB200932ED1 /* Graph.m */,
 				284AFB381E303AB200932ED1 /* Heap.h */,
@@ -241,7 +236,6 @@
 				284AFB401E303AB200932ED1 /* PQ.m in Sources */,
 				284AFB411E303AB200932ED1 /* Vertex.m in Sources */,
 				284AFB3E1E303AB200932ED1 /* Graph.m in Sources */,
-				284AFB291E30397300932ED1 /* program.cpp in Sources */,
 				284AFAF21E30394E00932ED1 /* main.m in Sources */,
 				284CB74D1E31A61500A5C43A /* WindowController.m in Sources */,
 				284AFAF91E30394E00932ED1 /* GameScene.m in Sources */,
