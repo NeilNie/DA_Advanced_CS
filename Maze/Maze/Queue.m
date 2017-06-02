@@ -12,7 +12,7 @@
 @interface Queue ()
 
 //note: objects is private and you can implement it with NSMutableArray.
-@property (strong, nonatomic) LinkedList *objects;
+@property (strong, nonatomic) NSMutableArray *objects;
 
 @end
 
@@ -28,8 +28,8 @@
 }
 
 -(id)dequeue{
-    id object = [self.objects nodeAt:0].object;
-    [self.objects removeAt:0];
+    id object = [self.objects firstObject];
+    [self.objects removeObjectAtIndex:0];
     return object;
 }
 -(void)enqueue:(id)object{
@@ -39,7 +39,7 @@
     return [self.objects count];
 }
 -(BOOL)isEmpty{
-    return [self.objects head] == nil;
+    return [self.objects firstObject] == nil;
 }
 
 -(void)printQueue{
